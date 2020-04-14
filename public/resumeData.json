@@ -51,32 +51,32 @@
     ],
     "skills":[
       {
-        "name":"Git",
-        "level":"70%"
-      },
-      {
-        "name":"C++",
-        "level":"55%"
-      },
-      {
-        "name":"ReactJs",
-        "level":"50%"
-      },
-      {
-        "name":"NodeJs",
-        "level":"40%"
-      },
-      {
         "name":"Python",
         "level":"80%"
       },
       {
-        "name":"OpenCV",
+        "name":"Git",
+        "level":"75%"
+      },
+      {
+        "name":"C++",
         "level":"70%"
       },
       {
-        "name":"MongoDB",
+        "name":"OpenCV",
+        "level":"60%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"40%"
+      },
+      {
+        "name":"NodeJs",
         "level":"30%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"40%"
       }
     ]
   },
