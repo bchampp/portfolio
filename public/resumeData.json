@@ -1,0 +1,99 @@
+{
+  "main": {
+    "name":"Brent Champion",
+    "occupation":"Full Stack Developer",
+    "image":"profile_pic.jpg",
+    "bio":"21 year old software engineering student from Canada.",
+    "contactmessage":"Get in touch!",
+    "email": "brent.champion@queensu.ca",
+    "address":{
+      "street":"Brett Road",
+      "city":"Misssissauga",
+      "state":"ON",
+      "zip": "L5L 4N7"
+    },
+    "resumedownload":"BrentChampion_resume.pdf",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/brentchampion/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/bchampp",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"gitlab",
+        "url":"https://code.engineering.queensu.ca/16bc39",
+        "className":"fa fa-gitlab"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Significant Experience with Python, C++ and Design Software. Gaining experience with Full Stack Development",
+    "education":[
+      {
+        "school":"Queen's University",
+        "degree":"Bachlor of Applied Science - Computer Engineering",
+        "graduated":"September 2017 - Present",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"RCVLab",
+        "title":"Research Assistant, Software Engineering Intern",
+        "years":"May 2019 - Present",
+        "description":"Develop Machine Vision projects using OpenCV"
+      }
+    ],
+    "skills":[
+      {
+        "name":"Git",
+        "level":"70%"
+      },
+      {
+        "name":"C++",
+        "level":"55%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"NodeJs",
+        "level":"40%"
+      },
+      {
+        "name":"Python",
+        "level":"80%"
+      },
+      {
+        "name":"OpenCV",
+        "level":"70%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"30%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"CodeLife Ventilator Challenge",
+        "category":"",
+        "image":"ventilator.png",
+        "url":"https://code.engineering.queensu.ca/ygk-modular-ventilator"
+      },
+      {
+        "title":"Grocery-Smart",
+        "category":"",
+        "image":"grocerysmart.png",
+        "url":"https://www.grocery-smart.com"
+      }
+    ]
+  }
+}
