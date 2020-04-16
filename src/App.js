@@ -12,7 +12,6 @@ import {
 import IndexPage from './pages/index';
 import AboutPage from './pages/about';
 import NotFound from './pages/404';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -29,7 +28,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path='/' component={IndexPage} />
-          <Route exact path='/about' component={AboutPage} />
+          <Route exact path='/about'> <AboutPage /></Route>
           <Route exact path='/404' component={NotFound}/> {/* Default Render */}
           <Redirect to='/404' />
         </Switch>

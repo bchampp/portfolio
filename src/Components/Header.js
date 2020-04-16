@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
@@ -19,7 +19,7 @@ class Header extends Component {
          <ul id="nav" className="nav">
             {/* <li><a className="smoothscroll" href="#home">Brent Champion</a></li> */}
             <li className="current"><a className="smoothscroll" href="home">Home</a></li>
-            {/* <li className='smoothscroll'><Link to='/about'>Test</Link></li> */}
+            <li className='smoothscroll'><Link to='/about'>About</Link></li>
             <li><a className="smoothscroll" href="#portfolio">Projects</a></li>
 	         <li><a className="smoothscroll" href="#resume">Resume</a></li>
          </ul>
