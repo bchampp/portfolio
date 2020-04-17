@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class ProjectPage extends Component {
+class ResumePage extends Component {
     render() {
 
 
     return (
-        <section id="projects">
+        <section id="resume">
         </section>
     );
     }
 }
 
-export default ProjectPage;
+export default ResumePage;
