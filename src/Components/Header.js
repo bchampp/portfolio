@@ -18,20 +18,20 @@ class Header extends Component {
 	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
          <ul id="nav" className="nav">
             {/* <li><a className="smoothscroll" href="#home">Brent Champion</a></li> */}
-            <Link to='./home'>
+            <Link to='/home'>
                <li className="current"><a className="smoothscroll" href="home">Home</a></li> 
             </Link>
 
-            <Link to='./about'>
-               <li className='smoothscroll'>About</li>
+            <Link to='/about'>
+               <li>About</li>
             </Link>
 
-            <Link to='./projects'>
-               <li><a className="smoothscroll" href="#portfolio">Projects</a></li>
+            <Link to='/projects'>
+               <li>Projects</li>
             </Link>
             
-            <Link to='./resume'>
-	            <li><a className="smoothscroll" href="#resume">Resume</a></li>
+            <Link to='/resume'>
+	            <li>Resume</li>
             </Link>
          </ul>
       </nav>

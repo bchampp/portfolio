@@ -31,8 +31,8 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={IndexPage} />
           <Route exact path='/about' component={AboutPage} />    
-          <Route exact path='./projects' components={ProjectPage} />
-          <Route exact path='./resume' components={ResumePage} />
+          <Route exact path='/projects' components={ProjectPage} />
+          <Route exact path='/resume' components={ResumePage} />
           <Route exact path='/404' component={NotFound}/> {/* Default Render */}
           <Redirect to='/404' />
         </Switch>

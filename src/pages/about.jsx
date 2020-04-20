@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Header from '../Components/Header';
 class AboutPage extends Component {
   render() {
 
@@ -18,6 +18,7 @@ class AboutPage extends Component {
 
     return (
       <section id="about">
+      {/* <Header data={this.state.resumeData.main}/> */}
       <div className="row">
          <div className="three columns">
             <img className="profile-pic"  src={profilepic} alt="Profile Pic" />
