@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Components/Header';
+
 class AboutPage extends Component {
   render() {
 
