@@ -25,7 +25,7 @@ class Header extends Component {
             </Link>
 
             <Link to='/about'>
-               <li>About</li>
+               <li><a className="smoothscroll" href="/about">About</a></li>
             </Link>
 
             <Link to='/projects'>

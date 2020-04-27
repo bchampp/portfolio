@@ -44,7 +44,6 @@ class IndexPage extends Component {
     render() {
         return (
             <div className="App">
-                {/* <Link to="/about">About</Link> */}
                 <Header data={this.state.resumeData.main}/>
                 <About data={this.state.resumeData.main}/>
                 <Projects data={this.state.resumeData.portfolio}/>
