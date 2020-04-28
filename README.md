@@ -1,3 +1,3 @@
-# Codebase for ReactJs Based Personal Website
+# Portfolio Website
 
-Website can be found at bchampion.ca
+This is my personal portfolio website, which can be found [here](http://bchampion.ca)
