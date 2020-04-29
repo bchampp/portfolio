@@ -24,14 +24,10 @@ class Projects extends Component {
     }
 
     return (
-      <section id="portfolio">
-
+      <section id="projects">
       <div className="row">
-
          <div className="twelve columns collapsed">
-
-            <h1>Check out my recent projects</h1>
-
+            <h1>Here are a few projects I've worked on recently. </h1>
             <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
                 {projects}
             </div>

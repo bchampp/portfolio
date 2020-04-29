@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+import $ from 'jquery';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
-
-// Import Pages
-import IndexPage from './pages/index';
-import AboutPage from './pages/about';
-import ProjectPage from './pages/projects';
-import ResumePage from './pages/resume'
-import NotFound from './pages/404';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import About from './Components/About';
+import Resume from './Components/Resume';
+import Projects from './Components/Projects';
 
 
 class App extends Component {
@@ -23,20 +17,40 @@ class App extends Component {
       foo: 'bar',
       resumeData: {}
     };
+
+    ReactGA.initialize('UA-110570651-1');
+    ReactGA.pageview(window.location.pathname);
+
+  }
+
+  getResumeData(){
+    $.ajax({
+      url:'/resumeData.json',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        this.setState({resumeData: data});
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
+
+  componentDidMount(){
+    this.getResumeData();
   }
 
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route exact path='/' component={IndexPage} />
-          <Route exact path='/about' component={AboutPage} />    
-          <Route exact path='/projects' components={ProjectPage} />
-          <Route exact path='/resume' components={ResumePage} />
-          <Route exact path='/404' component={NotFound}/> {/* Default Render */}
-          <Redirect to='/404' />
-        </Switch>
-      </Router>
+      <div className="App">
+          <Header data={this.state.resumeData.main}/>
+          <About data={this.state.resumeData.main}/>
+          <Projects data={this.state.resumeData.portfolio}/>
+          <Resume data={this.state.resumeData.resume}/>
+          <Footer data={this.state.resumeData.main}/>
+      </div>
     );
   }
 }
