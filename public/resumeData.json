@@ -28,7 +28,7 @@
   },
   "resume":{
     "skillmessage":"Significant Experience with Python, C++ and Design Software.",
-    "learnmessage":"Gaining experience with Full Stack Development.",
+    "learnmessage":"Gaining experience in Full Stack Development.",
     "education":[
       {
         "school":"Queen's University",
@@ -39,10 +39,16 @@
     ],
     "work":[
       {
+        "company": "Acoutera",
+        "title" : "Software Engineer",
+        "years" : "May 2020 - Present",
+        "description" : "Full Stack Developer working with MongoDB, Express, React and Node.js"
+      },
+      {
         "company":"RCVLab",
         "title":"Research Assistant",
-        "years":"May 2019 - Present",
-        "description":"Developing internal Machine Vision projects using OpenCV"
+        "years":"May 2019 - April 2020",
+        "description":"Developing internal Machine Vision projects using OpenCV, C++ and Python"
       },
       {
         "company":"Queen's Formula SAE Team",
