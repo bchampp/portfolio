@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Projects from './Components/Projects';
+import Header from '../next-version/pages/Components/Header';
+import Footer from '../next-version/pages/Components/Footer';
+import About from '../next-version/pages/Components/About';
+import Resume from '../next-version/pages/Components/Resume';
+import Projects from '../next-version/pages/Components/Projects';
 
 
 class App extends Component {
