@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { Component } from 'react';
 import $ from 'jquery';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Projects from './Components/Projects';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import About from './components/About';
+import Resume from './components/Resume';
+import Projects from './components/Projects';
 
 
 export default class extends Component {
@@ -16,13 +16,13 @@ export default class extends Component {
     };
   }
 
-  getResumeData(){
+  async getResumeData(){
     $.ajax({
       url:'/resumeData.json',
       dataType:'json',
       cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
+      success: async function(data){
+        await this.setState({resumeData: data});
       }.bind(this),
       error: function(xhr, status, err){
         console.log(err);
@@ -33,9 +33,11 @@ export default class extends Component {
 
   componentDidMount(){
     this.getResumeData();
+    console.log("Test")
   }
 
   render() {
+    console.log(this.state)
     return (
       <Head>
       <div className="App">

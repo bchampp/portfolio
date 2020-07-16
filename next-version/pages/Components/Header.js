@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
-
+   console.log(this.props);
     if(this.props.data){
       var name = this.props.data.name;
       var networks= this.props.data.social.map(function(network){
