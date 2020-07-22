@@ -1,5 +1,5 @@
-import "./css/layout.css";
-import "./css/fonts.css";
+import "../public/css/layout.css";
+import "../public/css/fonts.css";
 
 function MyApp({ Component, pageProps }){
     return <Component {...pageProps} />

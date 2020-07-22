@@ -1,4 +1,4 @@
-{
+export const resumeData = {
   "main": {
     "name":"Brent Champion",
     "occupation":"Full Stack Developer",
