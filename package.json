@@ -10,7 +10,9 @@
   "dependencies": {
     "jquery": "^3.5.1",
     "next": "9.4.4",
+    "pdfobject": "^2.1.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-pdf": "^4.1.0"
   }
 }
