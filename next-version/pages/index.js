@@ -9,44 +9,44 @@ import Projects from './components/Projects';
 
 
 export default class extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       resumeData: {}
     };
   }
 
-  async getResumeData(){
+  async getResumeData() {
     $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
+      url: '/resumeData.json',
+      dataType: 'json',
       cache: false,
-      success: async function(data){
-        await this.setState({resumeData: data});
+      success: async function (data) {
+        await this.setState({ resumeData: data });
       }.bind(this),
-      error: function(xhr, status, err){
+      error: function (xhr, status, err) {
         console.log(err);
         alert(err);
       }
     });
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.getResumeData();
-    console.log("Test")
   }
 
   render() {
     console.log(this.state)
     return (
       <Head>
-      <div className="App">
-          <Header data={this.state.resumeData.main}/>
-          <About data={this.state.resumeData.main}/>
-          <Projects data={this.state.resumeData.portfolio}/>
-          <Resume data={this.state.resumeData.resume}/>
-          <Footer data={this.state.resumeData.main}/>
-      </div>
+        <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="brentchampion" data-description="" data-message="" data-color="#5F7FFF" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+        <div className="App">
+          <Header data={this.state.resumeData.main} />
+          <About data={this.state.resumeData.main} />
+          <Projects data={this.state.resumeData.portfolio} />
+          <Resume data={this.state.resumeData.resume} />
+          <Footer data={this.state.resumeData.main} />
+        </div>
       </Head>
     );
   }
