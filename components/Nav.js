@@ -1,34 +1,19 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import Link from 'next/link'
 
-class NavBar extends Component {
-   render(){
+function NavBar(){
       return (
          <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
             <ul id="nav" className="nav">
-               {/* <li><a className="smoothscroll" href="#home">Brent Champion</a></li> */}
-               <Link to='/home'>
-                  <li className="current"><a className="smoothscroll" href="home">Home</a></li> 
-               </Link>
-
-               <Link to='/about'>
-                  <li>About</li>
-               </Link>
-
-               <Link to='/projects'>
-                  <li>Projects</li>
-               </Link>
-               
-               <Link to='/resume'>
-                  <li>Resume</li>
-               </Link>
+               <Link href='/'><a className="current">Home</a></Link>
+               <Link href='/about'><a>About</a></Link>
+               <Link href='/projects'><a>Projects</a></Link>
+               <Link href='/resume'><a>Resume</a></Link>
             </ul>
          </nav>
-      );
-   }
+      )
 }
 
 export default NavBar;
