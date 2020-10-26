@@ -1,3 +1,1 @@
-# Portfolio Website
-
-This is my personal portfolio website, which can be found [here](http://brentchampion.com)
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).

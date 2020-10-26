@@ -1,5 +1,6 @@
 {
   "polyfillFiles": [
+<<<<<<< HEAD
     "static/chunks/polyfills-2be76cc2531af487e612.js"
   ],
   "devFiles": [],
@@ -145,6 +146,56 @@
       "static/chunks/8ee93e01036bb5bdd30ff766913d6daf4eedeeb0.cfc4fe82273e570fd7e2.js",
       "static/css/bbaf7d2c7432f8cdca47.css",
       "static/chunks/pages/work/[id]-1efe07b808bce49c4bf8.js"
+=======
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/_app": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_app.js"
+    ],
+    "/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_error.js"
+    ],
+    "/about": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/about.js"
+    ],
+    "/posts": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/posts.js"
+    ],
+    "/projects": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/projects.js"
+    ],
+    "/projects/[id]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/projects/[id].js"
+>>>>>>> 27f7608 (major updates, moving to nextjs with static rendering)
     ]
   },
   "ampFirstPages": []

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "/404": "pages/404.html",
   "/_app": "pages/_app.js",
   "/about": "pages/about.html",
@@ -14,4 +15,14 @@
   "/work": "pages/work.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js"
+=======
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/projects/[id]": "pages/projects/[id].js",
+  "/projects": "pages/projects.js",
+  "/posts": "pages/posts.js",
+  "/about": "pages/about.js"
+>>>>>>> 27f7608 (major updates, moving to nextjs with static rendering)
 }
