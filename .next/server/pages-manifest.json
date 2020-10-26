@@ -1,0 +1,17 @@
+{
+  "/404": "pages/404.html",
+  "/_app": "pages/_app.js",
+  "/about": "pages/about.html",
+  "/": "pages/index.js",
+  "/posts/[id]": "pages/posts/[id].js",
+  "/posts": "pages/posts.js",
+  "/projects/[id]": "pages/projects/[id].js",
+  "/projects": "pages/projects.js",
+  "/resume": "pages/resume.html",
+  "/tags/[id]": "pages/tags/[id].js",
+  "/tags": "pages/tags.js",
+  "/work/[id]": "pages/work/[id].js",
+  "/work": "pages/work.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
+}
