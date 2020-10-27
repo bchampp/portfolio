@@ -111,7 +111,7 @@ export default function Layout({ children, page }) {
           <Typography className={classes.title} variant="h6" noWrap>
             <Link href='/'><a>{name}</a></Link>
           </Typography>
-          <div className={classes.search}>
+          {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -123,7 +123,7 @@ export default function Layout({ children, page }) {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
+          </div> */}
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Link href="/about"><a>About</a></Link>

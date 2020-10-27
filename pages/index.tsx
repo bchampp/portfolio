@@ -33,36 +33,40 @@ export default function Home({ projects, posts }) {
 
         {/* Projects Section */}
         <div style={{ textAlign: 'center', padding: '20px' }}>
-          <h3>Check out some of my recent Projects!</h3>
+          <h3>Check out some of my recent projects!</h3>
           <div>
-            <ul>
-              <li>
-                Test
-              </li>
-              <li>
-                Test 2
-              </li>
-              <li>
-                Test 3
-              </li>
+            <ul className={utilStyles.list}>
+              {projects.map(({ id, date, title }) => (
+                <li className={utilStyles.listItem} key={id}>
+                  <Link href={`/projects/${id}`}>
+                    <a>{title}</a>
+                  </Link>
+                  <br />
+                  <small className={utilStyles.lightText}>
+                    <Date dateString={date} />
+                  </small>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
         {/* Posts Section */}
         <div style={{ textAlign: 'center', padding: '20px' }}>
-          <h3>Check out some of my recent Posts!</h3>
+          <h3>Check out some of my recent posts!</h3>
           <div>
-            <ul>
-              <li>
-                Test
-              </li>
-              <li>
-                Test 2
-              </li>
-              <li>
-                Test 3
-              </li>
+            <ul className={utilStyles.list}>
+              {posts.map(({ id, date, title }) => (
+                <li className={utilStyles.listItem} key={id}>
+                  <Link href={`/posts/${id}`}>
+                    <a>{title}</a>
+                  </Link>
+                  <br />
+                  <small className={utilStyles.lightText}>
+                    <Date dateString={date} />
+                  </small>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

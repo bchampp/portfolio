@@ -1,5 +1,5 @@
 import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/projects';
+import { getAllProjectIds, getProjectData } from '../../lib/projects';
 import Date from '../../components/date';
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
@@ -22,8 +22,7 @@ export default function Project({ postData }) {
 }
 
 export async function getStaticPaths() {
-  // Return a list of possible value for id
-  const paths = getAllPostIds()
+  const paths = getAllProjectIds()
   return {
     paths,
     fallback: false
@@ -31,7 +30,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData = await getProjectData(params.id)
   return {
     props: {
       postData
