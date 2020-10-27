@@ -11,7 +11,8 @@ import Date from '../components/date'
 import ProjectCards from '../components/projects/ProjectCards'
 
 // Import Utility Functions
-import { getProjectsData, getPostData } from '../lib/projects';
+import { getProjectsData } from '../lib/projects';
+import { getPostsData } from '../lib/posts';
 
 // Import css modules 
 import utilStyles from '../styles/utils.module.css'
@@ -71,16 +72,25 @@ export default function Home({ projects, posts }) {
   )
 }
 
-// Render website content on build
 export const getStaticProps: GetStaticProps = async (context) => {
-  // Fetch relevant projects
+
   const projects = getProjectsData();
-  // const posts = getPostData();
+  const posts = getPostsData();
+
+  // console.log("Statically pre-fetching all projects... ")
+  // projects.forEach(project => {
+  //   console.log('- ' + project.title);
+  // })
+
+  // console.log("Statically pre-fetching all posts... ")
+  // posts.forEach(post => {
+  //   console.log('- ' + post.title);
+  // })
 
   return {
     props: {
       projects,
-      // posts,
+      posts,
     }
   }
 }
