@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Nav() {
     return (
-        <div class="absolute top-0 flex justify-between">
+        <div class="top-0 flex justify-between">
             <div>
                 <Link href='/'><a class='inline-block py-2 px-4 text-white'>Brent Champion</a></Link>
             </div>
             <div class="text-center">
                 <ul class="flex justify-between">
                     <li class="mr-3">
-                        <Link href='/about'><a class='inline-block py-2 px-4 text-white'>About</a></Link>>
+                        <Link href='/about'><a class='inline-block py-2 px-4 text-white'>About</a></Link>
                     </li>
                     <li class="mr-3">
                         <Link href='/projects'><a class='inline-block py-2 px-4 text-white'>Projects</a></Link>
