@@ -6,7 +6,7 @@ import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'projects')
 
-export function getSortedPostsData() {
+export function getProjectsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   console.log(fileNames);
@@ -36,6 +36,10 @@ export function getSortedPostsData() {
       return -1
     }
   })
+}
+
+export function getPostsData(){
+
 }
 
 export function getAllPostIds() {
