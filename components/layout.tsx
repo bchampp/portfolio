@@ -44,7 +44,7 @@ export default function Layout({ children, page }) {
       <Nav />
       <main>{children}</main>
       {page !== 'home' && (
-        <div className={styles.backToHome}>
+        <div className={styles.backToHome} class='bg-white'>
           <Link href="/">
             <a>← Back to home</a>
           </Link>

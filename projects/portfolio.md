@@ -6,3 +6,5 @@ description: 'My portfolio website'
 ---
 
 This is my portfolio website :) 
+
+*How it works*

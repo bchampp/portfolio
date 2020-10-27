@@ -7,17 +7,19 @@ import utilStyles from '../../styles/utils.module.css'
 export default function Project({ postData }) {
   return (
     <Layout page='projects'>
-    <Head>
-      <title>{postData.title}</title>
-    </Head>
-    <article>
-      <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-      <div className={utilStyles.lightText}>
-        <Date dateString={postData.date} />
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
+      <div class='py-10 px-32 bg-white'>
+        <article>
+          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          <div className={utilStyles.lightText}>
+            <Date dateString={postData.date} />
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-    </article>
-  </Layout>
+    </Layout>
   )
 }
 
