@@ -40,9 +40,12 @@ export default function Layout({ children, page }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {/* TODO: Make into custom component */}
+      
+      {/* Navigation Bar */}
       <Nav />
+      
       <main>{children}</main>
+
       {page !== 'home' && (
         <div className={styles.backToHome} class='bg-white'>
           <Link href="/">
