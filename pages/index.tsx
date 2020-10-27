@@ -17,6 +17,7 @@ import { getPostsData } from '../lib/posts';
 // Import css modules 
 import utilStyles from '../styles/utils.module.css'
 import homeStyles from '../styles/home.module.css';
+import Typewriter from 'typewriter-effect';
 
 export default function Home({ projects, posts }) {
   return (
@@ -30,18 +31,19 @@ export default function Home({ projects, posts }) {
         <div class="rounded-lg shadow-lg relative">
           <img class="w-full object-cover" src="/images/background.jpg" alt="Mountain Image" />
           <div class="px-6 py-4 m-auto md:flex items-center absolute top-0 left-0 right-0 bottom-0">
-            <h2 class="font-semibold text-white tracking-tight text-6xl w-full mb-3 items-center text-center align-middle">Hi, I'm Brent</h2>
+            <h2 class="font-semibold text-white tracking-tight text-6xl w-full mb-3 items-center text-center align-middle">
+              <Typewriter options={{
+                strings: ["Hi, I'm Brent!", "I like building things"],
+                autoStart: true,
+                loop: true,
+              }}/>
+            </h2>
           </div>
         </div>
 
-        {/* <div className={homeStyles.container}>
-          <div className={homeStyles.wallpaper}>
-            <img src='/images/background.jpg'></img>
-          </div> */}
-
         {/* Projects Section */}
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-          <h3>Check out some of my recent projects!</h3>
+        <div style={{ textAlign: 'center', padding: '20px', backgroundColor: '#1a202c'}}>
+          <h3 class='px-6 py-4 text-white text-2xl mb-3'>Check out some of my recent projects:</h3>
           <div>
             <ul className={utilStyles.list}>
               {projects.map(({ id, date, title }) => (
