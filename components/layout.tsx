@@ -14,6 +14,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 // Global Styles
 import styles from './layout.module.css'
+import Nav from './nav';
 
 // Page Constants
 const name = 'Brent Champion'
@@ -88,7 +89,7 @@ export default function Layout({ children, page }) {
   const classes = useStyles();
 
   return (
-    <div>
+    <div class="bg-gray-900">
       {/* Page Head */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -106,37 +107,7 @@ export default function Layout({ children, page }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {/* TODO: Make into custom component */}
-      <AppBar color="primary" position="static">
-        <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            <Link href='/'><a>{name}</a></Link>
-          </Typography>
-          {/* <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div> */}
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <Link href="/about"><a>About</a></Link>
-            <br/>
-            <Link href="/projects"><a>Projects</a></Link>
-            <br/>
-            <Link href="/posts"><a>Posts</a></Link>
-            <br/>
-          </div>
-          <div className={classes.sectionMobile}>
-          </div>
-        </Toolbar>
-      </AppBar>
+      <Nav />
       <main>{children}</main>
       {page !== 'home' && (
         <div className={styles.backToHome}>

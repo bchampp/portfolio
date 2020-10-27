@@ -1,6 +1,6 @@
 ---
-title: 'Portfolio Website'
+title: 'Portfolio'
 date: '2020-10-31'
 ---
 
-Woop Woop
+This is my portfolio website :) 

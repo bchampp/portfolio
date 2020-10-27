@@ -20,59 +20,61 @@ import homeStyles from '../styles/home.module.css';
 
 export default function Home({ projects, posts }) {
   return (
-    <Layout page='home'>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <div className='md:flex bg-white rounded-lg justify-center'>
+      <Layout page='home'>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
 
-      {/* Hero Section */}
-      <div className={homeStyles.container}>
-        <div className={homeStyles.wallpaper}>
-          <img src='/images/background.jpg'></img>
-        </div>
-
-        {/* Projects Section */}
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-          <h3>Check out some of my recent projects!</h3>
-          <div>
-            <ul className={utilStyles.list}>
-              {projects.map(({ id, date, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/projects/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-              ))}
-            </ul>
+        {/* Hero Section */}
+        <div className={homeStyles.container}>
+          <div className={homeStyles.wallpaper}>
+            <img src='/images/background.jpg'></img>
           </div>
-        </div>
 
-        {/* Posts Section */}
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-          <h3>Check out some of my recent posts!</h3>
-          <div>
-            <ul className={utilStyles.list}>
-              {posts.map(({ id, date, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-              ))}
-            </ul>
+          {/* Projects Section */}
+          <div style={{ textAlign: 'center', padding: '20px' }}>
+            <h3>Check out some of my recent projects!</h3>
+            <div>
+              <ul className={utilStyles.list}>
+                {projects.map(({ id, date, title }) => (
+                  <li className={utilStyles.listItem} key={id}>
+                    <Link href={`/projects/${id}`}>
+                      <a>{title}</a>
+                    </Link>
+                    <br />
+                    <small className={utilStyles.lightText}>
+                      <Date dateString={date} />
+                    </small>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
 
-      </div>
-    </Layout>
+          {/* Posts Section */}
+          <div style={{ textAlign: 'center', padding: '20px' }}>
+            <h3>Check out some of my recent posts!</h3>
+            <div>
+              <ul className={utilStyles.list}>
+                {posts.map(({ id, date, title }) => (
+                  <li className={utilStyles.listItem} key={id}>
+                    <Link href={`/posts/${id}`}>
+                      <a>{title}</a>
+                    </Link>
+                    <br />
+                    <small className={utilStyles.lightText}>
+                      <Date dateString={date} />
+                    </small>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </Layout>
+    </div>
   )
 }
 
