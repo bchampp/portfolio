@@ -23,7 +23,7 @@ export const siteTitle = 'Portfolio'
 export default function Layout({ children, page }) {
 
   return (
-    <div class="bg-black cursor-auto">
+    <div className="bg-black cursor-auto">
       {/* Page Head */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -47,7 +47,7 @@ export default function Layout({ children, page }) {
       <main>{children}</main>
 
       {page !== 'home' && (
-        <div className={styles.backToHome} class='bg-white'>
+        <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>

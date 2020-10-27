@@ -10,7 +10,7 @@ export default function Project({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <div class='py-10 px-32 bg-white'>
+      <div className='py-10 px-32 bg-white'>
         <article>
           <h1 className={utilStyles.headingXl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
