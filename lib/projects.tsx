@@ -16,7 +16,7 @@ export function getProjectsData() {
 
     // TODO: Parse Tags
     const matterResult = matter(fileContents)
-
+    console.log(matterResult);    
     return {
       id,
       ...matterResult.data
