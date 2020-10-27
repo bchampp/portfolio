@@ -8,7 +8,9 @@ import { GetStaticProps } from 'next'
 import Layout, { siteTitle } from '../components/layout'
 import Date from '../components/date'
 
-import ProjectCards from '../components/projects/ProjectCards'
+
+import Projects from '../components/projects.tsx';
+import Posts from '../components/posts.tsx';
 
 // Import Utility Functions
 import { getProjectsData } from '../lib/projects';
@@ -42,62 +44,10 @@ export default function Home({ projects, posts }) {
         </div>
 
         {/* Projects Section */}
-        <div style={{ textAlign: 'center', padding: '40px', backgroundColor: '#1a202c' }}>
-          <h3 class='px-6 text-white text-2xl mb-3'>Check out some of my recent projects</h3>
-          <div>
-            <ul class='flex justify-evenly px-20 py-10'>
-              {projects.slice(0, 3) // Take 3 most recent projects
-                .map(({ id, date, title, description, img, tags }) => (
-                  <li class='h-30 w-72' key={id}>
-                    <Link href={`/projects/${id}`}>
-                      <div class="max-w-sm rounded shadow-lg bg-white m-0  hover:bg-blue-800">
-                        <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-wht">{title}</div>
-                          <div class="text-m mb-2"><Date dateString={date} /></div>
-                          <p class="text-gray-700 text-base">
-                            {description}
-                          </p>
-                        </div>
-                        <div class="px-6 pt-4 pb-2">
-                          {tags && tags.map(tag => (
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
-                          )
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                    {/* <Link href={`/projects/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small> */}
-                  </li>
-                ))}
-            </ul>
-          </div>
-        </div>
+        <Projects projects={projects}/>
 
         {/* Posts Section */}
-        <div style={{ textAlign: 'center', padding: '20px', backgroundColor: '#2c0a30' }}>
-          <h3>Check out some of my recent posts!</h3>
-          <div>
-            <ul className={utilStyles.list}>
-              {posts.map(({ id, date, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <Posts posts={posts}/>
 
       </Layout>
     </div>
