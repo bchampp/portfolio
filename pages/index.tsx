@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
 import Layout, { siteTitle } from '../components/layout'
-import Hero from '../components/home/hero.tsx';
-import Projects from '../components/home/projects.tsx';
-import Posts from '../components/home/posts.tsx';
+import Hero from '../components/home/hero';
+import Projects from '../components/home/projects';
+import Posts from '../components/home/posts';
 
 // Import Utility Functions
 import { getProjectsData } from '../lib/projects';
