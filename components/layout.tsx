@@ -23,7 +23,7 @@ export const siteTitle = 'Portfolio'
 export default function Layout({ children, page }) {
 
   return (
-    <div className="bg-black cursor-auto">
+    <div className="bg-white cursor-auto">
       {/* Page Head */}
       <Head>
         <link rel="icon" href="/favicon.ico" />

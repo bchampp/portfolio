@@ -4,7 +4,7 @@ const links = ['About', 'Projects', 'Posts'];
 
 export default function Nav() {
     return (
-        <div className="top-0 flex justify-between">
+        <div className="top-0 flex bg-black justify-between">
             <div>
                 <Link href='/'><a className='inline-block py-2 px-4 text-white'>Brent Champion</a></Link>
             </div>

@@ -6,6 +6,7 @@ import html from 'remark-html'
 
 const projectsDir = path.join(process.cwd(), 'projects')
 
+//TODO: Make global function pre-cache
 export function getProjectsData() {
   const fileNames = fs.readdirSync(projectsDir)
 
@@ -15,6 +16,7 @@ export function getProjectsData() {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
     const matterResult = matter(fileContents)
+    
     return {
       id,
       ...matterResult.data
