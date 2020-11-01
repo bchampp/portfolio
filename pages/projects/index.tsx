@@ -1,17 +1,27 @@
 import Layout from '../../components/layout';
 import { getProjectsData } from '../../lib/projects';
+import utilStyles from '../../styles/utils.module.css';
+import Link from 'next/link';
+import Date from '../../components/date';
 
-export default function Projects({projects}){
+export default function Projects({ projects }) {
     return (
-        <Layout page='projects' style={{backgroundColor: 'white'}}>
+        <Layout page='projects'>
             <div>
                 Project Page
-                {projects &&
-                projects.map(project => 
-                    <div>
-                        {project.id}
-                    </div>
-                )}
+                <ul className={utilStyles.list}>
+                    {projects.map(({ id, date, title }) => (
+                        <li className={utilStyles.listItem} key={id}>
+                        <Link href={`/posts/${id}`}>
+                          <a>{title}</a>
+                        </Link>
+                        <br />
+                        <small className={utilStyles.lightText}>
+                          <Date dateString={date} />
+                        </small>
+                      </li>
+                    ))}
+                </ul>
             </div>
         </Layout>
     )
@@ -19,7 +29,6 @@ export default function Projects({projects}){
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const projects = getProjectsData();
-
     return {
         props: {
             projects,

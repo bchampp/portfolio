@@ -4,7 +4,7 @@ export default function About(){
     return (
         <Layout page='about'>
             <div>
-                About Page
+                About Me
             </div>
         </Layout>
     )
