@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Search from '../../components/search';
 import { GetStaticProps } from 'next';
+import Data from '../../components/data';
 
 const title = 'Projects';
 
@@ -20,31 +21,7 @@ export default function Projects({ projects, tags }) {
 			<div className="w-64 py-6 m-auto">
 				<Search setFilter={setFilters} options={tags} />
 			</div>
-			<ul className="m-auto text-center overflow-y-auto" style={{height: '60vh'}}>
-				{projects
-					.filter((project) => {
-                        if (filters.length == 0) { // No filters yet
-                            return true; 
-                        }
-
-						for (var i = 0; i < filters.length; i++) {
-							if (project.tags.includes(filters[i])) {
-								return true;
-							}
-						}
-					}).map(({ id, date, title }) => (
-						<li className={utilStyles.listItem} key={id}>
-							<Link href={`/projects/${id}`}>
-								<a>{title}</a>
-							</Link>
-							<br />
-							<small className={utilStyles.lightText}>
-								<Date dateString={date} />
-							</small>
-						</li>
-					))
-                }
-			</ul>
+			<Data filters={filters} data={projects} />
 		</Layout>
 	);
 }

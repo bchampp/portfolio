@@ -1,7 +1,3 @@
-import Link from "next/link";
-
-const links = ['About', 'Projects', 'Posts'];
-
 export default function Footer() {
     return (
         <div className="bg-black text-center py-4">

@@ -1,6 +1,7 @@
 ---
 title: 'Electronic Xylophone'
-date: '2017-06-04'
+startDate: '2020-12-01'
+endDate: '2019-12-09'
 description: 'A C++ application to merge panoramas'
 tags: ['c++', 'opencv']
 ---

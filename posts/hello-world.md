@@ -1,6 +1,7 @@
 ---
 title: 'Hello World!'
-date: '2020-11-01'
+startDate: '2020-12-01'
+endDate: '2019-12-09'
 ---
 
 Hello and welcome to <a href='https://brentchampion.com'>brentchampion.com</a>
