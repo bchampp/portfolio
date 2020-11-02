@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Layout from '../../components/layout'
-import { getAllProjectIds, getProjectData } from '../../lib/projects';
-import Date from '../../components/date';
+import { Date } from '../../components/data';
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
+import Content from '../../lib/content';
+import { PostAddTwoTone } from '@material-ui/icons';
 
 export default function Project({ postData }) {
   return (
@@ -15,7 +16,7 @@ export default function Project({ postData }) {
         <article>
           <h1 className={utilStyles.headingXl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
+            <Date startDate={postData.startDate} endDate={postData.endDate} />
           </div>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
@@ -28,7 +29,7 @@ export default function Project({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllProjectIds()
+  const paths = new Content('projects').getAllIds();
   return {
     paths,
     fallback: false
@@ -36,7 +37,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getProjectData(params.id)
+  const postData = await new Content('projects').getData(params.id);
+  
   return {
     props: {
       postData

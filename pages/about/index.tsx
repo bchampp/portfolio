@@ -23,7 +23,7 @@ export default function About() {
 						When I'm not working, I enjoy listening to and making music, reading,
 						skateboarding and snowboarding.
 					</p>
-					<div className="md:flex py-4">
+					<div className="flex py-4">
 						<div style={{ flex: '50%', textAlign: 'center' }}>
 							<b>Technical Skills</b>
 							<ul>

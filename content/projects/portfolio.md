@@ -1,6 +1,7 @@
 ---
 title: 'Portfolio'
-date: '2020-10-31'
+startDate: '2020-12-01'
+endDate: '2019-12-09'
 tags: ['react', 'nextjs', 'webapp']
 description: 'My portfolio website'
 ---

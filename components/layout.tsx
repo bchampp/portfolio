@@ -33,7 +33,7 @@ export default function Layout(props) {
       <Nav page={page}/>
       
       {/* Page Contents */}
-      <main className={page != 'home' ? "px-6 py-8" : ""}>{children}</main>
+      <main className={page != 'home' ? "px-6 py-8 w-full" : ""}>{children}</main>
 
       {/* Footer */}
       <Footer />
