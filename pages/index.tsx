@@ -4,7 +4,7 @@
 import { GetStaticProps } from 'next'
 
 // Custom Components
-import Layout from '../components/layout'
+import Layout, { siteTitle } from '../components/layout'
 import Hero from '../components/home/hero';
 import Projects from '../components/home/projects';
 import Posts from '../components/home/posts';
@@ -27,10 +27,10 @@ export default function Home({ projects, posts }) {
         <Hero/>
 
         {/* Projects Section */}
-        <Projects projects={projects} />
+        {/* <Projects projects={projects} /> */}
 
         {/* Posts Section */}
-        <Posts posts={posts} />
+        {/* <Posts posts={posts} /> */}
 
       </Layout>
     </div>
