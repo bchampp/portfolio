@@ -4,7 +4,7 @@
 import { GetStaticProps } from 'next'
 
 // Custom Components
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import Hero from '../components/home/hero';
 import Projects from '../components/home/projects';
 import Posts from '../components/home/posts';

@@ -10,7 +10,8 @@ const projectsDir = path.join(process.cwd(), 'work');
 export function getWorksData() {
 	const fileNames = fs.readdirSync(projectsDir);
 
-	const projects = fileNames.map((fileName) => {
+	let projects: Array<any>
+	projects = fileNames.map((fileName): any => {
 		const id = fileName.replace(/\.md$/, '');
 		const fullPath = path.join(projectsDir, fileName);
 		const fileContents = fs.readFileSync(fullPath, 'utf8');

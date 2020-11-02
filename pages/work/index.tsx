@@ -7,6 +7,7 @@ import Date from '../../components/date';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Search from '../../components/search';
+import { GetStaticProps } from 'next';
 
 const title = 'Work';
 

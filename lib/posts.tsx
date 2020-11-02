@@ -9,7 +9,8 @@ const postsDir = path.join(process.cwd(), 'posts')
 export function getPostsData() {
   const fileNames = fs.readdirSync(postsDir)
 
-  const allPostsData = fileNames.map(fileName => {
+  let posts: Array<any>;
+  posts = fileNames.map(fileName => {
     const id = fileName.replace(/\.md$/, '')
     const fullPath = path.join(postsDir, fileName)
     console.log(fullPath);
@@ -22,7 +23,7 @@ export function getPostsData() {
     }
   })
   
-  return allPostsData;
+  return posts;
   // Sort posts by date
   // return allPostsData.sort((a, b) => {
   //   if (a.date < b.date) {
