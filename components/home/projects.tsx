@@ -9,9 +9,9 @@ export default function Projects({ projects }) {
         <ul className='flex justify-evenly px-20 py-10'>
           {projects.slice(0, 3) // Take 3 most recent projects
             .map(({ id, date, title, description, img, tags }) => (
-              <li className='h-30 w-72' key={id}>
+              <li className='h-30 w-72 cursor-pointer' key={id}>
                 <Link href={`/projects/${id}`}>
-                  <div className="max-w-sm rounded shadow-lg bg-white m-0  hover:bg-blue-800">
+                  <div className="max-w-sm rounded shadow-lg bg-white m-0">
                     <div className="px-6 py-4">
                       <div className="font-bold text-xl mb-2 text-wht">{title}</div>
                       <div className="text-m mb-2"><Date dateString={date} /></div>

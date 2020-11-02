@@ -10,7 +10,9 @@ import Footer from './footer';
 // Page Constants
 const name = 'brent champion | ';
 
-export default function Layout({ children, page, id }) {
+export default function Layout(props) {
+  const { page, children, id } = props; // Destructure props
+
   const siteTitle = id ? name + id : name + page
   return (
     <div className="bg-white cursor-auto">

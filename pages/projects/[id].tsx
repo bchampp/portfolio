@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Layout from '../../components/layout'
 import { getAllProjectIds, getProjectData } from '../../lib/projects';
 import Date from '../../components/date';
@@ -8,7 +9,7 @@ export default function Project({ postData }) {
   return (
     <Layout page='projects'>
       <Head>
-        <title>{postData.title}</title>
+        <title>brent champion | {postData.title}</title>
       </Head>
       <div className='py-10 px-32 bg-white'>
         <article>
@@ -18,6 +19,9 @@ export default function Project({ postData }) {
           </div>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
+      </div>
+      <div className="text-center">
+        <Link href='/projects'><a>&#x2190; Back to Projects</a></Link>
       </div>
     </Layout>
   )

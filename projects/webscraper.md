@@ -1,8 +1,6 @@
 ---
-title: 'Autostitch'
-date: '2019-12-09'
+title: 'Webscraper'
+date: '2019-07-18'
 description: 'A C++ application to merge panoramas'
-tags: ['c++', 'opencv']
+tags: ['python', 'webapp']
 ---
-
-AutoStitch is an OpenCV application which uses Machine Learning to build a panorama image from an unordered set of images. 
