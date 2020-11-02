@@ -12,7 +12,7 @@ export default function Projects({ projects }) {
                 <ul className={utilStyles.list}>
                     {projects.map(({ id, date, title }) => (
                         <li className={utilStyles.listItem} key={id}>
-                        <Link href={`/posts/${id}`}>
+                        <Link href={`/projects/${id}`}>
                           <a>{title}</a>
                         </Link>
                         <br />

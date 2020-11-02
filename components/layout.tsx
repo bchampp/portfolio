@@ -15,6 +15,7 @@ import SearchIcon from '@material-ui/icons/Search';
 // Global Styles
 import styles from './layout.module.css'
 import Nav from './nav';
+import Footer from './footer';
 
 // Page Constants
 const name = 'Brent Champion'
@@ -44,15 +45,10 @@ export default function Layout({ children, page }) {
       {/* Navigation Bar */}
       <Nav />
       
-      <main>{children}</main>
+      <main className={page != 'home' ? "px-6 py-8" : ""}>{children}</main>
 
-      {page !== 'home' && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      {/* Bottom Footer */}
+      <Footer />
     </div>
   )
 }
