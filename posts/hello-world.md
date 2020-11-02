@@ -1,6 +1,6 @@
 ---
-title: 'Hello World'
-date: '2020-10-31'
+title: 'Hello World!'
+date: '2020-11-01'
 ---
 
-Welcome to my portfolio website, v3.0
+Hello and welcome to <a href='https://brentchampion.com'>brentchampion.com</a>

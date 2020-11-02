@@ -15,11 +15,11 @@ export default function Projects({ projects, tags }) {
 
 	return (
 		<Layout page="projects">
-			<h3 className="text-center text-xl py-4">{title}</h3>
+			<h3 className="text-center text-xl py-2">{title}</h3>
 			<div className="w-64 py-6 m-auto">
 				<Search setFilter={setFilters} options={tags} />
 			</div>
-			<ul className="py-4 m-auto text-center">
+			<ul className="m-auto text-center overflow-y-auto" style={{height: '60vh'}}>
 				{projects
 					.filter((project) => {
                         if (filters.length == 0) { // No filters yet

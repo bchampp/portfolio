@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const links = ['about', 'projects', 'posts'];
+const links = ['about', 'work', 'projects', 'posts'];
 
 export default function Nav({page}) {
     return (

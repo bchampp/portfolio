@@ -1,34 +1,34 @@
 import Link from 'next/link';
 import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllWorkIds, getWorkData } from '../../lib/work';
 import Date from '../../components/date';
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
 
-export default function Post({ postData }) {
+export default function Work({ postData }) {
   return (
-    <Layout page='posts'>
-    <Head>
-      <title>{postData.title}</title>
-    </Head>
-    <div className='py-10 px-32 bg-white'>
+    <Layout page='work'>
+      <Head>
+        <title>brent champion | {postData.title}</title>
+      </Head>
+      <div className='py-10 px-32 bg-white'>
         <article>
           <h1 className={utilStyles.headingXl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
+            <Date dateString={postData.startDate} />
           </div>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
       </div>
       <div className="text-center">
-        <Link href='/posts'><a>&#x2190; Back to Posts</a></Link>
+        <Link href='/work'><a>&#x2190; Back to Work</a></Link>
       </div>
-  </Layout>
+    </Layout>
   )
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = getAllWorkIds()
   return {
     paths,
     fallback: false
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData = await getWorkData(params.id)
   return {
     props: {
       postData

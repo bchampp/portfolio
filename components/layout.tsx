@@ -20,7 +20,7 @@ export default function Layout(props) {
       {/* Page Head */}
       <Head>
         <title>{siteTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo.png" />
         <meta
           name="description"
           content="Brent Champion Portfolio Website"
