@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { parseISO, format } from 'date-fns';
 import utilStyles from '../styles/utils.module.css';
 
-export default function Data({ filters, data }) {
+export default function Data({ type, filters, data }) {
 	return (
 		<div>
 			<ul className="m-auto text-center overflow-y-auto" style={{ height: '60vh' }}>
@@ -26,7 +26,7 @@ export default function Data({ filters, data }) {
 					})
 					.map(({ id, startDate, endDate, title }) => (
 						<li className={utilStyles.listItem} key={id}>
-							<Link href={`/projects/${id}`}>
+							<Link href={`/${type}/${id}`}>
 								<a>{title}</a>
 							</Link>
 							<br />

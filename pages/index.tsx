@@ -6,12 +6,9 @@ import { GetStaticProps } from 'next'
 // Custom Components
 import Layout from '../components/layout'
 import Hero from '../components/hero';
-import Projects from '../components/home/projects';
-import Posts from '../components/home/posts';
 
 // Import Utility Functions
-import { getProjectsData } from '../lib/projects';
-import { getPostsData } from '../lib/posts';
+import Content from '../lib/content';
 
 export default function Home({ projects, posts }) {
   return (
@@ -26,12 +23,6 @@ export default function Home({ projects, posts }) {
         {/* Hero Section */}
         <Hero/>
 
-        {/* Projects Section */}
-        {/* <Projects projects={projects} /> */}
-
-        {/* Posts Section */}
-        {/* <Posts posts={posts} /> */}
-
       </Layout>
     </div>
   )
@@ -39,8 +30,8 @@ export default function Home({ projects, posts }) {
 
 export const getStaticProps: GetStaticProps = async (context) => {
 
-  const projects = getProjectsData();
-  const posts = getPostsData();
+  const projects = new Content('projects').getAllData();
+  const posts = new Content('posts').getAllData();
 
   return {
     props: {

@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import Layout from '../../components/layout';
-import { getProjectsData, getAllProjectTags } from '../../lib/projects';
-import utilStyles from '../../styles/utils.module.css';
-import Link from 'next/link';
-import Date from '../../components/date';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import Search from '../../components/search';
 import { GetStaticProps } from 'next';
+
+import Layout from '../../components/layout';
+import Search from '../../components/search';
 import Data from '../../components/data';
+
+import Content from '../../lib/content';
 
 const title = 'Projects';
 
@@ -21,14 +18,14 @@ export default function Projects({ projects, tags }) {
 			<div className="w-64 py-6 m-auto">
 				<Search setFilter={setFilters} options={tags} />
 			</div>
-			<Data filters={filters} data={projects} />
+			<Data type={'projects'} filters={filters} data={projects} />
 		</Layout>
 	);
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-	const projects = getProjectsData();
-	const tags = getAllProjectTags();
+	const projects = new Content('projects').getAllData();
+	const tags = new Content('projects').getAllIds();
 
 	return {
 		props: {
