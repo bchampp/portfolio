@@ -28,7 +28,7 @@ export default function Layout({ children, page, id }) {
       </Head>
       
       {/* Nav Bar */}
-      <Nav />
+      <Nav page={page}/>
       
       {/* Page Contents */}
       <main className={page != 'home' ? "px-6 py-8" : ""}>{children}</main>

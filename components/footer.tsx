@@ -4,8 +4,8 @@ const links = ['About', 'Projects', 'Posts'];
 
 export default function Footer() {
     return (
-        <div className="top-0 flex bg-black justify-between">
-            <h5 className="text-white">Brent Champion 2020</h5>
+        <div className="bg-black text-center py-4">
+            <h5 className="text-white text-sm">	&#169; Brent Champion 2020</h5>
         </div>
     )
 }

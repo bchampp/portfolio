@@ -6,7 +6,7 @@ import { getPostsData } from '../../lib/posts';
 
 export default function Posts({ posts }) {
     return (
-        <Layout page='projects'>
+        <Layout page='posts'>
             <div>
                 Posts
                 <ul className={utilStyles.list}>

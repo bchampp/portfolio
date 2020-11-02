@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const links = ['about', 'projects', 'posts'];
 
-export default function Nav() {
+export default function Nav({page}) {
     return (
         <div className="top-0 flex bg-black justify-between">
             <div>
@@ -13,7 +13,7 @@ export default function Nav() {
                     {links.map(link => (
                         <li className="mr-3">
                             <Link href={`/${link}`}>
-                                <a className='inline-block py-2 px-4 no-underline text-white'>
+                                <a className={page == link ? 'inline-block py-2 px-4 underline text-white' : 'inline-block py-2 px-4 no-underline text-white'}>
                                     {link}
                                 </a>
                             </Link>
