@@ -1,54 +1,41 @@
-import React from 'react';
+/* Layout Component */
+
+// Next Imports
 import Head from 'next/head'
-import Link from 'next/link'
 
-// Material UI Components
-import { fade, makeStyles } from '@material-ui/core/styles';
-import {
-  AppBar, Badge,
-  IconButton, InputBase,
-  MenuItem, Menu,
-  Toolbar, Typography
-} from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
-
-// Global Styles
-import styles from './layout.module.css'
+// Custom Components
 import Nav from './nav';
 import Footer from './footer';
 
 // Page Constants
-const name = 'Brent Champion'
-export const siteTitle = 'Portfolio'
+const name = 'brent champion | ';
 
-export default function Layout({ children, page }) {
-
+export default function Layout({ children, page, id }) {
+  const siteTitle = id ? name + id : name + page
   return (
     <div className="bg-white cursor-auto">
+
       {/* Page Head */}
       <Head>
+        <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content="Brent Champion Portfolio Website"
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      {/* Navigation Bar */}
+      {/* Nav Bar */}
       <Nav />
       
+      {/* Page Contents */}
       <main className={page != 'home' ? "px-6 py-8" : ""}>{children}</main>
 
-      {/* Bottom Footer */}
+      {/* Footer */}
       <Footer />
+
     </div>
   )
 }
