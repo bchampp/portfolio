@@ -21,10 +21,10 @@ export default function Tagged({tag, work, projects, posts }) {
 
 export async function getStaticPaths() {
   const paths = getAllTagIds();
-
+  console.log(paths);
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 

@@ -14,6 +14,16 @@ const title = 'All Tags';
 export default function All({ work, projects, posts, tags }) {
 	const [ filters, setFilters ] = useState([]);
 	
+	const handleTagClick = (filter) => {
+		const exists = filters.indexOf(filter);
+		if (exists == -1){
+			setFilters([...filters, filter]);
+		} else {
+			console.log(exists);
+			setFilters(filters.splice(exists, 1))
+		}
+	}
+
 	return (
 		<Layout page="tags">
 			<h3 className="text-center text-xl py-2">{title}</h3>
@@ -22,7 +32,8 @@ export default function All({ work, projects, posts, tags }) {
                 {tags && tags.map(tag => 
                     (
                         <div className="px-2 m-auto my-2 bg-gray-200 rounded hover:bg-gray-500">
-								<div className="hover:cursor-pointer" onClick={() => window.history.pushState({}, null, `/tags/${tag.name.toLowerCase()}`)}>{tag.name}</div>
+								<div className="hover:cursor-pointer" 
+									onClick={() => { handleTagClick(tag.name); window.history.pushState({}, null, `/tags/${tag.name.toLowerCase()}`); }}>{tag.name}</div>
                         </div>
 
                     )
