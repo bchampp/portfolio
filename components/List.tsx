@@ -1,16 +1,12 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
-import { Date } from "./data";
 import Item from "./list/Item";
 import ExpandedItem from './list/ExpandedItem';
+import utilStyles from '../styles/utils.module.css';
+import Link from 'next/link';
+import Date from '../components/data';
 
-const createCardFlipId = index => `listItem-${index}`;
-
-const shouldFlip = index => (prev, current) =>
-  index === prev || index === current;
-
-export default function AnimatedList({data}) {
+export function AnimatedList({data}) {
     const [focused, setFocused] = useState(null);
     
     const handleChange = (index) => {
@@ -48,4 +44,40 @@ export default function AnimatedList({data}) {
         </ul>
       </Flipper>
     );
+}
+
+export function List({type, filters, data}) {
+  return (
+  <div>
+			<ul className="m-auto text-center overflow-y-auto" style={{ height: '60vh' }}>
+				{data
+					.filter((project) => {
+						if ('tags' in project) {
+							if (filters.length == 0) {
+								// No filters yet
+								return true;
+							}
+
+							for (var i = 0; i < filters.length; i++) {
+								if (project.tags.includes(filters[i])) {
+									return true;
+								}
+							} 
+							return false;
+						} else { return true; };
+					})
+					.map(({ id, startDate, endDate, title }) => (
+						<li className={utilStyles.listItem} key={id}>
+							<Link href={`/${type}/${id}`}>
+								<a>{title}</a>
+							</Link>
+							<br />
+							<small className={utilStyles.lightText}>
+								<Date startDate={startDate} endDate={endDate} />
+							</small>
+						</li>
+					))}
+			</ul>
+		</div>
+  )
 }

@@ -122,3 +122,23 @@ export function getAllTags(): Array<string> {
     const postTags = new Content('posts').getAllTags() || [];
     return removeDuplicates(tags.concat(workTags, projectTags, postTags));
 }
+
+export function getAllTagIds(){
+    const raw_tags = getAllTags(); // [{name: 'c++', count: 5}, {}...etc.]
+    
+    let tagNames = [];
+    raw_tags.forEach(tag => {
+        tagNames.push(tag.name);
+    })
+    console.log(tagNames);
+
+    let tags = tagNames.map(tag => {
+        return {
+            params: {
+                id: tag
+            }
+        }
+    })
+    console.log(tags);
+    return tags;
+}

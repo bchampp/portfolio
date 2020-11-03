@@ -11,9 +11,9 @@ export default function Hero() {
 						onInit={(typewriter) => {
 							typewriter
 								.typeString("Hi, I'm Brent.\n")
-                .pauseFor(2000)
+                .pauseFor(1000)
                 .typeString("I like to build things.")
-                .pauseFor(2000)
+                .pauseFor(1000)
                 .start();
 						}}
 					/>
