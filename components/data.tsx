@@ -5,8 +5,7 @@ import { parseISO, format } from 'date-fns';
 import utilStyles from '../styles/utils.module.css';
 import { List, AnimatedList } from './list';
 
-export default function Data({ type, filters, data }) {
-	console.log( );
+export default function Data({ style, type, filters, data }) {
 	let cleanData: Array<any>;
 
 	if (data) {
@@ -28,7 +27,7 @@ export default function Data({ type, filters, data }) {
 		});
 		return (
 			<div>
-				{type == 'posts' || type == 'tags' ? (
+				{style == 'posts' || style == 'tags' ? (
 					// <List data={cleanData} filters={filters} type={type}/>a
 					<List type={type} filters={filters} data={cleanData} />
 				) : (

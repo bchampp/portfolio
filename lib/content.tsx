@@ -88,10 +88,10 @@ export default class Content {
         const filePath = path.join(this.dir, `${id}.md`)
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const matterResult = matter(fileContents);
-    
+
         const processedContent = await remark().use(html).process(matterResult.content);
         const contentHtml = processedContent.toString();
-    
+
         return {
             id,
             contentHtml,
@@ -106,13 +106,20 @@ export default class Content {
 
 function removeDuplicates(array: Array<any>): Array<any> {
     var a = array.concat();
-    for(var i=0; i<a.length; ++i) {
-        for(var j=i+1; j<a.length; ++j) {
-            if(a[i] === a[j])
+    for (var i = 0; i < a.length; ++i) {
+        for (var j = i + 1; j < a.length; ++j) {
+            if (a[i].name === a[j].name)
                 a.splice(j--, 1);
         }
     }
-    return a;
+
+    return a.sort((a, b) => {
+        if (a.count < b.count) {
+            return 1;
+        } else { 
+            return -1;
+        }
+    });
 }
 
 export function getAllTags(): Array<string> {
@@ -120,17 +127,16 @@ export function getAllTags(): Array<string> {
     const workTags = new Content('work').getAllTags() || [];
     const projectTags = new Content('projects').getAllTags() || [];
     const postTags = new Content('posts').getAllTags() || [];
-    return removeDuplicates(tags.concat(workTags, projectTags, postTags));
+    return removeDuplicates(tags.concat(workTags, projectTags, postTags))
 }
 
-export function getAllTagIds(){
+export function getAllTagIds() {
     const raw_tags = getAllTags(); // [{name: 'c++', count: 5}, {}...etc.]
-    
+
     let tagNames = [];
     raw_tags.forEach(tag => {
         tagNames.push(tag.name);
     })
-    console.log(tagNames);
 
     let tags = tagNames.map(tag => {
         return {
@@ -139,6 +145,5 @@ export function getAllTagIds(){
             }
         }
     })
-    console.log(tags);
     return tags;
 }

@@ -1,27 +1,17 @@
-import Link from 'next/link';
-import Layout from '../../components/layout'
-import Head from 'next/head'
 import { getAllTagIds } from '../../lib/content';
+import Tags from '.';
+import Content, { getAllTags } from '../../lib/content';
 
-const title = 'brent champion | ';
+const title = 'Tagged | ';
 
 export default function Tagged({tag, work, projects, posts }) {
   return (
-    <Layout page='projects'>
-      <Head>
-        <title>brent champion | {tag}</title>
-      </Head>
-      <h2 className="text-center">Tagged | {tag}</h2>
-      <div className="text-center">
-        <Link href='/tags'><a>&#x2190; All Tags</a></Link>
-      </div>
-    </Layout>
+    <Tags tag={tag} work={work} projects={projects} posts={posts} />
   )
 }
 
 export async function getStaticPaths() {
   const paths = getAllTagIds();
-  console.log(paths);
   return {
     paths,
     fallback: true
@@ -29,16 +19,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    console.log(params);
-    const tag = params.id;
-    const jobs = [];
-    const projects = [];
-    const posts = [];
+    const query = params.id;
+    const tag = query.split("&");
+    const work = new Content('work').getAllData();
+    const projects = new Content('projects').getAllData();
+    const posts = new Content('posts').getAllData();
   
   return {
     props: {
       tag, 
-      jobs,
+      work,
       projects, 
       posts
     }

@@ -9,7 +9,6 @@ const shouldFlip = index => (prev, current) =>
     index === prev || index === current;
 
 export default function Item({ data, index, onClick }) {
-    console.log(data);
     return (
         <Flipped
             flipId={createCardFlipId(index)}
@@ -26,7 +25,7 @@ export default function Item({ data, index, onClick }) {
                             delayUntil={createCardFlipId(index)}
                         >
                         </Flipped>
-                        <div>
+                        <div className="w-full">
                             <Flipped
                                 flipId={`description-${index}-${data.title}`}
                                 stagger="card-content"
@@ -43,18 +42,29 @@ export default function Item({ data, index, onClick }) {
                                 shouldFlip={shouldFlip(index)}
                                 delayUntil={createCardFlipId(index)}
                             >
-                                <div className="text-sm"><Date startDate={data.startDate} endDate={data.endDate} /></div>
+                                <div className="text-sm float-right"><Date startDate={data.startDate} endDate={data.endDate} /></div>
                             </Flipped>
+
+                        <div style={{flexBasis: '100%', height: '0'}}></div>
+                        <Flipped
+                                flipId={`description-${index}-${data.title}`}
+                                stagger="card-content"
+                                shouldFlip={shouldFlip(index)}
+                                delayUntil={createCardFlipId(index)}
+                            >
+                                <div className="text-sm">{data.position}</div>
+                            </Flipped>
+
                             {data.tags &&
-                                <>
+                                <div>
                                     <Flipped
                                         flipId={`description-${index}-${data.title}`}
                                         stagger="card-content"
                                         shouldFlip={shouldFlip(index)}
                                         delayUntil={createCardFlipId(index)}
                                     >
-                                        <div className="text-md flex justify-around">
-                                            {data.tags.slice(0, 2).map(tag =>
+                                        <div className="text-md flex">
+                                            {data.tags.map(tag =>
                                                 <div className="bg-red-200 px-4 m-2 rounded">
                                                     <Link href={`/tags/${tag}`}>
                                                         <a>{tag}</a>
@@ -64,7 +74,7 @@ export default function Item({ data, index, onClick }) {
                                             }
                                         </div>
                                     </Flipped>
-                                </>
+                                </div>
                             }
                         </div>
                     </div>
