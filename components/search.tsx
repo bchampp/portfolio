@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Search({setFilter, options}) {
   const classes = useStyles();
-
+  console.log(options);
   const handleChange = (e, values) => {
       let tags = [];
       values.forEach(value => {

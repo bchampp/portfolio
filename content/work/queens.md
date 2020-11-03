@@ -2,7 +2,9 @@
 title: 'Teaching Assistant (TA)'
 startDate: '2019-09-08'
 endDate: '2020-12-05'
-tags: ['react']
+tags: ['c++', 'data structures']
+description: ['blah', 'blahasd', 'blasdfasf']
+
 ---
 
 Acoutera 

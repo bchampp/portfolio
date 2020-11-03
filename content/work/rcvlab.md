@@ -2,7 +2,8 @@
 title: 'Robotic Computer Vision Research Lab'
 startDate: '2019-05-01'
 endDate: '2020-01-01'
-tags: ['react']
+tags: ['c++', 'opencv']
+description: ['blah', 'blahasd', 'blasdfasf'] 
 ---
 
-RCV Lab
+RCV Laba

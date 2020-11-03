@@ -11,7 +11,7 @@ export default function Nav({page}) {
             <div className="text-center">
                 <ul className="flex justify-between">
                     {links.map(link => (
-                        <li className="mr-3">
+                        <li className="mr-3" key={link}>
                             <Link href={`/${link}`}>
                                 <a className={page == link ? 'inline-block py-2 px-4 underline text-white' : 'inline-block py-2 px-4 no-underline text-white'}>
                                     {link}

@@ -25,7 +25,7 @@ export default function Projects({ projects, tags }) {
 
 export const getStaticProps: GetStaticProps = async (context) => {
 	const projects = new Content('projects').getAllData();
-	const tags = new Content('projects').getAllIds();
+	const tags = new Content('projects').getAllTags();
 
 	return {
 		props: {
