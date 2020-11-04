@@ -1,8 +1,9 @@
 ---
 title: 'Pill Dispenser'
-startDate: '2020-12-01'
-endDate: '2019-12-09'
-description: 'A '
+startDate: '2018-09-01'
+endDate: '2018-12-09'
+subtitle: 'A '
+type: 'projects'
 tags: ['c++', '3D printing']
 ---
 

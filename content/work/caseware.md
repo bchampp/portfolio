@@ -3,7 +3,8 @@ title: 'CaseWare International'
 startDate: '2020-09-08'
 endDate: 'present'
 tags: ['aws', 'java', 'angular']
-position: 'Software Developer Intern'
+subtitle: 'Software Developer Intern'
+type: 'work'
 description: ['blah', 'blahasd', 'blasdfasf']
 
 ---

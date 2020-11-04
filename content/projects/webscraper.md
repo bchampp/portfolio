@@ -1,7 +1,7 @@
 ---
 title: 'Webscraper'
-startDate: '2020-12-01'
-endDate: '2019-12-09'
-description: 'A C++ application to merge panoramas'
+startDate: '2019-07-01'
+endDate: '2019-07-09'
+subtitle: 'A C++ application to merge panoramas'
 tags: ['python', 'webapp']
 ---

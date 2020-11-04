@@ -2,7 +2,8 @@
 title: 'AuxMe'
 startDate: '2020-09-09'
 endDate: 'present'
-description: 'Democratic music application'
+type: 'projects'
+subtitle: 'Democratic music application'
 img: '/images/projects/auxme.PNG'
 link: 'https://github.com/bchampp/auxme'
 tags: ['spotify', 'serverless', 'react', 'webapp', 'app']

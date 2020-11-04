@@ -1,8 +1,9 @@
 ---
 title: 'Electronic Throttle Control'
-startDate: '2020-12-01'
-endDate: '2019-12-09'
-description: 'An Electronic Throttle Control System'
+startDate: '2018-10-01'
+endDate: '2020-12-09'
+type: 'projects'
+subtitle: 'An Electronic Throttle Control System'
 tags: ['c++', 'formula', 'control system']
 ---
 

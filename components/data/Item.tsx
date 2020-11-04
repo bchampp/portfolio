@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
-import { Date } from "../data";
+import { Date } from "./data";
 
 const createCardFlipId = index => `listItem-${index}`;
 

@@ -1,8 +1,9 @@
 ---
 title: 'Guess Master'
-startDate: '2020-12-01'
-endDate: '2019-12-09'
-description: 'A Java console and Android app'
+startDate: '2019-01-01'
+endDate: '2019-04-09'
+type: 'projects'
+subtitle: 'A Java console and Android app'
 tags: ['java', 'app']
 ---
 

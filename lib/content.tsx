@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
+import { parseISO } from 'date-fns/esm/fp';
 
 interface Post {
     id: string,
@@ -100,7 +101,25 @@ export default class Content {
     }
 
     sort(data: Array<any>): Array<any> {
-        return data;
+        return data.sort((a, b) => {
+            const start_a = a.startDate.split('-').join('');
+            const start_b = b.startDate.split('-').join('');
+            const end_a = a.endDate.split('-').join('');
+            const end_b = b.endDate.split('-').join('');
+
+            if (a.endDate == 'present' && b.endDate == 'present') {
+                if (start_a > start_b) return -1;
+                else return 1
+            } else if (a.endDate == 'present') {
+                return -1;
+            } else if (b.endDate == 'present') {
+                return 1;
+            } else {
+                if (end_a > end_b) return -1;
+                else return 1
+            }
+            return a;
+        })
     }
 }
 

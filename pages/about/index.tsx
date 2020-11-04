@@ -1,4 +1,4 @@
-import Layout from '../../components/layout';
+import Layout from '../../components/global/layout';
 
 const title = 'About Me';
 const technicalSkills = ['TypeScript/JavaScript', 'C++', 'AWS', 'ReactJS', 'Node.js'];

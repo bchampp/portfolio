@@ -1,11 +1,11 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
-import Layout from '../../components/layout';
-import Search from '../../components/search';
+import Layout from '../../components/global/layout';
+import Search from '../../components/data/search';
 import React, { useState } from 'react';
 
-import Data from '../../components/data';
+import Data from '../../components/data/data';
 import Content, { getAllTags } from '../../lib/content';
 import ActiveLink from '../../components/activelink';
 
