@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
 // Custom Components
-import Layout from '../../components/global/layout';
-import Data from '../../components/data/data';
+import Layout from '../../components/global/Layout';
+import Data from '../../components/lists/Data';
 import Content from '../../lib/content';
 
 const title = 'Work Experience';

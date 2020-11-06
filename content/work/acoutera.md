@@ -9,7 +9,7 @@ type: 'work'
 ---
 
 
-## My first taste of the start up life
+## My first taste of the start up culture
 Over the summer of 2020 I interned as a Full Stack Software Engineer for Acoutera. 
 Not only was this my first internship working in Full Stack development, this was actually my
 first formal introduction to web development in general. 

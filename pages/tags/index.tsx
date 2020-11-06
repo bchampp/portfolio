@@ -1,24 +1,36 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
-import Layout from '../../components/global/layout';
+import Layout from '../../components/global/Layout';
 import React, { useState } from 'react';
 
-import Data from '../../components/data/data';
+import Data from '../../components/lists/Data';
 import Content, { getAllTags } from '../../lib/content';
+import Tags from '../../components/global/Tags';
 
 const title = 'All Tags';
 
-export default function Tags({ tag, work, projects, posts, tags }) {
+export default function Index({ tag, work, projects, posts, tags }) {
 	const [filters, setFilters] = useState(tag ? tag : []);
 
 	const handleTagClick = (filter) => {
+		console.log(filter);
+		let currFilters = filters;
 		const exists = filters.indexOf(filter);
 		if (exists == -1) {
-			setFilters([...filters, filter]);
+			currFilters = [...filters, filter];
 		} else {
-			setFilters(filters.splice(exists, 1))
+			currFilters.splice(exists, 1)
+			console.log(currFilters);
 		}
+
+		let route = `/tags/${currFilters[0]}`;
+		for (var i = 1; i < currFilters.length; i++) {
+			const routePostfix = `&${currFilters[i]}`;
+			route = route.concat(routePostfix);
+		}
+		setFilters(currFilters);
+		window.history.pushState({}, null, route);
 	}
 
 	return (
@@ -31,17 +43,8 @@ export default function Tags({ tag, work, projects, posts, tags }) {
 				}
 			</h3>
 			{/* TODO: Cool Animation Here */}
-			<div className="flex px-48 py-4 justify-evenly flex-wrap">
-				{tags && tags.map(tag =>
-					(
-						<div key={tag.name} className="px-2 m-auto my-2 bg-gray-200 rounded hover:bg-gray-500">
-							<div className="hover:cursor-pointer"
-								onClick={() => { handleTagClick(tag.name); window.history.pushState({}, null, `/tags/${tag.name.toLowerCase()}`); }}>{tag.name}</div>
-						</div>
+			<Tags tags={tags} filters={filters} handleClick={handleTagClick} />
 
-					)
-				)}
-			</div>
 			<div className="flex justify-evenly">
 				<div className="text-center w-1/3">
 					<div className="py-6">

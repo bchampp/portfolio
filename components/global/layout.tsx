@@ -4,8 +4,8 @@
 import Head from 'next/head'
 
 // Custom Components
-import Nav from './nav';
-import Footer from './footer';
+import Nav from './Nav';
+import Footer from './Footer';
 
 // Page Constants
 const name = 'brent champion | ';

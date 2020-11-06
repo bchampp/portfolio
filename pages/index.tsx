@@ -4,7 +4,7 @@
 import { GetStaticProps } from 'next';
 
 // Custom Components
-import Layout from '../components/global/layout';
+import Layout from '../components/global/Layout';
 import Hero from '../components/hero';
 
 // Import Utility Functions

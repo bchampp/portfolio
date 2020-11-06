@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import Layout from '../../components/global/layout';
-import { Date } from '../../components/data/data';
+import Layout from '../../components/global/Layout';
+import Date from '../../components/global/Date';
 import utilStyles from '../../styles/utils.module.css';
 import Content from '../../lib/content';
 

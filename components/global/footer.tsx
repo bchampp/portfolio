@@ -1,3 +1,5 @@
+/* Footer Component */
+
 export default function Footer() {
     return (
         <div className="bg-black text-center py-4">

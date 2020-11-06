@@ -1,14 +1,47 @@
+/* Lists/Item Component - both static and animated versions*/
+
 import Link from "next/link";
 import React, { useState } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
-import { Date } from "./data";
+import Date from '../global/date';
+
+export function ListItem({ data }) {
+	return (
+		<Link href={`/${data.type}/${data.id}`}>
+			<a style={{ textDecoration: 'none' }} className="listItem">
+				<div className="listItemContent">
+					<div className="w-full flex flex-wrap justify-between">
+						<div className="font-bold float-left">{data.title}</div>
+						<div className="text-sm float-right text-gray-700">
+							<Date startDate={data.startDate} endDate={data.endDate} />
+						</div>
+						<div style={{ flexBasis: '100%', height: '0' }} />
+						<div className="text-sm px-2">{data.subtitle}</div>
+						<div style={{ flexBasis: '100%', height: '0' }} />
+						{data.tags && (
+							<div className="text-md flex flex-wrap">
+								{data.tags.map((tag) => (
+									<div className="tag">
+										<Link href={`/tags/${tag}`}>
+											<a>{tag}</a>
+										</Link>
+									</div>
+								))}
+							</div>
+						)}
+					</div>
+				</div>
+			</a>
+		</Link>
+	);
+}
 
 const createCardFlipId = index => `listItem-${index}`;
 
 const shouldFlip = index => (prev, current) =>
     index === prev || index === current;
 
-export default function ExpandedItem({ data, index, onClick }) {
+export function ExpandedItem({ data, index, onClick }) {
     return (
         <Flipped
             flipId={createCardFlipId(index)}

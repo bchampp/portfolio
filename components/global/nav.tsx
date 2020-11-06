@@ -1,3 +1,5 @@
+/* Nav Component */
+
 import Link from "next/link";
 
 const links = ['about', 'work', 'projects', 'posts'];
