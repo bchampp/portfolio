@@ -1,10 +1,10 @@
 ---
 title: 'Portfolio'
 startDate: '2020-11-01'
-endDate: '2019-11-09'
-tags: ['react', 'nextjs', 'webapp']
+endDate: 'present'
+tags: ['react', 'nextjs', 'typescript', 'webapp']
 type: 'projects'
-subtitle: 'My portfolio website'
+subtitle: 'My personal and portfolio website'
 ---
 
 This is my portfolio website!

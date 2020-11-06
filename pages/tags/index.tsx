@@ -2,12 +2,10 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
 import Layout from '../../components/global/layout';
-import Search from '../../components/data/search';
 import React, { useState } from 'react';
 
 import Data from '../../components/data/data';
 import Content, { getAllTags } from '../../lib/content';
-import ActiveLink from '../../components/activelink';
 
 const title = 'All Tags';
 
@@ -49,19 +47,19 @@ export default function Tags({ tag, work, projects, posts, tags }) {
 					<div className="py-6">
 						<Link href='/work'><a className="text-l font-bold">Work</a></Link>
 					</div>
-					<Data type={'work'} style={'tags'} filters={filters} data={work} />
+					<Data type={'work'} filters={filters} data={work} />
 				</div>
 				<div className="text-center w-1/3">
 					<div className="py-6">
 						<Link href='/projects'><a className="text-l font-bold">Projects</a></Link>
 					</div>
-					<Data type={'projects'} style={'tags'} filters={filters} data={projects} />
+					<Data type={'projects'} filters={filters} data={projects} />
 				</div>
 				<div className="text-center w-1/3">
 					<div className="py-6">
 						<Link href='/posts'><a className="text-l font-bold">Posts</a></Link>
 					</div>
-					<Data type={'posts'} style={'tags'} filters={filters} data={posts} />
+					<Data type={'posts'} filters={filters} data={posts} />
 				</div>
 			</div>
 			{tag ?

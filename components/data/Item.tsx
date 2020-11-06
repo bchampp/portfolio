@@ -63,9 +63,9 @@ export default function Item({ data, index, onClick }) {
                                         shouldFlip={shouldFlip(index)}
                                         delayUntil={createCardFlipId(index)}
                                     >
-                                        <div className="text-md flex">
+                                        <div className="text-md flex m-auto">
                                             {data.tags.map(tag =>
-                                                <div className="bg-red-200 px-4 m-2 rounded">
+                                                <div className="bg-red-200 px-1 m-2 rounded text-xl">
                                                     <Link href={`/tags/${tag}`}>
                                                         <a>{tag}</a>
                                                     </Link>

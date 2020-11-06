@@ -17,7 +17,7 @@ export default function Hero() {
 				data-y_margin="18"
 			/>
 
-			<img className="w-full object-cover" src="/images/background.jpg" alt="Mountain Image" />
+			<img className="w-full object-cover" src="/background.jpg" alt="Mountain Image" />
 			<div className="px-6 py-4 m-auto flex items-center absolute top-0 left-0 right-0 bottom-0">
 				<h3 className="font-semibold text-white tracking-tight text-6xl w-full mb-3 items-center text-center align-middle">
 					<Typewriter

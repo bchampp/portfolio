@@ -1,7 +1,8 @@
 ---
 title: 'AutoStitch'
-startDate: '2020-12-01'
-endDate: '2020-12-09'
+startDate: '2019-12-01'
+endDate: '2019-12-09'
+image: ''
 subtitle: 'A C++ application to merge panoramas'
 tags: ['c++', 'opencv', 'machine learning']
 type: 'projects'

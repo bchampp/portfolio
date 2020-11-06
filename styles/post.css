@@ -5,6 +5,10 @@
     font-weight: bold;
 }
 
+.post h1 {
+    font-weight: bold;
+    font-size: large;
+}
 .post p {
     width: 100%;
     padding-bottom: 5px;

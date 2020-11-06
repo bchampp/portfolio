@@ -31,7 +31,7 @@ export default function Search({setFilter, options}) {
           <TextField
             {...params}
             variant="standard"
-            placeholder="Technologies"
+            placeholder="tags"
           />
         )}
       />

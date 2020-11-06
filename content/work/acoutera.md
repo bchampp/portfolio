@@ -2,11 +2,10 @@
 title: 'Acoutera'
 startDate: '2020-05-01'
 endDate: '2020-08-31'
-image: '/images/work/acoutera/banner.png'
+image: '/work/banner.png'
 tags: ['react', 'express', 'mongodb', 'node']
 subtitle: 'Software Engineering Intern'
 type: 'work'
-post: '/posts/acoutera'
 ---
 
 

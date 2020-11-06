@@ -4,9 +4,9 @@ import Content, { getAllTags } from '../../lib/content';
 
 const title = 'Tagged | ';
 
-export default function Tagged({tag, work, projects, posts }) {
+export default function Tagged({tag, work, projects, posts, tags }) {
   return (
-    <Tags tag={tag} work={work} projects={projects} posts={posts} />
+    <Tags tag={tag} tags={tags} work={work} projects={projects} posts={posts} />
   )
 }
 
@@ -24,13 +24,15 @@ export async function getStaticProps({ params }) {
     const work = new Content('work').getAllData();
     const projects = new Content('projects').getAllData();
     const posts = new Content('posts').getAllData();
-  
+    const tags = getAllTags();
+
   return {
     props: {
       tag, 
       work,
       projects, 
-      posts
+      posts, 
+      tags
     }
   }
 }

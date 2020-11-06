@@ -12,7 +12,7 @@ export default function About() {
 				<h1 className="text-center text-xl font-bold py-4">{title}</h1>
 				<div className="text-center px-20">
                     {/* TODO: Make next/image component */}
-					<img className="rounded-full m-auto py-2" src="/images/me.jpg" width={300} height={300} />
+					<img className="rounded-full m-auto py-2" src="/me.jpg" width={300} height={300} />
                     <p className="py-2">Hi. I'm Brent. I'm from Mississauga, Ontario.</p>
 					<p className="py-2">
 						I'm in between my third and fourth years as a Computer Engineering student at Queen's

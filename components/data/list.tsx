@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import Item from './Item';
 import ExpandedItem from './ExpandedItem';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import { Date } from './data';
+import Projects from '../../pages/projects';
 
 export function AnimatedList({ data }) {
 	const [ focused, setFocused ] = useState(null);
@@ -47,29 +48,24 @@ export function List({ type, filters, data }) {
 		<div>
 			<ul className="list">
 				{data
-					.filter((project) => {
-						if ('tags' in project) {
-							if (filters.length == 0) {
-								// No filters yet
-								return true;
-							}
-
-							for (var i = 0; i < filters.length; i++) {
-								if (project.tags.includes(filters[i])) {
-									return true;
-								}
-							}
-							return false;
-						} else {
-							return true;
-						}
-					})
+					.filter((project) => sortList(project, filters))
 					.map((item, i) => {
 						return <ListItem data={data[i]} />;
 					})}
 			</ul>
 		</div>
 	);
+}
+
+const sortList = (project, filters) => {
+	if (filters.length == 0){
+		return true;
+	}
+	for (var i = 0; i < filters.length; i++){
+		if (project.tags && project.tags.includes(filters[i])) {
+			return true;
+		}
+	} return false;
 }
 
 export function ListItem({ data }) {

@@ -7,9 +7,8 @@ import { List, AnimatedList } from './list';
 
 const ANIMATED = false;
 
-export default function Data({ style, type, filters, data }) {
+export default function Data({ type, filters, data }) {
 	let cleanData: Array<any>;
-
 	if (data) {
 		cleanData = data.filter((project) => {
 			if ('tags' in project) {
@@ -28,7 +27,7 @@ export default function Data({ style, type, filters, data }) {
 			}
 		});
 		return (
-			<div className="w-3/5 m-auto">
+			<div className={"w-4/5 m-auto"}>
 				<List type={type} filters={filters} data={cleanData} />
 			</div>
 		);

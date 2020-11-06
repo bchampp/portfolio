@@ -147,10 +147,11 @@ export function getAllTags(): Array<string> {
     const projectTags = new Content('projects').getAllTags() || [];
     const postTags = new Content('posts').getAllTags() || [];
     return removeDuplicates(tags.concat(workTags, projectTags, postTags))
+        .sort((a, b) => a.count > b.count ? 1 : -1)
 }
 
 export function getAllTagIds() {
-    const raw_tags = getAllTags(); // [{name: 'c++', count: 5}, {}...etc.]
+    const raw_tags: Array<any> = getAllTags(); // [{name: 'c++', count: 5}, {}...etc.]
 
     let tagNames = [];
     raw_tags.forEach(tag => {
