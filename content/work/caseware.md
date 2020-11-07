@@ -6,6 +6,7 @@ image: '/work/caseware.png'
 tags: ['java', 'typescript', 'aws', 'angular']
 subtitle: 'Software Developer Intern'
 type: 'work'
+exists: true
 ---
 
 # CaseWare International

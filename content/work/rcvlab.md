@@ -5,7 +5,7 @@ endDate: '2020-01-01'
 tags: ['c++', 'opencv', 'machine learning']
 subtitle: 'Software Research Intern'
 type: 'work'
-description: ['blah', 'blahasd', 'blasdfasf'] 
+# exists: true
 ---
 
 RCV Laba

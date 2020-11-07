@@ -119,7 +119,7 @@ export default class Content {
                 else return 1
             }
             return a;
-        })
+        }).filter(post => post.exists)
     }
 }
 
