@@ -10,20 +10,34 @@ export default function About() {
 			<div>
 				{/* Title */}
 				<h1 className="text-center text-xl font-bold py-4">{title}</h1>
-				<div className="text-center px-20">
+				<div className="px-40">
                     {/* TODO: Make next/image component */}
 					<img className="rounded-full m-auto py-2" src="/me.jpg" width={300} height={300} />
-                    <p className="py-2">Hi. I'm Brent. I'm from Mississauga, Ontario.</p>
-					<p className="py-2">
-						I'm in between my third and fourth years as a Computer Engineering student at Queen's
-						University. I'm currently on internship at CaseWare international, where I'm working as a Full Stack
-						Developer on an exciting project!
+                    <p className="py-4">Hi. I'm Brent. I'm from Mississauga, Ontario.</p>
+					<p>
+						I'm in between my third and fourth years of my undergrad at Queen's University, where I'm studying Computer Engineering. 
+						Despite being primarily focused on Software Engineering, I love getting my hands dirty and working on diverse projects.
+						Throughout my undergrad, I've had the opportunity to work on several awesome <a href='/projects'>Projects</a> through 
+						Design Teams, work and hobby. While I lean towards involving myself in the technical side of projects,  I enjoy taking the lead
+						and helping a team work towards a common goal. 
 					</p>
-					<p className="py-2">
-						When I'm not working, I enjoy listening to and making music, reading,
+					<br></br>
+					<p>
+						Currently, I'm interning as a Full Stack developer with CaseWare International,
+						working remotely on an exciting cloud based project.
+					</p>
+					<br></br>
+					<p>
+						I'm also in an <a href='https://www.ece.queensu.ca/undergraduate/computer-engineering/four-plus-one.html'>accelerated masters program</a>, 
+						which I'll start actively working on in about a year. As of now, my MASc degree will be 
+						focused on applying Machine Learning techniques to a variety of industry Robotics and Machine Vision problems.
+					</p>
+					<br></br>
+					<p>
+						In my free time, I enjoy listening to and making music, reading,
 						skateboarding and snowboarding.
 					</p>
-					<div className="flex py-4">
+					{/* <div className="flex py-4">
 						<div style={{ flex: '50%', textAlign: 'center' }}>
 							<b>Technical Skills</b>
 							<ul>
@@ -40,7 +54,7 @@ export default function About() {
                                 ))}
 							</ul>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Layout>

@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Layout from '../../components/global/Layout';
-import Date from '../../components/global/Date';
 import Head from 'next/head'
-import utilStyles from '../../styles/utils.module.css'
 import Content from '../../lib/content';
+import Post from '../../components/posts/Post';
 
 export default function Project({ postData }) {
   return (
@@ -11,15 +10,8 @@ export default function Project({ postData }) {
       <Head>
         <title>brent champion | {postData.title}</title>
       </Head>
-      <div className='py-10 px-32 bg-white'>
-        <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
-            <Date startDate={postData.startDate} endDate={postData.endDate} />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </article>
-      </div>
+			<Post data={postData} />
+
       <div className="text-center">
         <Link href='/projects'><a>&#x2190; Back to Projects</a></Link>
       </div>

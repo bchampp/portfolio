@@ -8,26 +8,32 @@
 /* Wrapper for Markdown Text */
 .post h1 {
     font-weight: bold;
-    font-size: larger;
+    font-size: x-large;
     padding-top: 30px;
     padding-bottom: 10px;
 }
 .post h2 {
-    padding-bottom: 10px;
-    padding-top: 50px;
+    font-size: larger;
+    padding-bottom: 20px;
+    padding-top: 20px;
     font-weight: bold;
 }
-
+.post h3 {
+    font-size: large;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+}
 .post p {
     width: 100%;
     padding-bottom: 5px;
     padding-top: 5px;
-
 }
 .post img {
     width: 50%;
+    height: auto;
     margin: auto;
-    padding: 10px 0px 20px 0px;
+    padding: 10px 10px 0px 10px;
 }
 .post ul {
     list-style-type: circle;
@@ -35,3 +41,15 @@
     padding-left: 6%;
     color: black;
   }
+
+.title h1{
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
