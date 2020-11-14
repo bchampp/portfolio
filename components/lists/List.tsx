@@ -11,7 +11,7 @@ export function List({ type, filters, data }) {
 		<div>
 			<ul className="list">
 				{data.filter((project) => sortList(project, filters)).map((item, i) => {
-					return <ListItem data={data[i]} />;
+					return <ListItem key={i} data={data[i]} />;
 				})}
 			</ul>
 		</div>

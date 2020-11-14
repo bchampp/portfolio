@@ -1,12 +1,13 @@
 /* Nav Component */
 
 import Link from "next/link";
+import pageStyles from './page.module.css';
 
 const links = ['about', 'work', 'projects', 'posts'];
 
 export default function Nav({page}) {
     return (
-        <div className="top-0 flex bg-black justify-between">
+        <header className={pageStyles.nav}>
             <div>
                 <Link href='/'><a className='inline-block py-2 px-4 text-white'>brent champion</a></Link>
             </div>
@@ -23,13 +24,13 @@ export default function Nav({page}) {
                     ))}
                     <li className="mr-3">
                         <Link href='https://drive.google.com/file/d/1Mlz0-qz1H8olaJHuRJoG1eYiIaFCYjp-/view?usp=sharing'>
-                            <a className='inline-block py-2 px-4 text-white'>
+                            <a target="_blank" className='inline-block py-2 px-4 text-white'>
                                 resume
                             </a>
                         </Link>
                     </li>
                 </ul>
             </div>
-        </div>
+        </header>
     )
 }

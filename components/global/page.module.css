@@ -1,0 +1,17 @@
+.nav {
+    background-color: black;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer h5 {
+    color: white;
+    font-size: small;
+}
