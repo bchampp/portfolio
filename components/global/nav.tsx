@@ -11,7 +11,7 @@ export default function Nav({page}) {
             <div>
                 <Link href='/'><a className='inline-block py-2 px-4 text-white'>brent champion</a></Link>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
                 <ul className="flex justify-between">
                     {links.map(link => (
                         <li className="mr-3" key={link}>
@@ -30,7 +30,7 @@ export default function Nav({page}) {
                         </Link>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </header>
     )
 }

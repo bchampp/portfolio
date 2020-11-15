@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
-import Date from '../global/date';
+import Date from '../global/Date';
 
 export function ListItem({ data }) {
     return (

@@ -1,0 +1,17 @@
+/* Wrapper for Markdown Text */
+.post h2 {
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.post h1 {
+    font-weight: bold;
+    font-size: large;
+}
+.post p {
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
