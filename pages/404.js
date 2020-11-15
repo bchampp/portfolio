@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Layout from '../components/global/layout';
+import Layout from '../components/global/Layout';
 
 export default function Custom404() {
     return (
