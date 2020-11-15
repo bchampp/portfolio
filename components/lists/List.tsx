@@ -1,10 +1,8 @@
 /* Lists/List Component - both static and animated versions*/
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import { ListItem, ExpandedItem } from './Item';
-import Link from 'next/link';
-import Date from '../global/date';
 
 export function List({ type, filters, data }) {
 	return (
