@@ -42,10 +42,14 @@
     color: black;
   }
 
-.title h1{
+.date {
+    font-weight: 300;
+}
+
+.title h1 {
     font-weight: bold;
     font-size: x-large;
-    padding-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .subtitle {
@@ -53,3 +57,30 @@
     justify-content: space-between;
     padding-bottom: 10px;
 }
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag {
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+	font-size: medium;
+	margin: 0.25rem;
+	border-radius: 0.25rem;
+	transition: 0.5s;
+	background-color: rgb(255, 230, 230);
+  }
+  
+  .tag:hover {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	cursor: pointer;
+	background-color: black;
+  }
+
+  .tag:hover a {
+	  color: white;
+	  text-decoration: none;
+  }

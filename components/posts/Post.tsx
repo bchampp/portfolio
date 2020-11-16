@@ -20,11 +20,11 @@ function PostTitle({ data }) {
 			<h1>{data.title}</h1>
 			<div className={styles.subtitle}>
 				<div>{data.subtitle}</div>
-				<div>
+				<div className={styles.date}>
 					<Date startDate={data.startDate} endDate={data.endDate} />
 				</div>
 			</div>
-			<div className={styles.tags}>
+			<div>
 				<Tags tags={data.tags} />
 			</div>
 		</div>
@@ -33,10 +33,10 @@ function PostTitle({ data }) {
 
 function Tags({tags}) {
 	return (
-		<div>
+		<div className={styles.tags}>
 			Tags:
 			{ tags && tags.map(tag => 
-				<div>{tag}</div>
+				<div className={styles.tag}>{tag}</div>
 			)}
 		</div>
 	)

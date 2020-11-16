@@ -18,7 +18,6 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
-
 .nav ul li a {
   position: relative;
   display: flex;
@@ -34,7 +33,6 @@
 .nav ul li a:before {
   transition: all .5s;
 }
-
 .nav ul li a:after {
   position: absolute;
   bottom: 0;
@@ -49,6 +47,13 @@
 }
 .nav ul li a:hover:after {
   width: 75%;
+}
+@media screen and (max-width: 600px) {
+  .nav li {display: none;}
+  .icon { display: flex !important;}
+}
+.icon {
+  display: none;
 }
 .inactive {
     pointer-events: none;

@@ -1,11 +1,11 @@
 .about {
+    font-size: medium;
     padding-left: 20%;
     padding-right: 20%;
     padding-bottom: 40px;
 }
 .about img {
     margin: auto;
-    border-radius: 99999px;
 }
 .about a {
     font-weight: 600;

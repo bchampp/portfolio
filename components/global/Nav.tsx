@@ -31,6 +31,9 @@ export default function Nav({ page }) {
 					</li>
 				</ul>
 			</div>
+			<a href="javascript:void(0);" className={pageStyles.icon} onClick={() => alert("test")}>
+				<i className="fa fa-bars"></i>
+			</a>
 		</header>
 	);
 }
