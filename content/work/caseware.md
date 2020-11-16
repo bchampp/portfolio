@@ -10,8 +10,4 @@ exists: true
 ---
 
 # CaseWare International
-I'm currently working as a Software Developer Intern at CaseWare International, doing full stack development on a modern tech stack. 
-
-I don't have much to write here yet about what I've been working on. 
-
-## :P
+I'm currently working as a Software Developer Intern at CaseWare International, doing full stack development on a modern tech stack.

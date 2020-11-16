@@ -6,7 +6,7 @@ image: '/work/qfsae.png'
 tags: ['c++', 'pcb', 'control-systems']
 subtitle: 'Electrical Lead'
 type: 'work'
-exists: true
+exists: false
 ---
 
 # Queen's Formula

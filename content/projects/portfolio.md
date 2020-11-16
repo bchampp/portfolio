@@ -5,6 +5,8 @@ endDate: '2020-11-11'
 tags: ['react', 'nextjs', 'typescript', 'webapp']
 type: 'projects'
 subtitle: 'My personal and portfolio website'
+github: 'https://github.com/bchampp/portfolio'
+demo: 'https://brentchampion.com'
 exists: true
 ---
 

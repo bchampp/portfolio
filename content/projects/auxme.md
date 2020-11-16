@@ -11,11 +11,7 @@ exists: true
 ---
 
 AuxMe is an **all-inclusive** app to control music and lights. 
-The basic concept is a shared music queue, where users can add, upvote and downvote songs. Each room has **Admins** which give access to protected endpoints, like pause, skip...etc. Basically anything that will directly influence the music playing.
-
-## Inspiration
-AuxMe was inspired from a project I saw on YouTube when I was in first year.
-The base ideas simple: mapping an Audio Signal to an LED strip to give *sick* lighting effects. 
+The basic concept is a shared music queue, where users can add, upvote and downvote songs. Each room has **Admins** which give access to protected endpoints, like pause, skip...etc. Basically anything that will directly influence the music playing. 
 
 ## API
 We started by building a REST API. Since we want to deploy AuxMe as both a webapp and a mobile app, we wanted our backend to be reusable to the point where both clients could make requests to the same endpoints. 

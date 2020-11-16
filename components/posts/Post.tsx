@@ -1,5 +1,5 @@
 /* Post Component */
-
+import Link from 'next/link';
 import Date from '../global/Date';
 import styles from './post.module.css';
 
@@ -24,20 +24,26 @@ function PostTitle({ data }) {
 					<Date startDate={data.startDate} endDate={data.endDate} />
 				</h3>
 			</div>
-			<div>
-				<Tags tags={data.tags} />
+			<div className={styles.source}>
+				{data.github && <Link href={`/${data.github}`}><a style={{display: 'flex'}}>See the code <img src='/github.png' width={25} height={25}></img></a></Link>}
+				{data.demo &&  <Link href={`/${data.demo}`}><a>Demo</a></Link>}
+
 			</div>
+			<Tags tags={data.tags} />
 		</div>
 	);
 }
 
-function Tags({tags}) {
+function Tags({ tags }) {
 	return (
 		<div className={styles.tags}>
-			Tags:
-			{ tags && tags.map(tag => 
-				<div className={styles.tag}><a>{tag}</a></div>
-			)}
+			<h4>Tags: </h4>
+			{tags &&
+				tags.map((tag) => (
+					<div className={styles.tag}>
+						<a>{tag}</a>
+					</div>
+				))}
 		</div>
-	)
+	);
 }
