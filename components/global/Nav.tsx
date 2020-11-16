@@ -16,12 +16,13 @@ import SendIcon from '@material-ui/icons/Send';
 
 const links = [ 'about', 'work', 'projects', 'posts' ];
 
-const StyledMenu = withStyles({
+const StyledMenu: any = withStyles({
 	paper: {
 		border: '1px solid #FFFFFF'
 	}
-})((props) => (
+})((props: any) => (
 	<Menu
+		open={null}
 		elevation={0}
 		getContentAnchorEl={null}
 		anchorOrigin={{
@@ -87,7 +88,6 @@ export default function Nav({ page }) {
 			</a>
 			{/* Responsive Navigation */}
 			<StyledMenu
-				id="navigation menu"
 				anchorEl={anchorEl}
 				keepMounted
 				open={Boolean(anchorEl)}
