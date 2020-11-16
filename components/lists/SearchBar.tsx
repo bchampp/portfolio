@@ -1,6 +1,6 @@
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-
+import listStyles from './list.module.css';
 export default function Search({setFilter, options}) {
   const handleChange = (e, values) => {
       let tags = [];
@@ -10,6 +10,7 @@ export default function Search({setFilter, options}) {
       setFilter(tags);
   }
   return (
+    <div className={listStyles.search}>
       <Autocomplete
         multiple
         id="tags-standard"
@@ -25,5 +26,6 @@ export default function Search({setFilter, options}) {
           />
         )}
       />
+      </div>
   );
 }

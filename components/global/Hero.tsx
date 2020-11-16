@@ -25,8 +25,10 @@ export default function Hero() {
 					<Typewriter
 						onInit={(typewriter) => {
 							typewriter
-								.typeString("Hi, I'm Brent.\n")
-								.pauseFor(1000)
+								.typeString("Hi, I'm Brent. \n")
+								.pauseFor(500)
+								.typeString(window.innerWidth < 700 && '\b<br/>')
+								.pauseFor(500)
 								.typeString('I like to build things.')
 								.pauseFor(1000)
 								.start();

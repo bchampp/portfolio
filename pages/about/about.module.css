@@ -1,8 +1,12 @@
 .about {
     font-size: medium;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 5%;
     padding-bottom: 40px;
+}
+@media screen and (max-width: 1000px) {
+    .about {padding: 0; }
 }
 .about img {
     margin: auto;

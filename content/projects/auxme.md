@@ -10,7 +10,6 @@ tags: ['spotify', 'serverless', 'websocket', 'react', 'c++', 'control-system']
 exists: true
 ---
 
-# AuxMe
 AuxMe is an **all-inclusive** app to control music and lights. 
 The basic concept is a shared music queue, where users can add, upvote and downvote songs. Each room has **Admins** which give access to protected endpoints, like pause, skip...etc. Basically anything that will directly influence the music playing.
 

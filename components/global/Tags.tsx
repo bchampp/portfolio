@@ -25,11 +25,11 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 		window.history.pushState({}, null, route);
 	};
 
-	console.log(filters);
 	return (
 		<div>
 			<h3 className={tagStyles.title}>Tags</h3>
-			<div className={tagStyles.tags}>
+			<div>
+				<div className={tagStyles.tags}>
 				{tags && tags.map((tag) => (
 						<div key={tag.name} className={filters.includes(tag.name) ? tagStyles.active : tagStyles.inactive}>
 							<div onClick={() => { handleClick(tag.name); }}>
@@ -37,6 +37,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 							</div>
 						</div>
 					))}
+				</div>
 				<div className={tagStyles.content}>
 					{/* TODO: Refactor further */}
 					<div className={tagStyles.contentContainer}>

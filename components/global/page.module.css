@@ -11,12 +11,13 @@
     color: white;
     margin: auto;
     margin-left: 0;
+    
 }
 .nav ul {
     display: flex;
     justify-content: space-between;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .nav ul li a {
   position: relative;
@@ -48,9 +49,19 @@
 .nav ul li a:hover:after {
   width: 75%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+  .nav {
+    padding: 2%;
+    text-align: center;
+    align-items: center;
+  }
+  .nav a {
+    margin-left: 10px;
+  }
   .nav li {display: none;}
-  .icon { display: flex !important;}
+  .nav ul {display: none;}
+
+  .icon { display: flex !important; margin-right: 0 !important;}
 }
 .icon {
   display: none;
@@ -82,4 +93,5 @@
 .footer h5 {
     color: white;
     font-size: small;
+    margin: 0;
 }
