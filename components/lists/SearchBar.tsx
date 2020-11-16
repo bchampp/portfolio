@@ -1,17 +1,7 @@
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > * + *': {
-      marginTop: theme.spacing(3),
-    },
-  },
-}));
-
 export default function Search({setFilter, options}) {
-  const classes = useStyles();
   const handleChange = (e, values) => {
       let tags = [];
       values.forEach(value => {

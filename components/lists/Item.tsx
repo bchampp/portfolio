@@ -4,24 +4,25 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
 import Date from '../global/Date';
+import listStyles from './list.module.css';
 
 export function ListItem({ data }) {
     return (
             <Link href={`/${data.type}/${data.id}`}>
-                <a style={{ textDecoration: 'none' }} className="listItem">
-                    <div className="listItemContent">
-                        <div className="w-full flex flex-wrap justify-between">
-                            <div className="font-bold float-left">{data.title}</div>
-                            <div className="text-sm float-right text-gray-700">
+                <a style={{ textDecoration: 'none' }} className={listStyles.listItem}>
+                    <div className={listStyles.listItemContent}>
+                        <div className={listStyles.contentContainer}>
+                            <div className={listStyles.title}>{data.title}</div>
+                            <div className={listStyles.date}>
                                 <Date startDate={data.startDate} endDate={data.endDate} />
                             </div>
                             <div style={{ flexBasis: '100%', height: '0' }} />
-                            <div className="text-sm px-2">{data.subtitle}</div>
+                            <div className={listStyles.subtitle}>{data.subtitle}</div>
                             <div style={{ flexBasis: '100%', height: '0' }} />
                             {data.tags && (
-                                <div className="text-md flex flex-wrap">
+                                <div className={listStyles.tags}>
                                     {data.tags.map((tag) => (
-                                        <div className="tag">
+                                        <div className={listStyles.tag}>
                                             <Link href={`/tags/${tag}`}>
                                                 {tag}
                                             </Link>

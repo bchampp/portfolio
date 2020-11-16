@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import { ListItem, ExpandedItem } from './Item';
-
+import listStyles from './list.module.css';
 export function List({ filters, data }) {
 	return (
 		<div>
-			<ul className="list">
+			<ul className={listStyles.list}>
 				{data.filter((project) => sortList(project, filters)).map((item, i) => {
 					return <ListItem key={i} data={data[i]} />;
 				})}

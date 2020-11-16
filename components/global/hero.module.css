@@ -11,8 +11,8 @@
     margin: auto;
     display: flex;
     position: absolute;
-    /* align-items: center; */
-    top: 15%;
+    align-items: center;
+    top: 0%;
     left: 0;
     right: 0;
     bottom: 0;

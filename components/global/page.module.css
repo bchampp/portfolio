@@ -34,9 +34,7 @@
 .nav ul li a:before {
   transition: all .5s;
 }
-.nav ul li a:hover {
-  color: #555;
-}
+
 .nav ul li a:after {
   position: absolute;
   bottom: 0;
@@ -50,7 +48,7 @@
   height: 1px;
 }
 .nav ul li a:hover:after {
-  width: 100%;
+  width: 75%;
 }
 .inactive {
     pointer-events: none;

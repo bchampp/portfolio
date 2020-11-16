@@ -1,7 +1,7 @@
 /* Main Data Component */
 
 import { List, AnimatedList } from './List';
-
+import listStyles from './list.module.css';
 const ANIMATED = false;
 
 export default function Data({ type, filters, data }) {
@@ -24,7 +24,7 @@ export default function Data({ type, filters, data }) {
 			}
 		});
 		return (
-			<div className={"w-4/5 m-auto"}>
+			<div className={listStyles.container}>
 				<List filters={filters} data={cleanData} />
 			</div>
 		);
