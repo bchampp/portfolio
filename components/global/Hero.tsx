@@ -1,9 +1,11 @@
+import styles from './hero.module.css';
+
 // TODO: fix to be an import
 const Typewriter = require('typewriter-effect');
 
 export default function Hero() {
 	return (
-		<div className="rounded-lg shadow-lg relative">
+		<div className={styles.hero}>
 			{/* Buy Me A Coffee!! */}
 			<script
 				data-name="BMC-Widget"
@@ -17,9 +19,9 @@ export default function Hero() {
 				data-y_margin="18"
 			/>
 
-			<img className="w-full object-cover" src="/background.jpg" alt="Mountain Image" />
-			<div className="px-6 py-4 m-auto flex items-center absolute top-0 left-0 right-0 bottom-0">
-				<h3 className="font-semibold text-white tracking-tight text-6xl w-full mb-3 items-center text-center align-middle">
+			<img src="/background.jpg" alt="Mountain Image" />
+			<div className={styles.text}>
+				<h1>
 					<Typewriter
 						onInit={(typewriter) => {
 							typewriter
@@ -30,7 +32,7 @@ export default function Hero() {
 								.start();
 						}}
 					/>
-				</h3>
+				</h1>
 			</div>
 		</div>
 	);
