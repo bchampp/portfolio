@@ -15,7 +15,7 @@ export default function Projects({ projects, tags }) {
 	return (
 		<Layout page="projects">
 			<h3>{title}</h3>
-			<div style={{margin: 'auto', width: '40%'}}>
+			<div style={{margin: 'auto', width: '40%', padding: '10px'}}>
 				<Search setFilter={setFilters} options={tags} />
 			</div>
 			<Data type={'projects'} filters={filters} data={projects} />

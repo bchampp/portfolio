@@ -58,19 +58,17 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 						<Data type={'posts'} filters={filters} data={posts} />
 					</div>
 				</div>
-				
-					<div className='back'>
-					{tag ? 
-						<Link href="/tags">
-							<a>&larr; All Tags</a>
-						</Link>
-					 	: 
-						<Link href="/">
-							<a>&larr; Home</a>
-						</Link>
-					}
-					</div>
-				)
+				<div className='back'>
+				{tag ? 
+					<Link href="/tags">
+						<a>&larr; All Tags</a>
+					</Link>
+					: 
+					<Link href="/">
+						<a>&larr; Home</a>
+					</Link>
+				}
+				</div>
 			</div>
 		</div>
 	);
