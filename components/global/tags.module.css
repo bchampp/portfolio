@@ -24,6 +24,10 @@
   border-radius: 0.25rem;
   background-color: black;
   color: white;
+  transition: 1s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .active:hover {
@@ -37,11 +41,17 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
+  transition: 0.5s;
+  background-color: rgb(255, 230, 230);
 }
 
 .inactive:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   cursor: pointer;
-  background-color: slategrey;
+  background-color: black;
+  color: white;
 }
 
 .content {

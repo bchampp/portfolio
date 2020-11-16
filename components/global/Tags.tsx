@@ -5,30 +5,27 @@ import Link from 'next/link';
 import tagStyles from './tags.module.css';
 
 export default function Tags({ tag, tags, work, projects, posts }) {
-	const [ filters, setFilters ] = useState(tag ? tag : []);
-
-	useEffect(() => {}, [ filters ]);
+	const [filters, setFilters] = useState(tag ? tag : []);
 
 	const handleClick = (filter) => {
-		console.log(filter);
 		let currFilters = filters;
 		const exists = filters.indexOf(filter);
 		if (exists == -1) {
 			currFilters = [ ...filters, filter ];
+			setFilters(currFilters);
 		} else {
 			currFilters.splice(exists, 1);
-			console.log(currFilters);
+			setFilters(currFilters.filter(x => x !== filter));
 		}
-
-		let route = `/tags/${currFilters[0]}`;
+		let route = `/tags/${currFilters[0] || ''}`;
 		for (var i = 1; i < currFilters.length; i++) {
 			const routePostfix = `&${currFilters[i]}`;
 			route = route.concat(routePostfix);
 		}
-		setFilters(currFilters);
 		window.history.pushState({}, null, route);
 	};
 
+	console.log(filters);
 	return (
 		<div>
 			<h3 className={tagStyles.title}>Tags</h3>
@@ -42,6 +39,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 						</div>
 					))}
 				<div className={tagStyles.content}>
+					{/* TODO: Refactor further */}
 					<div className={tagStyles.contentContainer}>
 						<div className={tagStyles.contentTitle}>
 							<Link href="/work"><a>Work</a></Link>
