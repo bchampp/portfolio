@@ -1,12 +1,10 @@
 import { getAllTagIds } from '../../lib/content';
-import Tags from '.';
 import Content, { getAllTags } from '../../lib/content';
-
-const title = 'Tagged | ';
+import Index from '.';
 
 export default function Tagged({tag, work, projects, posts, tags }) {
   return (
-    <Tags tag={tag} tags={tags} work={work} projects={projects} posts={posts} />
+    <Index tag={tag} tags={tags} work={work} projects={projects} posts={posts} />
   )
 }
 

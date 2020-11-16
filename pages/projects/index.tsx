@@ -14,8 +14,8 @@ export default function Projects({ projects, tags }) {
 
 	return (
 		<Layout page="projects">
-			<h3 className="text-center text-xl py-2">{title}</h3>
-			<div className="w-64 py-6 m-auto">
+			<h3>{title}</h3>
+			<div style={{margin: 'auto', width: '40%'}}>
 				<Search setFilter={setFilters} options={tags} />
 			</div>
 			<Data type={'projects'} filters={filters} data={projects} />

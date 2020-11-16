@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import { ListItem, ExpandedItem } from './Item';
 
-export function List({ type, filters, data }) {
+export function List({ filters, data }) {
 	return (
 		<div>
 			<ul className="list">

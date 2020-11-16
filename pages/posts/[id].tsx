@@ -1,22 +1,13 @@
 import Link from 'next/link';
 import Layout from '../../components/global/Layout';
-import Date from '../../components/global/Date';
-import utilStyles from '../../styles/utils.module.css'
+import Post from '../../components/posts/Post';
 import Content from '../../lib/content';
 
-export default function Post({ postData }) {
+export default function Index({ postData }) {
   return (
     <Layout page='posts' id={postData.title}>
-    <div className='py-10 px-32 bg-white'>
-        <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
-            <Date startDate={postData.startDate} endDate={postData.endDate} />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </article>
-      </div>
-      <div className="text-center">
+      <Post data={postData} />
+      <div className="back">
         <Link href='/posts'><a>&#x2190; Back to Posts</a></Link>
       </div>
   </Layout>

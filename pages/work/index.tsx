@@ -13,7 +13,7 @@ export default function Works({ jobs }) {
 
 	return (
 		<Layout page="work">
-			<h3 className="text-center text-xl py-6">{title}</h3>
+			<h3>{title}</h3>
 			<Data type={'work'} filters={filters} data={jobs} />
 		</Layout>
 	);

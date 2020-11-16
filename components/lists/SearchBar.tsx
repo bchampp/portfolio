@@ -4,7 +4,6 @@ import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 500,
     '& > * + *': {
       marginTop: theme.spacing(3),
     },
@@ -24,6 +23,7 @@ export default function Search({setFilter, options}) {
       <Autocomplete
         multiple
         id="tags-standard"
+        autoComplete={true}
         options={options}
         onChange={handleChange}
         getOptionLabel={(option) => option.name}

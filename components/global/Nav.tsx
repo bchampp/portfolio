@@ -13,7 +13,7 @@ export default function Nav({ page }) {
 			</Link>
 			<div>
 				<ul>
-					{links.map((link) => (
+					{links && links.map((link) => (
 						<li key={link}>
 							{page === link ? (
 								<div className={pageStyles.inactive}>{link}</div>

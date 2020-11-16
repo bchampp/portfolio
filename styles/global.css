@@ -1,6 +1,5 @@
 html,
 body {
-  position: fixed;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
@@ -8,14 +7,21 @@ body {
   line-height: 1.6;
   font-size: 18px;
   width: 100%;
+  overflow-y: scroll;
 }
 
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem;
+}
 * {
   box-sizing: border-box;
 }
 
 a {
-  color: #0070f3;
+  color: #0c035c;
   text-decoration: none;
 }
 
@@ -26,4 +32,9 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.back {
+  text-align: center;
+  padding-bottom: 25px;
 }

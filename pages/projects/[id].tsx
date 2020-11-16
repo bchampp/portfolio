@@ -11,8 +11,7 @@ export default function Project({ postData }) {
         <title>brent champion | {postData.title}</title>
       </Head>
 			<Post data={postData} />
-
-      <div className="text-center">
+      <div className="back">
         <Link href='/projects'><a>&#x2190; Back to Projects</a></Link>
       </div>
     </Layout>
@@ -21,18 +20,10 @@ export default function Project({ postData }) {
 
 export async function getStaticPaths() {
   const paths = new Content('projects').getAllIds();
-  return {
-    paths,
-    fallback: false
-  }
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
   const postData = await new Content('projects').getData(params.id);
-  
-  return {
-    props: {
-      postData
-    }
-  }
+  return { props: { postData }}
 }

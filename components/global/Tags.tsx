@@ -30,8 +30,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 		<div>
 			<h3 className={tagStyles.title}>Tags</h3>
 			<div className={tagStyles.tags}>
-				{tags &&
-					tags.map((tag) => (
+				{tags && tags.map((tag) => (
 						<div key={tag.name} className={filters.includes(tag.name) ? tagStyles.active : tagStyles.inactive}>
 							<div onClick={() => { handleClick(tag.name); }}>
 								{tag.name}
@@ -60,7 +59,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 					</div>
 				</div>
 				
-					<div className={tagStyles.back}>
+					<div className='back'>
 					{tag ? 
 						<Link href="/tags">
 							<a>&larr; All Tags</a>

@@ -35,7 +35,7 @@ function Tags({tags}) {
 	return (
 		<div>
 			Tags:
-			{tags.map(tag => 
+			{ tags && tags.map(tag => 
 				<div>{tag}</div>
 			)}
 		</div>

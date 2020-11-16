@@ -25,7 +25,7 @@ export default function Data({ type, filters, data }) {
 		});
 		return (
 			<div className={"w-4/5 m-auto"}>
-				<List type={type} filters={filters} data={cleanData} />
+				<List filters={filters} data={cleanData} />
 			</div>
 		);
 	} else {
