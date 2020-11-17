@@ -17,9 +17,9 @@ export default function About() {
 						Currently, I'm interning as a Full Stack developer with CaseWare International,	working remotely on an exciting cloud based project.
 					</p>
 					<p>
-					Despite being primarily focused on Software Engineering, I love getting my hands dirty and working on multi-disciplinary projects.
-						Throughout my undergrad, I've had the opportunity to work on several awesome <a href='/projects'>Projects</a> through 
-						Design Teams, work and hobby. While I lean towards involving myself in the technical side of things,  I enjoy taking the lead
+						Despite being primarily focused on Software Engineering, I love getting my hands dirty and working on multi-disciplinary projects.
+						Throughout my undergrad, I've had the opportunity to work on several awesome <a href='/projects'>projects</a> through 
+						design teams, work and hobby. While I lean towards involving myself in the technical side of things,  I enjoy taking the lead
 						and helping a team work towards a common goal. 
 					</p>
 					<p>

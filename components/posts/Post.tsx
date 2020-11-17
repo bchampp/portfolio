@@ -44,7 +44,7 @@ function Tags({ tags }) {
 			{tags &&
 				tags.map((tag) => (
 					<div className={styles.tag}>
-						<a>{tag}</a>
+						<a href={`/tags/${tag}`}>{tag}</a>
 					</div>
 				))}
 		</div>

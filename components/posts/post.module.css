@@ -22,15 +22,26 @@
 }
 .post h2 {
     font-size: larger;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-weight: bold;
 }
 .post h3 {
+    padding: 0;
+    text-align: left;
     font-size: large;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-weight: bold;
+}
+.post blockquote {
+    background-color: lightgrey;
+    border-radius: 0.25rem;
+}
+.post blockquote > p {
+    padding: 10px;
+    font-style: italic;
+    font-size: medium;
 }
 .post p {
     width: 100%;
@@ -44,7 +55,7 @@
     padding: 10px 10px 0px 10px;
 }
 .post ul {
-    list-style-type: circle;
+    list-style-type: disc;
     list-style-position: inside;
     padding-left: 6%;
     color: black;
