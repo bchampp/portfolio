@@ -7,3 +7,5 @@ tags: ['c++', 'opencv', 'machine learning', 'tesserect']
 type: 'projects'
 exists: true
 ---
+
+C++ Design Project

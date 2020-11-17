@@ -13,7 +13,8 @@ Students can register, sign in and view filtered courses to their program and un
 
 ## The Teck Stack
 The frontend was built with ReactJS, and hosted with AWS Amplify.
-The backend was built entirely using Serverless lambda functions. 
+
+The backend was built using Serverless lambda functions. 
 
 
 

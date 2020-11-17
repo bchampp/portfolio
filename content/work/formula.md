@@ -4,9 +4,9 @@ startDate: '2017-09-25'
 endDate: '2020-08-01'
 image: '/work/qfsae.png'
 tags: ['c++', 'pcb', 'control-systems']
-subtitle: 'Electrical Lead'
+subtitle: 'Electrical Lead, Electrical Team Member'
 type: 'work'
-exists: false
+exists: true
 ---
 
 # Queen's Formula

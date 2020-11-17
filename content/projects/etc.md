@@ -8,4 +8,4 @@ tags: ['c++', 'formula', 'control system']
 exists: true
 ---
 
-Blah blah
+The Electronic Throttle Control (ETC) system was a long term project I worked on at Queen's Formula. 

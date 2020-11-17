@@ -14,9 +14,9 @@ exists: true
 # `brentchampion.com`
 I've been through 3 iterations of my portfolio website. The first two weren't *that bad*, but I was never happy with them.
 
-My first try was a static HTML page; I bootstrapped an html template I liked, filled it up with some content and threw it in an S3 bucket. Attempt #2 was again, a template I bootstrapped, this time using React. I made it during the couple weeks I had off before starting my internship with [Acoutera](/work/acoutera) to practice React. 
+<!-- My first try was a static HTML page; I bootstrapped an html template I liked, filled it up with some content and threw it in an S3 bucket. Attempt #2 was again, a template I bootstrapped, this time using React. I made it during the couple weeks I had off before starting my internship with [Acoutera](/work/acoutera) to practice React. 
 
-They lacked authenticity. I don't want my portfolio website to be an electronic copy of my resume, or a 'fill in the blank' portfolio template. I want it to be a place to experiment, talk about things I'm interested in and document my projects.
+They lacked authenticity. I don't want my portfolio website to be an electronic copy of my resume, or a 'fill in the blank' portfolio template. I want it to be a place to experiment, talk about things I'm interested in and document my projects. -->
 
 ## How it works
 This site was built with NextJS, a React framework that lets you do 'cool' and 'complicated' things with ease, like static HTML generation and server-side rendering. 

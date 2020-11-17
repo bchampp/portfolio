@@ -11,10 +11,14 @@ exists: true
 ---
 
 AuxMe is an **all-inclusive** app to control music and lights. 
-The basic concept is a shared music queue, where users can add, upvote and downvote songs. Each room has **Admins** which give access to protected endpoints, like pause, skip...etc. Basically anything that will directly influence the music playing. 
+The basic concept is a shared music queue, where users can add, upvote and downvote songs. Each room has **Admins** which have access to protected endpoints, like pause, skip...etc, anything that will directly influence the music playing. 
 
+## Control System
+
+
+# Website
 ## API
-We started by building a REST API. Since we want to deploy AuxMe as both a webapp and a mobile app, we wanted our backend to be reusable to the point where both clients could make requests to the same endpoints. 
+We started by building a REST API. Since AuxMe is being deployed as both a webapp and a mobile app, our backend needed to be reusable so that both clients could make requests to the same set of endpoints. 
 
 Some of the endpoints look like: 
 - `POST auxme.ca/login/spotify`
@@ -22,8 +26,8 @@ Some of the endpoints look like:
 - `GET auxme.ca/join-room?id=123`
 - `POST auxme.ca/queue/upvote?song=<some_song_id>`
 
-We tested the endpoints on our personal music streaming accounts with an app called PostMan. It was really cool controlling my spotify account through our API.
+We tested the endpoints on our personal music streaming accounts with an app called PostMan.
 
 ## Client
-We built our website client in my favorite Javascript framework, React. We threw a simple UI together, tied it with our API and started testing. 
+We built our website client with React. We threw a simple UI together, tied it with our API and started testing. 
 

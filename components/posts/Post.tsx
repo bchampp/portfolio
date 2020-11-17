@@ -29,7 +29,10 @@ function PostTitle({ data }) {
 				{data.demo &&  <Link href={`/${data.demo}`}><a>Demo</a></Link>}
 
 			</div>
-			<Tags tags={data.tags} />
+			{
+				data.tags && 
+				<Tags tags={data.tags} />
+			}
 		</div>
 	);
 }

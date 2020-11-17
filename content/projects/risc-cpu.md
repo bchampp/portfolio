@@ -5,5 +5,7 @@ endDate: '2019-04-09'
 subtitle: 'A Simple RISC computer implementation'
 tags: ['vhdl', 'digital logic']
 type: 'projects'
-# exists: true
+exists: true
 ---
+
+ELEC374 Design Project

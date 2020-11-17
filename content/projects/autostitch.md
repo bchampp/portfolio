@@ -6,6 +6,7 @@ image: ''
 subtitle: 'A C++ application to merge panoramas'
 tags: ['c++', 'opencv', 'machine learning']
 type: 'projects'
+link: 'https://github.com/bchampp/autostitch'
 exists: true
 ---
 
