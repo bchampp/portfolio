@@ -1,4 +1,4 @@
-import styles from './hero.module.css';
+import styles from '../../styles/hero.module.css';
 
 // TODO: fix to be an import
 const Typewriter = require('typewriter-effect');

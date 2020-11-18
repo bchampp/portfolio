@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Nav from './Nav'
 import Footer from './Footer';
 
-import pageStyles from './page.module.css';
+import pageStyles from '../../styles/page.module.css';
 
 // Page Constants
 const name = 'brent champion | ';

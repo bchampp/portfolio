@@ -1,5 +1,5 @@
 import Layout from '../../components/global/Layout';
-import aboutStyles from './about.module.css';
+import aboutStyles from '../../styles/about.module.css';
 
 const title = 'About Me';
 

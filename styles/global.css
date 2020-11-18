@@ -1,3 +1,18 @@
+:root {
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: black;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: white;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
 html,
 body {
   padding: 0;
@@ -9,19 +24,25 @@ body {
   width: 100%;
   overflow-y: scroll;
 }
-
+main {
+  background-color: var(--bg-color);
+  transition-property: background-color;
+  transition: 1s;
+}
 h3 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
-  padding: 1rem;
+  padding: 3rem;
+  margin: 0;
+  color: var(--font-color);
 }
 * {
   box-sizing: border-box;
 }
 
 a {
-  color: #000000;
+  color: var(--bg-color);
   text-decoration: none;
 }
 
@@ -37,4 +58,8 @@ img {
 .back {
   text-align: center;
   padding-bottom: 25px;
+}
+
+.back > a {
+  color: var(--font-color);
 }

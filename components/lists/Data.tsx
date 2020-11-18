@@ -1,7 +1,7 @@
 /* Main Data Component */
 
 import { List, AnimatedList } from './List';
-import listStyles from './list.module.css';
+import listStyles from '../../styles/list.module.css';
 const ANIMATED = false;
 
 export default function Data({ type, filters, data }) {

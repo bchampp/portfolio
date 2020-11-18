@@ -1,7 +1,7 @@
 /* Post Component */
 import Link from 'next/link';
 import Date from '../global/Date';
-import styles from './post.module.css';
+import styles from '../../styles/post.module.css';
 
 export default function Post({ data }) {
 	return (

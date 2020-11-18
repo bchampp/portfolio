@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
 import Date from '../global/Date';
-import listStyles from './list.module.css';
+import listStyles from '../../styles/list.module.css';
 
 export function ListItem({ data }) {
     return (

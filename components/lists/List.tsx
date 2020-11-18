@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import { ListItem, ExpandedItem } from './Item';
-import listStyles from './list.module.css';
+import listStyles from '../../styles/list.module.css';
 export function List({ filters, data }) {
 	return (
 		<div>

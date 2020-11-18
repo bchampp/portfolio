@@ -1,5 +1,5 @@
 /* Footer Component */
-import pageStyles from './page.module.css';
+import pageStyles from '../styles/page.module.css';
 
 export default function Footer() {
     return (

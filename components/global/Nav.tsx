@@ -1,20 +1,17 @@
 /* Nav Component */
 import React, { useState } from 'react';
 import Link from 'next/link';
-import pageStyles from './page.module.css';
+import pageStyles from '../../styles/page.module.css';
+
+import Switch from '@material-ui/core/Switch';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
-
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import { withStyles } from '@material-ui/core/styles';
 
 const links = [ 'about', 'work', 'projects', 'posts' ];
+const resumeLink = "https://drive.google.com/file/d/1Mlz0-qz1H8olaJHuRJoG1eYiIaFCYjp-/view?usp=sharing"
 
 const StyledMenu: any = withStyles({
 	paper: {
@@ -50,14 +47,26 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export default function Nav({ page }) {
 	const [ anchorEl, setAnchorEl ] = useState(null);
+	const [colorState, setState] = useState(false)
 	const handleClick = (event) => {
-		console.log(event.currentTarget);
 		setAnchorEl(event.currentTarget);
 	};
 
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+
+	const handleChange = (e) => {
+		console.log("Changing Color Scheme");
+		if (e.target.checked) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		}
+		else {
+			document.documentElement.setAttribute('data-theme', 'light');
+		} 
+		setState(!colorState);
+	}
+
 	return (
 		<header className={pageStyles.nav}>
 			<Link href="/">
@@ -78,12 +87,19 @@ export default function Nav({ page }) {
 						</li>
 					))}
 				<li>
-					<Link href="https://drive.google.com/file/d/1Mlz0-qz1H8olaJHuRJoG1eYiIaFCYjp-/view?usp=sharing">
+					<Link href={resumeLink}>
 						<a target="_blank">resume</a>
 					</Link>
 				</li>
+				<li>
+				<Switch
+					checked={colorState}
+					onChange={handleChange}
+					name="checkedA"
+				/>
+				</li>
 			</ul>
-			<a href="javascript:void(0);" className={pageStyles.icon} onClick={handleClick}>
+			<a className={pageStyles.icon} onClick={handleClick}>
 				<MenuIcon />
 			</a>
 			{/* Responsive Navigation */}
@@ -122,8 +138,8 @@ export default function Nav({ page }) {
 					</Link>
 				</StyledMenuItem>
 				<StyledMenuItem>
-					<Link href="/resume">
-						<a>
+					<Link href={resumeLink}>
+						<a target="_blank">
 							<ListItemText primary="resume" />
 						</a>
 					</Link>

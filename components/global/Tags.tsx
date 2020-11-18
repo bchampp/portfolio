@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Data from '../lists/Data';
 import Link from 'next/link';
 
-import tagStyles from './tags.module.css';
+import tagStyles from '../../styles/tags.module.css';
 
 export default function Tags({ tag, tags, work, projects, posts }) {
 	const [filters, setFilters] = useState(tag ? tag : []);
