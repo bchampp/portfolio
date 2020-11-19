@@ -92,11 +92,14 @@ export default function Nav({ page }) {
 					</Link>
 				</li>
 				<li>
-				<Switch
-					checked={colorState}
-					onChange={handleChange}
-					name="checkedA"
-				/>
+					<a>
+					<input type="checkbox" className={pageStyles.checkbox} id="chk" />
+					<label className={pageStyles.label} for="chk">
+						<i className="fas fa-moon"></i>
+						<i className="fas fa-sun"></i>
+						<div className={pageStyles.ball}></div>
+					</label>
+					</a>
 				</li>
 			</ul>
 			<a className={pageStyles.icon} onClick={handleClick}>
