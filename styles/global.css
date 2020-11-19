@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 :root {
-  --primary-color: #302AE6;
-  --secondary-color: #536390;
   --font-color: black;
+  --inversion: white;
   --bg-color: #fff;
   --heading-color: #292922;
+  --card-color: rgb(250, 250, 250);
+  --tag-color: rgb(255, 230, 230);
+  
 }
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
-  --secondary-color: #818cab;
   --font-color: white;
+  --inversion: black;
   --bg-color: #161625;
+  --card-color: #121212;
   --heading-color: #818cab;
+  --tag-color: #161625;
 }
 
 html,
@@ -36,13 +41,15 @@ h3 {
   padding: 3rem;
   margin: 0;
   color: var(--font-color);
+  transition-property: color;
+  transition: 1s;
 }
 * {
   box-sizing: border-box;
 }
 
 a {
-  color: var(--bg-color);
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -62,4 +69,17 @@ img {
 
 .back > a {
   color: var(--font-color);
+}
+
+.fas {
+  padding-top: 2px;
+  font-size: 0.7em !important;
+}
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
 }

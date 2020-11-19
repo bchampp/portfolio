@@ -2,8 +2,8 @@
     font-size: medium;
     padding-left: 15%;
     padding-right: 15%;
-    margin: 5%;
     padding-bottom: 40px;
+    min-height: 100vh;
 }
 @media screen and (max-width: 1000px) {
     .about {padding: 0; }
@@ -13,4 +13,9 @@
 }
 .about a {
     font-weight: 600;
+}
+.about p {
+    color: var(--font-color);
+    transition-property: color;
+    transition: 1s;
 }

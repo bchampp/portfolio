@@ -14,7 +14,7 @@ I'm currently a Software Developer Intern at CaseWare International, where I'm w
 
 My work consists of Full Stack development using Angular, Java Spring Boot, and a variety of AWS resources.
 
-I'm still early into my internship, but here are some of <b>my</b>  takeaways from working a <i>corporate</i> programming job: 
+I'm still early into my internship, but here are some of <b>my</b> takeaways so far: 
 - Ask questions. Big codebases can be scary and people are generally happy to help.
 - Check the diff! Review your own code before asking someone else to. 
 - Have `balance` - if you're coding full time, make sure you have past times and hobbies that don't involve screens.

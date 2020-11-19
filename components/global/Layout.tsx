@@ -30,6 +30,7 @@ export default function Layout(props) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+			  <script src="https://kit.fontawesome.com/9506f5416a.js" crossOrigin="anonymous"></script>
       </Head>
       
       {/* Nav Bar */}

@@ -1,5 +1,5 @@
 /* Nav Component */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import pageStyles from '../../styles/page.module.css';
 
@@ -47,24 +47,36 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export default function Nav({ page }) {
 	const [ anchorEl, setAnchorEl ] = useState(null);
-	const [colorState, setState] = useState(false)
+	const [theme, setTheme] = useState(false)
+
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
 	};
+
+	useEffect(() => {
+		const currTheme = window.localStorage.getItem('theme') || null;
+		if (currTheme == 'dark') {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			setTheme(true);
+		} else {
+			document.documentElement.setAttribute('data-theme', 'light');
+			setTheme(false);
+		}
+	}, [theme])
 
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
 
-	const handleChange = (e) => {
-		console.log("Changing Color Scheme");
+	const handleThemeChange = (e) => {
 		if (e.target.checked) {
 			document.documentElement.setAttribute('data-theme', 'dark');
-		}
-		else {
+			window.localStorage.setItem('theme', 'dark');
+		} else {
 			document.documentElement.setAttribute('data-theme', 'light');
+			window.localStorage.setItem('theme', 'light');
 		} 
-		setState(!colorState);
+		setTheme(!theme);
 	}
 
 	return (
@@ -92,14 +104,19 @@ export default function Nav({ page }) {
 					</Link>
 				</li>
 				<li>
-					<a>
-					<input type="checkbox" className={pageStyles.checkbox} id="chk" />
-					<label className={pageStyles.label} for="chk">
+					<div className={pageStyles.toggle}>
+					<input 	type="checkbox" 
+							className={pageStyles.checkbox} 
+							id="chk" 
+							checked={theme}
+							onChange={handleThemeChange}
+					/>
+					<label className={pageStyles.label} htmlFor="chk">
 						<i className="fas fa-moon"></i>
 						<i className="fas fa-sun"></i>
 						<div className={pageStyles.ball}></div>
 					</label>
-					</a>
+					</div>
 				</li>
 			</ul>
 			<a className={pageStyles.icon} onClick={handleClick}>

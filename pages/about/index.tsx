@@ -31,7 +31,7 @@ export default function About() {
 						In my free time, I enjoy listening to and making music, reading,
 						skateboarding and snowboarding.
 					</p>
-					<img src="/me.jpg" width={300} height={300} />
+					{/* <img src="/me.jpg" width={300} height={300} /> */}
 				</div>
 			</div>
 		</Layout>
