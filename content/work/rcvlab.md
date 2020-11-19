@@ -8,7 +8,7 @@ type: 'work'
 exists: true
 ---
 
-# My first <relevant> job
+# My first *relevant* job
 Over the summer of 2019 I worked as a Research Assistant in the Robotic Computer Vision Lab (RCVLab for short). Not only was this the first time working in a position that relates to my degree, this was my first time working in an office in general.
 
 That summer, the lab consisted of several masters, phd and post-doc students, as well as myself and another undergraduate research assistant. 

@@ -38,7 +38,8 @@ For example, <a>brentchampion.com/projects/portfolio</a> would render `pages/pro
 This file organization is nice, but these features really shine at build time. When you run `npm run build`, NextJS is able to pre-render *almost* everything into static HTML pages. 
 
 This is what the build looks like: 
-* INSERT IMAGE HERE OF BUILD *
+![Build](/projects/portfolio/build.png)
+
 
 ### Tagging
 I got really caught up on the idea of a tagging engine. I've seen a few examples I liked while browsing around, but I wanted to build it from scratch. It adds a whole new way to navigate around the site which I think is pretty neat. 
