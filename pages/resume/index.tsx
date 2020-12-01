@@ -14,13 +14,13 @@ export default function Resume(){
       }
      
       return (
-        <div>
+        <Layout page="resume">
           <Document
             file="/resume.pdf"
             onLoadSuccess={onDocumentLoadSuccess}
           >
           </Document>
           <p>Page {pageNumber} of {numPages}</p>
-        </div>
+        </Layout>
       );
     }
