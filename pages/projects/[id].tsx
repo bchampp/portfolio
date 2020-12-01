@@ -8,12 +8,9 @@ export default function Project({ postData }) {
   return (
     <Layout page='projects'>
       <Head>
-        <title>brent champion | {postData.title}</title>
+        <title>brent champion | {postData.title.toLowerCase()}</title>
       </Head>
 			<Post data={postData} />
-      <div className="back">
-        <Link href='/projects'><a>&#x2190; Back to Projects</a></Link>
-      </div>
     </Layout>
   )
 }

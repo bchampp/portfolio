@@ -13,8 +13,6 @@
   display: flex;
   padding-left: 12rem;
   padding-right: 12rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -26,8 +24,8 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
-  background-color: var(--bg-color);
-  color: var(--font-color);
+  background-color: var(--font-color);
+  color: var(--inversion);
   transition: 1s;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -60,17 +58,20 @@
 
 .content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
+
 @media screen and (max-width: 700px) {
-  .content {flex-wrap: wrap;}
+  .content {flex-wrap: wrap; padding: 0;}
   .tags {padding-bottom: 20px;}
   .contentTitle {padding-bottom: 0 !important; padding-top: 5px !important;}
   .contentContainer {width: 100% !important; margin: auto;}
 }
 .contentContainer {
   text-align: center;
-  width: 33%;
+  width: 50%;
 }
 .contentTitle {
   padding-top: 2rem;

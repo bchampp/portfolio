@@ -4,14 +4,21 @@ import React, { useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import { ListItem, ExpandedItem } from './Item';
 import listStyles from '../../styles/list.module.css';
+
 export function List({ filters, data }) {
+	const listItems = data.filter((project) => sortList(project, filters)).map((item, i) => {
+		return <ListItem key={i} data={data[i]} />;
+	});
+
 	return (
 		<div>
+			{listItems.length > 0 ? 
 			<ul className={listStyles.list}>
-				{data.filter((project) => sortList(project, filters)).map((item, i) => {
-					return <ListItem key={i} data={data[i]} />;
-				})}
+				{listItems}
 			</ul>
+			:
+			<div>Nothing here...yet</div>
+			}
 		</div>
 	);
 }

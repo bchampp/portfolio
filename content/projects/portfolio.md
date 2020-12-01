@@ -57,7 +57,6 @@ I did this by including an optional `tagged` prop on the base tag page, and funn
 All my React components are defined in the `components` folder. If you're familiar with React, there's nothing too fancy going on here. I make use of hooks where appropriate, as well as tying in some of the features of Next such as the `Link` and `Image` components. The only difference between this and a **pure** react project is the use of `getStaticProps`, which I use to let the compiler know where to do static page generation. 
 
 I absracted my components away from the pages too, so each page basically wraps it's needed components and injects data accordingly. I wanted to be careful with my components since a lot of data was flowing around, so I wrote them in TypeScript. 
-> If you're unfamiliar with TypeScript, think of it like a stricter version of JavaScript. You *can* still define a variable as a `let`, but the point of TypeScript is to type all your variables, dodging unnecessary problems. 
 
 ### Styling
 Each component group has a corresponding css module, which defines the styling for the component. Next tries to perform code-splitting, which means only loading exactly whats needed to show the page. 

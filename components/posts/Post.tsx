@@ -1,14 +1,22 @@
 /* Post Component */
+
 import Link from 'next/link';
 import Date from '../global/Date';
 import styles from '../../styles/post.module.css';
 
 export default function Post({ data }) {
+	const prev = data.type.charAt(0).toUpperCase() + data.type.slice(1);
+
 	return (
 		<div className={styles.container}>
 			<article>
 				<PostTitle data={data} />
 				<div className={styles.post} dangerouslySetInnerHTML={{ __html: data.contentHtml }} />
+				<div className={styles.back}>
+					<Link href={`/${data.type}`}>
+						<a>&#x2190; Back to {prev}</a>
+					</Link>
+				</div>
 			</article>
 		</div>
 	);
@@ -25,14 +33,20 @@ function PostTitle({ data }) {
 				</h3>
 			</div>
 			<div className={styles.source}>
-				{data.github && <Link href={`/${data.github}`}><a style={{display: 'flex'}}>See the code <img src='/github.png' width={25} height={25}></img></a></Link>}
-				{data.demo &&  <Link href={`/${data.demo}`}><a>Demo</a></Link>}
-
+				{data.github && (
+					<Link href={`/${data.github}`}>
+						<a style={{ display: 'flex' }}>
+							See the code <img src="/github.png" width={25} height={25} />
+						</a>
+					</Link>
+				)}
+				{data.demo && (
+					<Link href={`/${data.demo}`}>
+						<a>Demo</a>
+					</Link>
+				)}
 			</div>
-			{
-				data.tags && 
-				<Tags tags={data.tags} />
-			}
+			{data.tags && <Tags tags={data.tags} />}
 		</div>
 	);
 }

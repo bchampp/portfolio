@@ -9,14 +9,15 @@ type: 'work'
 exists: true
 ---
 
-# My Formal Internship
-I'm currently a Software Developer Intern at CaseWare International, where I'm working on the Cloud Platform Team for an 8 month term. 
+# My Formal Internship Year
+I'm currently a Software Developer Intern at CaseWare International, where I'm working on the Cloud Platform Team for an 8 month term. The Cloud Platform Team is in the process of building <i>Cloud 2.0</i>, a web-based version of one of CaseWares flagship softwares. 
 
 My work consists of Full Stack development using Angular, Java Spring Boot, and a variety of AWS resources.
 
-I'm still early into my internship, but here are some of <b>my</b> takeaways so far: 
+
+<!-- I'm still early into my internship, but here are some of <b>my</b> takeaways so far: 
 - Ask questions. Big codebases can be scary and people are generally happy to help.
 - Check the diff! Review your own code before asking someone else to. 
 - Have `balance` - if you're coding full time, make sure you have past times and hobbies that don't involve screens.
-<!-- 
+
 So far, this internship has been a great experience in learning new technologies, best practices, and most importantly, how to collaborate (especially remotely). Working on a big team/project is worlds different than a small team, and I'm still learning how to be an effective team member.  -->

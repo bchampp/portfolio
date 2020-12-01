@@ -5,7 +5,13 @@ import Link from 'next/link';
 import tagStyles from '../../styles/tags.module.css';
 
 export default function Tags({ tag, tags, work, projects, posts }) {
-	const [filters, setFilters] = useState(tag ? tag : []);
+	const [filters, setFilters] = useState([]);
+
+	useEffect(() => {
+		if (tag) {
+			setFilters(tag);
+		}
+	}, [tag]);
 
 	const handleClick = (filter) => {
 		let currFilters = filters;
@@ -27,7 +33,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 
 	return (
 		<div>
-			<h3 className={tagStyles.title}>Tags</h3>
+			<h3>Tags</h3>
 			<div>
 				<div className={tagStyles.tags}>
 				{tags && tags.map((tag) => (
@@ -44,20 +50,20 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 						<div className={tagStyles.contentTitle}>
 							<Link href="/work"><a>Work</a></Link>
 							</div>
-						<Data type={'work'} filters={filters} data={work} />
+						<Data tags={true} type={'work'} filters={filters} data={work} />
 					</div>
 					<div className={tagStyles.contentContainer}>
 						<div className={tagStyles.contentTitle}>
 							<Link href="/projects"><a>Projects</a></Link>
 						</div>
-						<Data type={'projects'} filters={filters} data={projects} />
+						<Data tags={true} type={'projects'} filters={filters} data={projects} />
 					</div>
-					<div className={tagStyles.contentContainer}>
+					{/* <div className={tagStyles.contentContainer}>
 						<div className={tagStyles.contentTitle}>
 							<Link href="/posts"><a>Posts</a></Link>
 						</div>
 						<Data type={'posts'} filters={filters} data={posts} />
-					</div>
+					</div> */}
 				</div>
 				<div className='back'>
 				{tag ? 

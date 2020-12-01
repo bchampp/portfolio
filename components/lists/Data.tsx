@@ -4,7 +4,7 @@ import { List, AnimatedList } from './List';
 import listStyles from '../../styles/list.module.css';
 const ANIMATED = false;
 
-export default function Data({ type, filters, data }) {
+export default function Data({ tags, type, filters, data }) {
 	let cleanData: Array<any>;
 	if (data) {
 		cleanData = data.filter((project) => {
@@ -24,7 +24,7 @@ export default function Data({ type, filters, data }) {
 			}
 		});
 		return (
-			<div className={listStyles.container}>
+			<div className={tags ? listStyles.containerTags : listStyles.container}>
 				<List filters={filters} data={cleanData} />
 			</div>
 		);

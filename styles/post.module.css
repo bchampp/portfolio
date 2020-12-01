@@ -1,123 +1,116 @@
 .container {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: var(--bg-color);
-    margin: 5%;
-    margin-top: 0;
-    transition-property: background-color;
-    transition: 1s;
-    min-height: 80vh;
-}
-@media screen and (max-width: 1000px) {
-    .container {padding: 0; }
-}
-@media screen and (max-width: 700px) {
-    .subtitle {display: block !important;}
+	padding: 2% 20%;
+	background-color: var(--bg-color);
+	transition-property: background-color;
+	transition: 1s;
+	min-height: 95vh;
 }
 /* Wrapper for Markdown Text */
 .post {
-    padding-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 25px;
 }
 .post h1 {
-    font-weight: bold;
-    font-size: x-large;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    color: var(--font-color);
+	font-weight: bold;
+	font-size: x-large;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	color: var(--font-color);
 }
 .post h2 {
-    font-size: larger;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-weight: bold;
-    color: var(--font-color);
+	font-size: larger;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-weight: bold;
+	color: var(--font-color);
 }
 .post h3 {
-    padding: 0;
-    text-align: left;
-    font-size: large;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-weight: bold;
-    color: var(--font-color);
+	padding: 0;
+	text-align: left;
+	font-size: large;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-weight: bold;
+	color: var(--font-color);
 }
 .post blockquote {
-    background-color: lightgrey;
-    border-radius: 0.25rem;
+	background-color: lightgrey;
+	border-radius: 0.25rem;
 }
 .post blockquote > p {
-    padding: 10px;
-    font-style: italic;
-    font-size: medium;
+	padding: 10px;
+	font-style: italic;
+	font-size: medium;
 }
 .post p {
-    width: 100%;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    color: var(--font-color);
+	width: 100%;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: var(--font-color);
 }
 .post img {
-    width: 75%;
-    height: auto;
-    margin: auto;
-    padding: 10px 10px 0px 10px;
+	width: 75%;
+	height: auto;
+	margin: auto;
+	padding: 10px 10px 0px 10px;
 }
 .post ul {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 6%;
-    color: var(--font-color);
-
-  }
-
-.date {
-    font-weight: 300;
-    font-size: medium;
-    padding: 0;
-    margin: 0;
+	list-style-type: disc;
+	list-style-position: inside;
+	padding-left: 6%;
+	color: var(--font-color);
 }
-
+.date {
+	font-weight: 300;
+	font-size: medium;
+	padding: 0;
+	margin: 0;
+}
 .title h1 {
-    color: var(--font-color);
-    font-weight: bold;
-    font-size: x-large;
-    margin-bottom: 5px;
-    padding-top: 30px;
-    margin-top: 0;
+	color: var(--font-color);
+	font-weight: bold;
+	font-size: x-large;
+	margin-bottom: 5px;
+	padding-top: 30px;
+	margin-top: 0;
 }
 @media screen and (max-width: 700px) {
-    .title h1 { text-align: center; padding-bottom: 10px;}
-    .subtitle h2 {text-align: center; padding-bottom: 5px;}
+	.title h1 {
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	.subtitle h2 {
+		text-align: center;
+		padding-bottom: 5px;
+	}
 }
-
 .subtitle {
-    color: var(--font-color);
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
+	color: var(--font-color);
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 10px;
 }
 .subtitle h2 {
-    color: var(--font-color);
-    font-size: large;
-    font-weight: 400;
-    padding: 0;
-    margin: 0;
+	color: var(--font-color);
+	font-size: large;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
 }
-
 .tags {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 10px;
 }
 .tags h4 {
-    color: var(--font-color);
-    font-size: medium;
+	color: var(--font-color);
+	font-size: medium;
     padding: 0;
-    margin: 0;
-    text-align: center;
-    padding-top: 5px;
+    padding-right: 5px;
+	margin: 0;
+	text-align: center;
+	padding-top: 5px;
 }
-
 .tag {
 	padding-right: 0.5rem;
 	padding-left: 0.5rem;
@@ -125,32 +118,58 @@
 	margin: 0.25rem;
 	border-radius: 0.25rem;
 	transition: 0.5s;
-    background-color: var(--tag-color);
-	transition-property: background-color;
-	transition: 1s;
-  }
-  
-  .tag:hover {
+	background-color: var(--tag-color);
+	transition-property: background-color, border-color;
+    transition: 1s;
+    border-color: var(--font-color) !important;
+    border: solid 1px;
+}
+
+.tag:hover {
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
 	cursor: pointer;
-    background-color: var(--font-color);
-  }
+	background-color: var(--font-color);
+}
 
-  .tag:hover a {
-    color: var(--inversion);
-    text-decoration: none;
-  }
+.tag:hover a {
+	color: var(--inversion);
+	text-decoration: none;
+}
 
-  .source {
-      display: flex;
-  }
-  .source a {
-      padding-right: 20px;
-      font-size: medium;
-  }
-  .source img {
-      padding: 0px;
-      margin-left: 5px;
-  }
+.source {
+	display: flex;
+}
+.source a {
+	padding-right: 20px;
+	font-size: medium;
+}
+.source img {
+	padding: 0px;
+	margin-left: 5px;
+}
+.back {
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+.back > a {
+	color: var(--font-color);
+}
+@media screen and (max-width: 1000px) {
+	.container {
+        padding: 5%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.subtitle {
+		display: block !important;
+	}
+}
+@media screen and (max-width: 700px){
+    .tags {
+        margin: auto;
+        width: fit-content;
+    }
+}

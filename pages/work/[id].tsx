@@ -8,11 +8,6 @@ export default function Work({ postData }) {
 	return (
 		<Layout page="work" id={postData.title}>
 			<Post data={postData} />
-			<div className="back">
-				<Link href="/work">
-					<a>&#x2190; Back to Work</a>
-				</Link>
-			</div>
 		</Layout>
 	);
 }

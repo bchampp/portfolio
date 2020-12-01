@@ -61,16 +61,6 @@ img {
   max-width: 100%;
   display: block;
 }
-
-.back {
-  text-align: center;
-  padding-bottom: 25px;
-}
-
-.back > a {
-  color: var(--font-color);
-}
-
 .fas {
   padding-top: 2px;
   font-size: 0.7em !important;
