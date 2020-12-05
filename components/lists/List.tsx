@@ -35,7 +35,7 @@ export function AnimatedList({ filters, data }) {
 			spring="noWobble"
 			staggerConfig={{
 				default: {
-					reverse: 'forward',
+					reverse: false,
 					speed: 1
 				}
 			}}

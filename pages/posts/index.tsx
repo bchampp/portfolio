@@ -10,7 +10,7 @@ export default function Posts({ posts }) {
 	return (
 		<Layout page="posts">
 			<h3>{title}</h3>
-			<Data type={'posts'} filters={[]} data={posts} />
+			<Data tags={[]} type={'posts'} filters={[]} data={posts} />
 		</Layout>
 	);
 }

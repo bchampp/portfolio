@@ -14,7 +14,7 @@ export default function Works({ jobs }) {
 	return (
 		<Layout page="work">
 			<h3>{title}</h3>
-			<Data type={'work'} filters={filters} data={jobs} />
+			<Data tags={[]} type={'work'} filters={filters} data={jobs} />
 		</Layout>
 	);
 }
