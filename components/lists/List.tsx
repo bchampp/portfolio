@@ -12,49 +12,46 @@ export function List({ filters, data }) {
 
 	return (
 		<div>
-			{listItems.length > 0 ? 
-			<ul className={listStyles.list}>
-				{listItems}
-			</ul>
-			:
-			<div>Nothing here...yet</div>
-			}
+			{listItems.length > 0 ? <ul className={listStyles.list}>{listItems}</ul> : <div>Nothing here...yet</div>}
 		</div>
 	);
 }
 
-export function AnimatedList({ data }) {
-	const [ focused, setFocused ] = useState(null);
-
-	const handleChange = (index) => {
-		setFocused(focused === index ? null : index);
-	};
+export function AnimatedList({ filters, data }) {
+	const listItems = data.filter((project) => sortList(project, filters)).map((item, i) => {
+		return (
+			<Flipped
+				flipId={data[i]}
+				key={data[i]}
+			>
+				<ListItem key={i} data={data[i]} />
+			</Flipped>
+		);
+	});
 
 	return (
 		<Flipper
-			flipKey={focused}
-			className="staggered-list-content"
-			spring="gentle"
+			flipKey={"test"}
+			spring="noWobble"
 			staggerConfig={{
-				card: {
-					reverse: focused !== null
+				default: {
+					reverse: 'forward',
+					speed: 1
 				}
 			}}
-			decisionData={focused}
+			decisionData={{}}
 		>
-			<ul className="list">
-				{data.map((item, i) => {
-					return (
-						<li key={item.id}>
-							{i === focused ? (
-								<ExpandedItem data={data[i]} index={focused} onClick={handleChange} />
-							) : (
-								<ListItem data={data[i]} key={i} />
-							)}
-						</li>
-					);
-				})}
-			</ul>
+			{listItems.length > 0 ? (
+				<Flipped flipId="list">
+					<div>
+						<Flipped inverseFlipId="list">
+							<ul className={listStyles.list}>{listItems}</ul>
+						</Flipped>
+					</div>
+				</Flipped>
+			) : (
+				<div>Nothing here...yet</div>
+			)}
 		</Flipper>
 	);
 }

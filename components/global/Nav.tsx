@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import pageStyles from '../../styles/page.module.css';
 
-import Switch from '@material-ui/core/Switch';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -92,7 +91,7 @@ export default function Nav({ page }) {
 					links.map((link) => (
 						<li key={link}>
 							{page === link ? (
-								<div className={pageStyles.inactive}>{link}</div>
+								<a className={pageStyles.active}>{link}</a>
 							) : (
 								<Link href={`/${link}`}>
 									<a>{link}</a>

@@ -2,7 +2,7 @@
 
 import { List, AnimatedList } from './List';
 import listStyles from '../../styles/list.module.css';
-const ANIMATED = false;
+const ANIMATED = true;
 
 export default function Data({ tags, type, filters, data }) {
 	let cleanData: Array<any>;
@@ -23,13 +23,19 @@ export default function Data({ tags, type, filters, data }) {
 				return true;
 			}
 		});
+
 		return (
 			<div className={tags ? listStyles.containerTags : listStyles.container}>
-				<List filters={filters} data={cleanData} />
+				{ANIMATED ? (
+					<AnimatedList filters={filters} data={cleanData} />
+				) : (
+					<List filters={filters} data={cleanData} />
+				)}
 			</div>
 		);
 	} else {
-		cleanData = [];
 		return <div />;
 	}
 }
+
+export function AnimatedData({ tags, type, filters, data }) {}
