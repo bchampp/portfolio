@@ -67,8 +67,20 @@
   background: #89D1FE;
   height: 1px;
 }
+@media screen and (max-width: 700px) {
+  .nav {
+    padding: 2%;
+    text-align: center;
+    align-items: center;
+  }
+  .nav a {
+    margin-left: 10px;
+  }
+  .nav li {display: none;}
+  .nav ul {display: none;}
 
-
+  .icon { display: flex !important; margin-right: 0 !important;}
+}
 /* Dark Mode Toggle */
 .toggle {
   display: flex;

@@ -11,8 +11,6 @@
 
 .tags {
   display: flex;
-  padding-left: 12rem;
-  padding-right: 12rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -59,8 +57,6 @@
 .content {
   display: flex;
   justify-content: space-around;
-  padding-right: 4rem;
-  padding-left: 4rem;
 }
 
 @media screen and (max-width: 700px) {

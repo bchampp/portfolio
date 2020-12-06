@@ -1,12 +1,12 @@
 /* Lists/List Component - both static and animated versions*/
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
-import { ListItem, ExpandedItem } from './Item';
+import { ListItem, AnimatedListItem } from './Item';
 import listStyles from '../../styles/list.module.css';
 
-export function List({ filters, data }) {
-	const listItems = data.filter((project) => sortList(project, filters)).map((item, i) => {
+export function List({ data }) {
+	const listItems = data.map((item, i) => {
 		return <ListItem key={i} data={data[i]} />;
 	});
 
@@ -17,53 +17,58 @@ export function List({ filters, data }) {
 	);
 }
 
-export function AnimatedList({ filters, data }) {
-	const listItems = data.filter((project) => sortList(project, filters)).map((item, i) => {
-		return (
-			<Flipped
-				flipId={data[i]}
-				key={data[i]}
-			>
-				<ListItem key={i} data={data[i]} />
-			</Flipped>
-		);
-	});
+export function AnimatedList({ data, filters }) {
+	const [spring, setSpring] = useState("noWobble");
+	const [filteredData, setFilteredData] = useState([]);
+
+	const filterData = () => {
+		let cleanData = data.filter((project) => {
+			if ('tags' in project) {
+				if (filters.length == 0) { return true; }
+				for (var i = 0; i < filters.length; i++) {
+					return project.tags.includes(filters[i]);
+				} return false;
+			} else { return true; } // No tags
+		});
+		console.log("Setting filtered data state and re rendering")
+		setFilteredData(cleanData);
+	}
+	
+	useEffect(() => {
+		filterData();
+	}, [filters])
 
 	return (
-		<Flipper
-			flipKey={"test"}
-			spring="noWobble"
-			staggerConfig={{
-				default: {
-					reverse: false,
-					speed: 1
-				}
-			}}
-			decisionData={{}}
-		>
-			{listItems.length > 0 ? (
-				<Flipped flipId="list">
-					<div>
-						<Flipped inverseFlipId="list">
-							<ul className={listStyles.list}>{listItems}</ul>
-						</Flipped>
-					</div>
-				</Flipped>
-			) : (
-				<div>Nothing here...yet</div>
-			)}
-		</Flipper>
+		<div>
+			<Flipper
+				flipKey={`${JSON.stringify(filteredData)}`}
+				spring={spring}
+				staggerConfig={{
+					default: {
+						reverse: false,
+						speed: 0
+					}
+				}}
+				decisionData={filteredData}
+			>
+				{filteredData.length > 0 ? (
+					<Flipped flipId="list">
+						<div>
+							<Flipped inverseFlipId="list">
+								<ul className={listStyles.list}>
+									{[...filteredData]
+										.map(item => (
+											<AnimatedListItem data={item}/>
+										))}
+								</ul>
+							</Flipped>
+						</div>
+					</Flipped>
+				) : (
+						<div>Nothing here...yet</div>
+					)}
+			</Flipper>
+		</div>
 	);
 }
 
-const sortList = (project, filters) => {
-	if (filters.length == 0) {
-		return true;
-	}
-	for (var i = 0; i < filters.length; i++) {
-		if (project.tags && project.tags.includes(filters[i])) {
-			return true;
-		}
-	}
-	return false;
-};

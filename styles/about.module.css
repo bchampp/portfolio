@@ -1,7 +1,5 @@
 .about {
     font-size: medium;
-    padding-left: 15%;
-    padding-right: 15%;
     padding-bottom: 40px;
     min-height: 100vh;
 }
@@ -10,6 +8,7 @@
 }
 .about img {
     margin: auto;
+    border-radius: 50%;
 }
 .about a {
     font-weight: 600;
@@ -18,4 +17,7 @@
     color: var(--font-color);
     transition-property: color;
     transition: 1s;
+}
+.gallery {
+    padding-bottom: 20px;
 }

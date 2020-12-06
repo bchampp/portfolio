@@ -10,7 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 
 // const links = [ 'about', 'work', 'projects', 'posts' ];
-const links = [ 'about', 'work', 'projects', 'resume' ];
+const links = [ 'about', 'work', 'projects'];
 
 const resumeLink = "https://drive.google.com/file/d/1Mlz0-qz1H8olaJHuRJoG1eYiIaFCYjp-/view?usp=sharing"
 
@@ -99,6 +99,9 @@ export default function Nav({ page }) {
 							)}
 						</li>
 					))}
+				<li>
+					<a href={resumeLink} target="_">resume</a>
+				</li>
 				<li>
 					<div className={pageStyles.toggle}>
 					<input 	type="checkbox" 
