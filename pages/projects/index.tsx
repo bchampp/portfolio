@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
@@ -34,3 +35,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		}
 	};
 };
+=======
+import Layout from '../../components/layout';
+
+export default function Projects(){
+    return (
+        <Layout page='projects'>
+            <div>
+                Project Page
+            </div>
+        </Layout>
+    )
+}
+>>>>>>> 07b5cd37ded555c82ab84f9f3ca35239b6cea161

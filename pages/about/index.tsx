@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/global/Layout';
 
 const title = 'About Me';
@@ -60,3 +61,16 @@ export default function About() {
 		</Layout>
 	);
 }
+=======
+import Layout from '../../components/layout';
+
+export default function About(){
+    return (
+        <Layout page='about'>
+            <div>
+                About Page
+            </div>
+        </Layout>
+    )
+}
+>>>>>>> 07b5cd37ded555c82ab84f9f3ca35239b6cea161

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const purgecss = [
   '@fullhuman/postcss-purgecss',
   {
@@ -17,6 +18,8 @@ const purgecss = [
   },
 ];
 
+=======
+>>>>>>> 07b5cd37ded555c82ab84f9f3ca35239b6cea161
 module.exports = {
     plugins: [
       'tailwindcss',
