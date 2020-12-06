@@ -52,7 +52,7 @@ export function AnimatedList({ data, filters }) {
 						</div>
 					</Flipped>
 				) : (
-						<div>Nothing here...yet</div>
+						<div style={{color: "var(--font-color)"}}>Nothing here...yet</div>
 					)}
 			</Flipper>
 		</div>

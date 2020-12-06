@@ -68,7 +68,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 						<Data type={'posts'} filters={filters} data={posts} />
 					</div> */}
 				</div>
-				<div className={styles.back}>
+				<div className={styles.back} style={{paddingTop: '20px'}}>
 				{tag ? 
 					<Link href="/tags">
 						<a>&larr; All Tags</a>

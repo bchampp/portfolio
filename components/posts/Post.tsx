@@ -35,7 +35,7 @@ function PostTitle({ data }) {
 			</div>
 			<div className={styles.source}>
 				{data.github && (
-					<Link href={`/${data.github}`}>
+					<Link href={`${data.github}`}>
 						<a style={{ display: 'flex' }}>
 							See the code <img className={styles.github} src="/github.png" width={25} height={25} />
 						</a>

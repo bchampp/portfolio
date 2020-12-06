@@ -1,8 +1,8 @@
 /* Project Post Page */
 
 import Head from 'next/head'
-import Content from '../../lib/content';
 import Layout from '../../components/global/Layout';
+import Content from '../../lib/content';
 import Post from '../../components/posts/Post';
 
 export default function Project({ postData }) {
@@ -23,5 +23,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const postData = await new Content('projects').getData(params.id);
-  return { props: { postData }}
+  return {
+    props: {
+      postData
+    }
+  }
 }
