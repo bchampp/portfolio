@@ -4,8 +4,10 @@
 import Head from 'next/head'
 
 // Custom Components
-import Nav from './Nav';
-import Footer from './Footer';
+import Nav from './Nav'
+// import Footer from './Footer';
+
+import pageStyles from '../../styles/page.module.css';
 
 // Page Constants
 const name = 'brent champion | ';
@@ -15,9 +17,10 @@ export default function Layout(props) {
 
   const siteTitle = id ? name + id : name + page
   return (
-    <div className="bg-white cursor-auto">
+    <div className={pageStyles.layout}>
 
       {/* Page Head */}
+      {/* TODO: Make this dynamic */}
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/logo.png" />
@@ -27,16 +30,17 @@ export default function Layout(props) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+			  <script src="https://kit.fontawesome.com/9506f5416a.js" crossOrigin="anonymous"></script>
       </Head>
       
       {/* Nav Bar */}
       <Nav page={page}/>
       
       {/* Page Contents */}
-      <main className={page != 'home' ? "px-6 py-8 w-full" : ""}>{children}</main>
+      <main className={page === 'home' ? '' : pageStyles.main}>{children}</main>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   )

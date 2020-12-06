@@ -1,10 +1,8 @@
+/* All Tags Page */
+
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 
 import Layout from '../../components/global/Layout';
-import React, { useState } from 'react';
-
-import Data from '../../components/lists/Data';
 import Content, { getAllTags } from '../../lib/content';
 import Tags from '../../components/global/Tags';
 

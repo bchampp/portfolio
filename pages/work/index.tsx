@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-import { GetStaticProps } from 'next';
+/* All Experience Page */
 
-// Custom Components
+import { GetStaticProps } from 'next';
 import Layout from '../../components/global/Layout';
 import Data from '../../components/lists/Data';
 import Content from '../../lib/content';
 
-const title = 'Work Experience';
+const title = 'Experience';
 
 export default function Works({ jobs }) {
-	const [ filters, setFilters ] = useState([]);
-
 	return (
 		<Layout page="work">
-			<h3 className="text-center text-xl py-6">{title}</h3>
-			<Data type={'work'} filters={filters} data={jobs} />
+			<h3>{title}</h3>
+			<Data tags={[]} filters={[]} data={jobs} />
 		</Layout>
 	);
 }

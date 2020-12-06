@@ -1,6 +1,7 @@
+/* Utility Component for displaying Dates */
+
 import { parseISO, format } from 'date-fns';
 
-// Utility for displaying date
 export default function Date({ startDate, endDate }) {
 	const start = format(parseISO(startDate), 'LLLL yyyy');
 	let end: Date | String;

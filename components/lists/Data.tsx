@@ -1,35 +1,33 @@
 /* Main Data Component */
 
 import { List, AnimatedList } from './List';
+import listStyles from '../../styles/list.module.css';
 
-const ANIMATED = false;
+const ANIMATED = true;
 
-export default function Data({ type, filters, data }) {
+export default function Data({ tags, filters, data }) {
 	let cleanData: Array<any>;
 	if (data) {
 		cleanData = data.filter((project) => {
 			if ('tags' in project) {
-				if (filters.length == 0) {
-					// No filters yet
-					return true;
-				}
+				if (filters.length == 0) { return true; }
 				for (var i = 0; i < filters.length; i++) {
 					if (project.tags.includes(filters[i])) {
 						return true;
 					}
-				}
-				return false;
-			} else {
-				return true;
-			}
+				} return false;
+			} else { return true; } // No tags
 		});
+
 		return (
-			<div className={"w-4/5 m-auto"}>
-				<List type={type} filters={filters} data={cleanData} />
+			<div className={tags ? listStyles.containerTags : listStyles.container}>
+				{ ANIMATED ? (
+					<AnimatedList filters={filters} data={cleanData} />
+				) : (
+					<List data={cleanData} />
+				)}
 			</div>
 		);
-	} else {
-		cleanData = [];
-		return <div />;
-	}
+
+	} else { return <div />; }
 }

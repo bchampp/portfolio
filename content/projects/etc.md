@@ -5,7 +5,7 @@ endDate: '2019-12-09'
 type: 'projects'
 subtitle: 'An Electronic Throttle Control System'
 tags: ['c++', 'formula', 'control system']
-exists: true
+exists: false
 ---
 
-Blah blah
+The Electronic Throttle Control (ETC) system was a long term project I worked on at Queen's Formula. 

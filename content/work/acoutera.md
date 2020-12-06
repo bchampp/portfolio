@@ -9,6 +9,7 @@ type: 'work'
 exists: true
 ---
 
+![Acoutera Banner](/work/acoutera.png)
 
 # My first taste of the start up culture
 Over the summer of 2020 I interned as a Full Stack Software Engineer for Acoutera. This was my first formal introduction to Full Stack development, and it left me feeling the most excited I've ever been about technology. 
@@ -48,4 +49,4 @@ Some of the features I built in the design suite were:
     - Pre-building static html pages where possible
 
 
-Overall, this internship was one of the best experiences I could ask for as an Aspiring Software Engineer. It opened my eyes to a ton of technology I'd never used before. 
+Overall, this internship was one of the best experiences I could ask for as an Aspiring Software Engineer. It opened my eyes to different technologies I'd never used before, gave me the freedom to play around with a lot of trending frameworks, and helped me understand what goes into launching a product. 
