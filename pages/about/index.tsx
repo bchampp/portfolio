@@ -1,3 +1,5 @@
+/* About Page */
+
 import Layout from '../../components/global/Layout';
 import styles from '../../styles/about.module.css';
 

@@ -1,7 +1,9 @@
 /* Nav Component */
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import pageStyles from '../../styles/page.module.css';
+
+import styles from '../../styles/page.module.css';
 
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -9,14 +11,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 
-// const links = [ 'about', 'work', 'projects', 'posts' ];
 const links = [ 'about', 'work', 'projects'];
 
 const resumeLink = "https://drive.google.com/file/d/1Mlz0-qz1H8olaJHuRJoG1eYiIaFCYjp-/view?usp=sharing"
 
 const StyledMenu: any = withStyles({
-	paper: {
-		border: '1px solid #FFFFFF'
+
+	list: {
+		'background-color': 'var(--bg-color)',
 	}
 })((props: any) => (
 	<Menu
@@ -37,6 +39,7 @@ const StyledMenu: any = withStyles({
 
 const StyledMenuItem = withStyles((theme) => ({
 	root: {
+		'background-color': 'var(--bg-color)',
 		'&:focus': {
 			backgroundColor: theme.palette.primary.main,
 			'& .MuiListItemIcon-root, & .MuiListItemText-primary': {
@@ -81,7 +84,7 @@ export default function Nav({ page }) {
 	}
 
 	return (
-		<header className={pageStyles.nav}>
+		<header className={styles.nav}>
 			<Link href="/">
 				<a>brent champion</a>
 			</Link>
@@ -92,7 +95,7 @@ export default function Nav({ page }) {
 						<li key={link}>
 							{page === link ? (
 								<Link href={`/${link}`}>
-									<a className={pageStyles.active}>{link}</a>
+									<a className={styles.active}>{link}</a>
 								</Link>
 							) : (
 								<Link href={`/${link}`}>
@@ -105,24 +108,25 @@ export default function Nav({ page }) {
 					<a href={resumeLink} target="_">resume</a>
 				</li>
 				<li>
-					<div className={pageStyles.toggle}>
+					<div className={styles.toggle}>
 					<input 	type="checkbox" 
-							className={pageStyles.checkbox} 
+							className={styles.checkbox} 
 							id="chk" 
 							checked={theme}
 							onChange={handleThemeChange}
 					/>
-					<label className={pageStyles.label} htmlFor="chk">
+					<label className={styles.label} htmlFor="chk">
 						<i className="fas fa-moon"></i>
 						<i className="fas fa-sun"></i>
-						<div className={pageStyles.ball}></div>
+						<div className={styles.ball}></div>
 					</label>
 					</div>
 				</li>
 			</ul>
-			<a className={pageStyles.icon} onClick={handleClick}>
+			<a className={styles.icon} onClick={handleClick}>
 				<MenuIcon />
 			</a>
+
 			{/* Responsive Navigation */}
 			<StyledMenu
 				anchorEl={anchorEl}
@@ -152,18 +156,28 @@ export default function Nav({ page }) {
 					</Link>
 				</StyledMenuItem>
 				<StyledMenuItem>
-					<Link href="/posts">
-						<a>
-							<ListItemText primary="posts" />
-						</a>
-					</Link>
-				</StyledMenuItem>
-				<StyledMenuItem>
 					<Link href={resumeLink}>
 						<a target="_blank">
 							<ListItemText primary="resume" />
 						</a>
 					</Link>
+				</StyledMenuItem>
+				<StyledMenuItem>
+				<li>
+					<div className={styles.toggle}>
+					<input 	type="checkbox" 
+							className={styles.checkbox} 
+							id="chk" 
+							checked={theme}
+							onChange={handleThemeChange}
+					/>
+					<label className={styles.label} htmlFor="chk">
+						<i style={{paddingLeft: '1px'}} className="fas fa-moon"></i>
+						<i style={{paddingRight: '1px'}} className="fas fa-sun"></i>
+						<div className={styles.mobileBall}></div>
+					</label>
+					</div>
+				</li>
 				</StyledMenuItem>
 			</StyledMenu>
 		</header>

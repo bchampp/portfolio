@@ -1,6 +1,6 @@
-import { GetStaticProps } from 'next';
+/* All Experience Page */
 
-// Custom Components
+import { GetStaticProps } from 'next';
 import Layout from '../../components/global/Layout';
 import Data from '../../components/lists/Data';
 import Content from '../../lib/content';

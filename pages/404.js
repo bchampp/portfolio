@@ -1,3 +1,5 @@
+/* 404 Not Found Page */
+
 import Link from 'next/link';
 import Layout from '../components/global/Layout';
 

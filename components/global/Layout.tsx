@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 // Custom Components
 import Nav from './Nav'
-import Footer from './Footer';
+// import Footer from './Footer';
 
 import pageStyles from '../../styles/page.module.css';
 

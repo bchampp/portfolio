@@ -1,3 +1,5 @@
+/* All Tags Page */
+
 import { GetStaticProps } from 'next';
 
 import Layout from '../../components/global/Layout';

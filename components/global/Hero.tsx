@@ -1,6 +1,7 @@
+/* Hero Component */
+
 import styles from '../../styles/hero.module.css';
 
-// TODO: fix to be an import
 const Typewriter = require('typewriter-effect');
 
 export default function Hero() {

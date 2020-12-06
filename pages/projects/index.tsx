@@ -1,10 +1,10 @@
+/* All Projects Page */
+
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
-
 import Layout from '../../components/global/Layout';
 import Search from '../../components/lists/SearchBar';
 import Data from '../../components/lists/Data';
-
 import Content from '../../lib/content';
 
 const title = 'Projects';

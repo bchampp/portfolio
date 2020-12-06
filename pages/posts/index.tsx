@@ -1,5 +1,6 @@
-import { GetStaticProps } from 'next';
+/* All Posts Page */
 
+import { GetStaticProps } from 'next';
 import Layout from '../../components/global/Layout';
 import Data from '../../components/lists/Data';
 import Content from '../../lib/content';

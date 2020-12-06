@@ -3,9 +3,6 @@
     padding-bottom: 40px;
     min-height: 100vh;
 }
-@media screen and (max-width: 1000px) {
-    .about {padding: 0; }
-}
 .about img {
     margin: auto;
     border-radius: 50%;
@@ -17,6 +14,9 @@
     color: var(--font-color);
     transition-property: color;
     transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+    .about {padding: 0; }
 }
 .gallery {
     padding-bottom: 20px;

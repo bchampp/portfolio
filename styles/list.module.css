@@ -1,3 +1,4 @@
+/* List Container */
 .container {
     width: 75%;
 	margin: auto;
@@ -14,11 +15,13 @@
 .containerTags {
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-  }
+}
 .staggered-list-content {
 	width: 50%;
 	margin: 2rem auto;
 }
+
+/* List Wrapper */
 .list {
 	list-style-type: none;
 	display: flex;
@@ -26,15 +29,17 @@
 	height: 100vh;
 	padding: 0;
 }
-@media screen and (max-width: 700px){
-	.list {height: auto !important;}
-}
 .list li {
 	width: 100%;
 }
 .list li + li {
 	margin-top: 1rem;
 }
+@media screen and (max-width: 700px){
+	.list {height: auto !important;}
+}
+
+/* List Item */
 .listItem {
 	width: 100%;
 	transform: translateZ(0);

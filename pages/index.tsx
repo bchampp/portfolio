@@ -1,13 +1,8 @@
 /* Home Page Component */
 
-// Next Imports
 import { GetStaticProps } from 'next';
-
-// Custom Components
 import Layout from '../components/global/Layout';
 import Hero from '../components/global/Hero';
-
-// Import Utility Functions
 import Content from '../lib/content';
 
 export default function Home({ projects, posts }) {

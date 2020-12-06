@@ -1,3 +1,5 @@
+/* Blog Post Page */
+
 import Link from 'next/link';
 import Layout from '../../components/global/Layout';
 import Post from '../../components/posts/Post';

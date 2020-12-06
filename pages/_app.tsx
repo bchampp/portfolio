@@ -1,7 +1,5 @@
-// Import types
 import type { AppProps } from 'next/app';
 
-// Import Global Styling
 import '../styles/global.css';
 
 // Export App

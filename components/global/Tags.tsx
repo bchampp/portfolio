@@ -1,3 +1,5 @@
+/* Tagging Component */
+
 import React, { useState, useEffect } from 'react';
 import Data from '../lists/Data';
 import Link from 'next/link';

@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import Layout from '../../components/global/Layout';
+/* Project Post Page */
+
 import Head from 'next/head'
 import Content from '../../lib/content';
+import Layout from '../../components/global/Layout';
 import Post from '../../components/posts/Post';
 
 export default function Project({ postData }) {

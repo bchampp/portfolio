@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* Work Post Page */
 
 import Layout from '../../components/global/Layout';
 import Post from '../../components/posts/Post';

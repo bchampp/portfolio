@@ -1,3 +1,5 @@
+/* Specific Tag Page */
+
 import { getAllTagIds } from '../../lib/content';
 import Content, { getAllTags } from '../../lib/content';
 import Index from '.';
