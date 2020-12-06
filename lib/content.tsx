@@ -3,7 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
-import { parseISO } from 'date-fns/esm/fp';
 
 interface Post {
     id: string,
@@ -166,4 +165,4 @@ export function getAllTagIds() {
         }
     })
     return tags;
-}
+} 

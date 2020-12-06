@@ -1,18 +1,27 @@
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+/* Search Bar Component */
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: 500,
-    '& > * + *': {
-      marginTop: theme.spacing(3),
-    },
+import styles from '../../styles/list.module.css';
+
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  inputRoot: {
+    color: "var(--font-color)",
   },
+  endAdornment: {
+    color: "#757575",
+    "& .MuiButtonBase-root": {
+      color: "#757575",
+    }
+    
+  }
 }));
 
 export default function Search({setFilter, options}) {
   const classes = useStyles();
+
   const handleChange = (e, values) => {
       let tags = [];
       values.forEach(value => {
@@ -20,10 +29,14 @@ export default function Search({setFilter, options}) {
       })
       setFilter(tags);
   }
+
   return (
+    <div className={styles.search}>
       <Autocomplete
         multiple
+        classes={classes}
         id="tags-standard"
+        autoComplete={true}
         options={options}
         onChange={handleChange}
         getOptionLabel={(option) => option.name}
@@ -35,5 +48,6 @@ export default function Search({setFilter, options}) {
           />
         )}
       />
+      </div>
   );
 }

@@ -1,101 +1,84 @@
+/* Tagging Component */
+
 import React, { useState, useEffect } from 'react';
 import Data from '../lists/Data';
 import Link from 'next/link';
 
-export default function Tags({ tag, tags, work, projects, posts}) {
-	const [filters, setFilters] = useState(tag ? tag : []);
+import tagStyles from '../../styles/tags.module.css';
+import styles from '../../styles/post.module.css';
 
+export default function Tags({ tag, tags, work, projects, posts }) {
+	const [filters, setFilters] = useState([]);
 
-	useEffect(() => {}, [ filters ]);
-	
+	useEffect(() => {
+		if (tag) {
+			setFilters(tag);
+		}
+	}, [tag]);
+
 	const handleClick = (filter) => {
-		console.log(filter);
 		let currFilters = filters;
 		const exists = filters.indexOf(filter);
 		if (exists == -1) {
-			currFilters = [...filters, filter];
+			currFilters = [ ...filters, filter ];
+			setFilters(currFilters);
 		} else {
-			currFilters.splice(exists, 1)
-			console.log(currFilters);
+			currFilters.splice(exists, 1);
+			setFilters(currFilters.filter(x => x !== filter));
 		}
-
-		let route = `/tags/${currFilters[0]}`;
+		let route = `/tags/${currFilters[0] || ''}`;
 		for (var i = 1; i < currFilters.length; i++) {
 			const routePostfix = `&${currFilters[i]}`;
 			route = route.concat(routePostfix);
 		}
-		setFilters(currFilters);
 		window.history.pushState({}, null, route);
-	}
+	};
 
 	return (
 		<div>
-			<h3 className="text-center text-xl py-2">Tags</h3>
-			<div className="flex px-48 py-4 justify-evenly flex-wrap">
-				{tags &&
-					tags.map(
-						(tag) =>
-							filters.includes(tag.name) ? ( // Selected Tag
-								<div key={tag.name} className="px-2 m-auto my-2 rounded bg-black text-white">
-									<div
-										className="hover:cursor-pointer"
-										onClick={() => {
-											handleClick(tag.name);
-										}}
-									>
-										{tag.name}
-									</div>
-								</div>
-							) : (
-								<div key={tag.name} className="px-2 m-auto my-2 bg-gray-200 rounded hover:bg-gray-500">
-									<div
-										className="hover:cursor-pointer"
-										onClick={() => {
-											handleClick(tag.name);
-										}}
-									>
-										{tag.name}
-									</div>
-								</div>
-							)
-					)}
-								<div className="flex justify-evenly">
-				<div className="text-center w-1/3">
-					<div className="py-6">
-						<Link href='/work'><a className="text-l font-bold">Work</a></Link>
-					</div>
-					<Data type={'work'} filters={filters} data={work} />
+			<h3>Tags</h3>
+			<div>
+				<div className={tagStyles.tags}>
+				{tags && tags.map((tag) => (
+						<div key={tag.name} className={filters.includes(tag.name) ? tagStyles.active : tagStyles.inactive}>
+							<div onClick={() => { handleClick(tag.name); }}>
+								{tag.name}
+							</div>
+						</div>
+					))}
 				</div>
-				<div className="text-center w-1/3">
-					<div className="py-6">
-						<Link href='/projects'><a className="text-l font-bold">Projects</a></Link>
+				<div className={tagStyles.content}>
+					{/* TODO: Refactor further */}
+					<div className={tagStyles.contentContainer}>
+						<div className={tagStyles.contentTitle}>
+							<Link href="/work"><a>Work</a></Link>
+							</div>
+						<Data tags={true} filters={filters} data={work} />
 					</div>
-					<Data type={'projects'} filters={filters} data={projects} />
-				</div>
-				<div className="text-center w-1/3">
-					<div className="py-6">
-						<Link href='/posts'><a className="text-l font-bold">Posts</a></Link>
+					<div className={tagStyles.contentContainer}>
+						<div className={tagStyles.contentTitle}>
+							<Link href="/projects"><a>Projects</a></Link>
+						</div>
+						<Data tags={true} filters={filters} data={projects} />
 					</div>
-					<Data type={'posts'} filters={filters} data={posts} />
+					{/* <div className={tagStyles.contentContainer}>
+						<div className={tagStyles.contentTitle}>
+							<Link href="/posts"><a>Posts</a></Link>
+						</div>
+						<Data type={'posts'} filters={filters} data={posts} />
+					</div> */}
 				</div>
-			</div>
-			{tag ?
-				<div className='text-center hover:underline hover:'>
-					<Link href='/tags'>
-						<a>
-							&larr; All Tags
-						</a>
+				<div className={styles.back} style={{paddingTop: '20px'}}>
+				{tag ? 
+					<Link href="/tags">
+						<a>&larr; All Tags</a>
 					</Link>
+					: 
+					<Link href="/">
+						<a>&larr; Home</a>
+					</Link>
+				}
 				</div>
-				:
-				<div className='text-center hover:underline hover'>
-					<Link href='/'>
-				<a>
-					&larr; Home
-				</a>
-			</Link>
-				</div>
-			}
 			</div>
 		</div>
 	);

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+/* All Projects Page */
+
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
-
 import Layout from '../../components/global/Layout';
 import Search from '../../components/lists/SearchBar';
 import Data from '../../components/lists/Data';
-
 import Content from '../../lib/content';
 
 const title = 'Projects';
@@ -15,11 +14,9 @@ export default function Projects({ projects, tags }) {
 
 	return (
 		<Layout page="projects">
-			<h3 className="text-center text-xl py-2">{title}</h3>
-			<div className="w-64 py-6 m-auto">
-				<Search setFilter={setFilters} options={tags} />
-			</div>
-			<Data type={'projects'} filters={filters} data={projects} />
+			<h3>{title}</h3>
+			<Search setFilter={setFilters} options={tags} />
+			<Data tags={[]} filters={filters} data={projects} />
 		</Layout>
 	);
 }
@@ -35,16 +32,3 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		}
 	};
 };
-=======
-import Layout from '../../components/layout';
-
-export default function Projects(){
-    return (
-        <Layout page='projects'>
-            <div>
-                Project Page
-            </div>
-        </Layout>
-    )
-}
->>>>>>> 07b5cd37ded555c82ab84f9f3ca35239b6cea161

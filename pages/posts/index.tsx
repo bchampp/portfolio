@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-import { GetStaticProps } from 'next';
+/* All Posts Page */
 
+import { GetStaticProps } from 'next';
 import Layout from '../../components/global/Layout';
 import Data from '../../components/lists/Data';
 import Content from '../../lib/content';
 
 const title = "Posts";
 
-export default function ({ posts }) {
-
+export default function Posts({ posts }) {
 	return (
 		<Layout page="posts">
-			<h3 className="text-center text-xl py-4">{title}</h3>
-			<Data type={'posts'} filters={[]} data={posts} />
+			<h3>{title}</h3>
+			<Data tags={[]} filters={[]} data={posts} />
 		</Layout>
 	);
 }
@@ -26,16 +25,3 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		}
 	};
 };
-=======
-import Layout from '../../components/layout';
-
-export default function Posts(){
-    return (
-        <Layout page='posts'>
-            <div>
-                Posts
-            </div>
-        </Layout>
-    )
-}
->>>>>>> 07b5cd37ded555c82ab84f9f3ca35239b6cea161

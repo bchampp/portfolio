@@ -1,47 +1,133 @@
 /* Lists/Item Component - both static and animated versions*/
 
 import Link from "next/link";
-import React, { useState } from "react";
-import { Flipper, Flipped } from "react-flip-toolkit";
+import React, { useEffect, useState } from "react";
+import { Flipped, spring } from "react-flip-toolkit";
 import Date from '../global/Date';
+import listStyles from '../../styles/list.module.css';
 
 export function ListItem({ data }) {
-	return (
-		<Link href={`/${data.type}/${data.id}`}>
-			<a style={{ textDecoration: 'none' }} className="listItem">
-				<div className="listItemContent">
-					<div className="w-full flex flex-wrap justify-between">
-						<div className="font-bold float-left">{data.title}</div>
-						<div className="text-sm float-right text-gray-700">
-							<Date startDate={data.startDate} endDate={data.endDate} />
-						</div>
-						<div style={{ flexBasis: '100%', height: '0' }} />
-						<div className="text-sm px-2">{data.subtitle}</div>
-						<div style={{ flexBasis: '100%', height: '0' }} />
-						{data.tags && (
-							<div className="text-md flex flex-wrap">
-								{data.tags.map((tag) => (
-									<div className="tag">
-										<Link href={`/tags/${tag}`}>
-											<a>{tag}</a>
-										</Link>
-									</div>
-								))}
-							</div>
-						)}
-					</div>
-				</div>
-			</a>
-		</Link>
-	);
+    return (
+        <Link href={`/${data.type}/${data.id}`}>
+            <a style={{ textDecoration: 'none' }} className={listStyles.listItem}>
+                <div className={listStyles.listItemContent}>
+                    <div className={listStyles.contentContainer}>
+                        <div className={listStyles.title}>{data.title}</div>
+                        <div className={listStyles.date}>
+                            <Date startDate={data.startDate} endDate={data.endDate} />
+                        </div>
+                        <div style={{ flexBasis: '100%', height: '0' }} />
+                        <div className={listStyles.subtitle}>{data.subtitle}</div>
+                        <div style={{ flexBasis: '100%', height: '0' }} />
+                        {data.tags && (
+                            <div className={listStyles.tags}>
+                                {data.tags.map((tag) => (
+                                    <div key={tag} className={listStyles.tag}>
+                                        <Link href={`/tags/${tag}`}>
+                                            {tag}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </a>
+        </Link>
+    );
 }
 
-const createCardFlipId = index => `listItem-${index}`;
+export function AnimatedListItem({ data }) {
+    const flipId = `item-${data.id}`
 
-const shouldFlip = index => (prev, current) =>
-    index === prev || index === current;
+    const shouldFlip = (prev, current) => {
+        if (prev.type !== current.type) {
+            return true;
+        }
+        return false;
+    };
+
+    const onElementAppear = (el, index) => {
+        spring({
+            onUpdate: val => {
+                el.style.opacity = val;
+            },
+            delay: index * 250
+        });
+    }
+
+    const onExit = (el, index, removeElement) => {
+        spring({
+            config: { overshootClamping: true },
+            onUpdate: (val: number) => {
+                el.style.transform = `scale(${1 - val})`;
+            },
+            delay: index * 150,
+            onComplete: removeElement
+        });
+
+        return () => {
+            el.style.opacity = "";
+            removeElement();
+        };
+    };
+
+    return (
+        <Flipped
+            flipId={flipId}
+            key={flipId}
+            onAppear={onElementAppear}
+            onExit={onExit}
+            stagger={"forward"}
+            shouldInvert={shouldFlip}>
+            <li>
+                <Link href={`/${data.type}/${data.id}`}>
+                    <a style={{ textDecoration: 'none' }}>
+                        <Flipped inverseFlipId={flipId}>
+                            <Flipped
+                                flipId={`${flipId}-content`}
+                                translate
+                                shouldFlip={shouldFlip}
+                                delayUntil={flipId}>
+                                    <div className={listStyles.listItem}>
+                                <div className={listStyles.listItemContent}>
+                                    <div className={listStyles.contentContainer}>
+                                        <div className={listStyles.title}>{data.title}</div>
+                                        <div className={listStyles.date}>
+                                            <Date startDate={data.startDate} endDate={data.endDate} />
+                                        </div>
+                                        <div style={{ flexBasis: '100%', height: '0' }} />
+                                        <div className={listStyles.subtitle}>{data.subtitle}</div>
+                                        <div style={{ flexBasis: '100%', height: '0' }} />
+                                        {data.tags && (
+                                            <div className={listStyles.tags}>
+                                                {data.tags.map((tag) => (
+                                                    <div key={tag} className={listStyles.tag}>
+                                                        <Link href={`/tags/${tag}`}>
+                                                            {tag}
+                                                        </Link>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                                </div>
+                            </Flipped>
+                        </Flipped>
+                    </a>
+                </Link>
+            </li>
+        </Flipped>
+    )
+}
 
 export function ExpandedItem({ data, index, onClick }) {
+    const createCardFlipId = index => `listItem-${index}`;
+
+    const shouldFlip = index => (prev, current) =>
+        index === prev || index === current;
+
     return (
         <Flipped
             flipId={createCardFlipId(index)}
@@ -109,12 +195,12 @@ export function ExpandedItem({ data, index, onClick }) {
                                 </>
                             }
                         </div>
-                        { (data.type=='project' || data.post) && 
-                        <div className="text-center">
-                            <Link href={data.type=='project' ? `/projects/${data.id}` : data.post}>
-                                <a>Read more &rarr;</a>
-                            </Link>
-                        </div>
+                        {(data.type == 'project' || data.post) &&
+                            <div className="text-center">
+                                <Link href={data.type == 'project' ? `/projects/${data.id}` : data.post}>
+                                    <a>Read more &rarr;</a>
+                                </Link>
+                            </div>
                         }
                     </div>
                 </Flipped>

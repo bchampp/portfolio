@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* Work Post Page */
 
 import Layout from '../../components/global/Layout';
 import Post from '../../components/posts/Post';
@@ -8,11 +8,6 @@ export default function Work({ postData }) {
 	return (
 		<Layout page="work" id={postData.title}>
 			<Post data={postData} />
-			<div className="text-center">
-				<Link href="/work">
-					<a>&#x2190; Back to Work</a>
-				</Link>
-			</div>
 		</Layout>
 	);
 }

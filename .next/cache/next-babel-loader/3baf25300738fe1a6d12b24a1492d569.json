@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Layout from '../components/layout';\nexport default function Custom404() {\n  return __jsx(Layout, {\n    page: \"notfound\"\n  }, __jsx(\"div\", {\n    className: \"text-center\"\n  }, \"hmm.. I can't find that page for you.\"));\n}","map":null,"metadata":{},"sourceType":"module"}
