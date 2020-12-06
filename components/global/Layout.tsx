@@ -37,7 +37,7 @@ export default function Layout(props) {
       <Nav page={page}/>
       
       {/* Page Contents */}
-      <main>{children}</main>
+      <main className={page === 'home' ? '' : pageStyles.main}>{children}</main>
 
       {/* Footer */}
       {/* <Footer /> */}

@@ -49,4 +49,4 @@ Some of the features I built in the design suite were:
     - Pre-building static html pages where possible
 
 
-Overall, this internship was one of the best experiences I could ask for as an Aspiring Software Engineer. It opened my eyes to a ton of technology I'd never used before, gave me freedom to play around with a lot of <i>trending</i> frameworks and taught me about what goes into starting a company.  
+Overall, this internship was one of the best experiences I could ask for as an Aspiring Software Engineer. It opened my eyes to different technologies I'd never used before, gave me the freedom to play around with a lot of trending frameworks, and helped me understand what goes into launching a product. 

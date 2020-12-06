@@ -91,7 +91,9 @@ export default function Nav({ page }) {
 					links.map((link) => (
 						<li key={link}>
 							{page === link ? (
-								<a className={pageStyles.active}>{link}</a>
+								<Link href={`/${link}`}>
+									<a className={pageStyles.active}>{link}</a>
+								</Link>
 							) : (
 								<Link href={`/${link}`}>
 									<a>{link}</a>

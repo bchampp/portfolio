@@ -59,7 +59,7 @@ export function AnimatedListItem({ data }) {
     const onExit = (el, index, removeElement) => {
         spring({
             config: { overshootClamping: true },
-            onUpdate: (val) => {
+            onUpdate: (val: number) => {
                 el.style.transform = `scale(${1 - val})`;
             },
             delay: index * 150,

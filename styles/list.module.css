@@ -6,7 +6,15 @@
 	width: 100%;
 	margin: auto;
 	padding: 0 5%;
+	overflow-y: scroll;
 }
+.containerTags::-webkit-scrollbar {
+	display: none;
+}
+.containerTags {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
 .staggered-list-content {
 	width: 50%;
 	margin: 2rem auto;
@@ -29,19 +37,22 @@
 }
 .listItem {
 	width: 100%;
+	transform: translateZ(0);
+	backface-visibility: hidden;
 	cursor: pointer;
-	background-color: var(--card-color);
+	background-color: var(--surface-color);
     border-radius: 10px;
     border: solid;
 	border-width: 2px;
 	border-color: var(--bg-color);
 	margin-bottom: 5px;
+	box-shadow: 1px 1px var(--inversion);
 	transition: background-color 1s;
 }
 
 .listItem:hover {
 	border-color: var(--font-color);
-	transition: 0s;
+	transition: 0.5s;
 }
 .listItemContent {
 	display: flex;
@@ -80,7 +91,7 @@
 .search {
 	margin: auto;
 	padding-top: 10px;
-	width: 30%;
+	width: 60%;
 }
 @media screen and (max-width: 700px) {
 	.search { width: 70%; }
@@ -151,21 +162,25 @@
 	font-size: medium;
 	margin: 0.25rem;
 	border-radius: 0.25rem;
-	transition: 0.5s;
 	background-color: var(--tag-color);
 	transition-property: background-color;
-	transition: 1s;
-  }
-  
-  .tag:hover {
-	-webkit-transform: scale(1.05);
-	-ms-transform: scale(1.05);
-	transform: scale(1.05);
-	cursor: pointer;
-	background-color: var(--font-color);
-  }
+	transition: 0.5s;
+}
+.tag a {
+	color: black;
+	transition-property: color;
+	transition: 0.5s;
+}
 
-  .tag:hover a {
-	  color: var(--inversion);
-	  text-decoration: none;
-  }
+.tag:hover {
+-webkit-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
+cursor: pointer;
+background-color: var(--tag-hover);
+}
+
+.tag:hover a {
+	color: white;
+	text-decoration: none;
+}

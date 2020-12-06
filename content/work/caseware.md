@@ -9,10 +9,9 @@ type: 'work'
 exists: true
 ---
 
-# My Formal Internship Year
-I'm currently a Software Developer Intern at CaseWare International, where I'm working on the Cloud Platform Team for an 8 month term. The Cloud Platform Team is in the process of building <i>Cloud 2.0</i>, a web-based version of one of CaseWares flagship softwares. 
+I'm currently interning as a Software Developer Intern at CaseWare International, where I'm working on the Cloud Platform Team for an 8 month term. 
 
-My work consists of Full Stack development using Angular, Java Spring Boot, and a variety of AWS resources.
+My work consists of Full Stack development using Angular, Java Spring Boot, and a variety of AWS resources. 
 
 
 <!-- I'm still early into my internship, but here are some of <b>my</b> takeaways so far: 

@@ -12,7 +12,9 @@ export default function Data({ tags, filters, data }) {
 			if ('tags' in project) {
 				if (filters.length == 0) { return true; }
 				for (var i = 0; i < filters.length; i++) {
-					return project.tags.includes(filters[i]);
+					if (project.tags.includes(filters[i])) {
+						return true;
+					}
 				} return false;
 			} else { return true; } // No tags
 		});
@@ -20,9 +22,9 @@ export default function Data({ tags, filters, data }) {
 		return (
 			<div className={tags ? listStyles.containerTags : listStyles.container}>
 				{ ANIMATED ? (
-					<AnimatedList filters={filters} data={data} />
+					<AnimatedList filters={filters} data={cleanData} />
 				) : (
-					<List filters={filters} data={cleanData} />
+					<List data={cleanData} />
 				)}
 			</div>
 		);

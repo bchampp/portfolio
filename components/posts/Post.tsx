@@ -1,5 +1,6 @@
 /* Post Component */
 
+import React, { useEffect, useState} from 'react';
 import Link from 'next/link';
 import Date from '../global/Date';
 import styles from '../../styles/post.module.css';
@@ -36,7 +37,7 @@ function PostTitle({ data }) {
 				{data.github && (
 					<Link href={`/${data.github}`}>
 						<a style={{ display: 'flex' }}>
-							See the code <img src="/github.png" width={25} height={25} />
+							See the code <img className={styles.github} src="/github.png" width={25} height={25} />
 						</a>
 					</Link>
 				)}

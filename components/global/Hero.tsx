@@ -27,7 +27,7 @@ export default function Hero() {
 							typewriter
 								.typeString("Hi, I'm Brent. \n")
 								.pauseFor(500)
-								.typeString(window.innerWidth < 700 && '\b<br/>')
+								.typeString(window.innerWidth < 700 && '<br/>')
 								.pauseFor(500)
 								.typeString('I like to build things.')
 								.pauseFor(1000)

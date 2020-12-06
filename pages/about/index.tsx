@@ -12,7 +12,7 @@ export default function About() {
 					<div className={styles.gallery}>
 						<img src="/me.jpg" width={300} height={300} />
 					</div>
-                    <p>Hi. I'm Brent. I'm from Mississauga, Ontario.</p>
+                    <p style={{textAlign: 'center'}}>Hi. I'm Brent. I'm from Mississauga, Ontario.</p>
 					<p>
 						I'm in between my third and fourth years of my undergrad at Queen's University, where I'm studying Computer Engineering. 
 						Currently, I'm interning as a Full Stack developer with CaseWare International,	working remotely on an exciting cloud based project.

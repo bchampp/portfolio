@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
 // Custom Components
@@ -9,12 +8,10 @@ import Content from '../../lib/content';
 const title = 'Experience';
 
 export default function Works({ jobs }) {
-	const [ filters, setFilters ] = useState([]);
-
 	return (
 		<Layout page="work">
 			<h3>{title}</h3>
-			<Data tags={[]} type={'work'} filters={filters} data={jobs} />
+			<Data tags={[]} filters={[]} data={jobs} />
 		</Layout>
 	);
 }

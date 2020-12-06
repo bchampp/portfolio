@@ -3,6 +3,7 @@ import Data from '../lists/Data';
 import Link from 'next/link';
 
 import tagStyles from '../../styles/tags.module.css';
+import styles from '../../styles/post.module.css';
 
 export default function Tags({ tag, tags, work, projects, posts }) {
 	const [filters, setFilters] = useState([]);
@@ -50,13 +51,13 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 						<div className={tagStyles.contentTitle}>
 							<Link href="/work"><a>Work</a></Link>
 							</div>
-						<Data tags={true} type={'work'} filters={filters} data={work} />
+						<Data tags={true} filters={filters} data={work} />
 					</div>
 					<div className={tagStyles.contentContainer}>
 						<div className={tagStyles.contentTitle}>
 							<Link href="/projects"><a>Projects</a></Link>
 						</div>
-						<Data tags={true} type={'projects'} filters={filters} data={projects} />
+						<Data tags={true} filters={filters} data={projects} />
 					</div>
 					{/* <div className={tagStyles.contentContainer}>
 						<div className={tagStyles.contentTitle}>
@@ -65,7 +66,7 @@ export default function Tags({ tag, tags, work, projects, posts }) {
 						<Data type={'posts'} filters={filters} data={posts} />
 					</div> */}
 				</div>
-				<div className='back'>
+				<div className={styles.back}>
 				{tag ? 
 					<Link href="/tags">
 						<a>&larr; All Tags</a>

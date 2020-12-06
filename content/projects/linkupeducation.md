@@ -5,6 +5,7 @@ endDate: 'present'
 tags: ['react', 'serverless', 'amplify']
 type: 'projects'
 subtitle: 'A social network for students to collaborate on course-work'
+github: 'https://github.com/avalittle/link-up-education'
 exists: true
 ---
 

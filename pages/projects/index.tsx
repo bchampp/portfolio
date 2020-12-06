@@ -16,7 +16,7 @@ export default function Projects({ projects, tags }) {
 		<Layout page="projects">
 			<h3>{title}</h3>
 			<Search setFilter={setFilters} options={tags} />
-			<Data tags={[]} type={'projects'} filters={filters} data={projects} />
+			<Data tags={[]} filters={filters} data={projects} />
 		</Layout>
 	);
 }

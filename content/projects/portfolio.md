@@ -23,7 +23,6 @@ This site was built with <b>NextJS</b>, a React framework that lets you do <i>co
 
 ### Routing
 I think the best part about NextJS is how routing your pages works.  
-
 The `pages` folder holds all the pages - where each subfolder defines a new page. 
 
 For example, `brentchampion.com/projects` renders the component `pages/projects/index.tsx`.

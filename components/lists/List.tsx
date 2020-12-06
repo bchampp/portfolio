@@ -21,21 +21,8 @@ export function AnimatedList({ data, filters }) {
 	const [spring, setSpring] = useState("noWobble");
 	const [filteredData, setFilteredData] = useState([]);
 
-	const filterData = () => {
-		let cleanData = data.filter((project) => {
-			if ('tags' in project) {
-				if (filters.length == 0) { return true; }
-				for (var i = 0; i < filters.length; i++) {
-					return project.tags.includes(filters[i]);
-				} return false;
-			} else { return true; } // No tags
-		});
-		console.log("Setting filtered data state and re rendering")
-		setFilteredData(cleanData);
-	}
-	
 	useEffect(() => {
-		filterData();
+		setFilteredData(data);
 	}, [filters])
 
 	return (
