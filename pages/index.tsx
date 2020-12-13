@@ -10,7 +10,6 @@ export default function Home({ projects, posts }) {
 		<div className="flex bg-white rounded-lg justify-center">
 			{/* Wrap with Layout Component */}
 			<Layout page="home">
-		
 				{/* Hero Section */}
 				<Hero />
 			</Layout>
