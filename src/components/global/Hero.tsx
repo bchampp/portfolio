@@ -8,7 +8,7 @@ export default function Hero() {
 	return (
 		<div className={styles.hero}>
 			{/* Buy Me A Coffee!! */}
-			<script
+			{/* <script
 				data-name="BMC-Widget"
 				src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
 				data-id="brentchampion"
@@ -18,7 +18,7 @@ export default function Hero() {
 				data-position="right"
 				data-x_margin="18"
 				data-y_margin="18"
-			/>
+			/> */}
 
 			<img src="/background.jpg" alt="Mountain Image" />
 			<div className={styles.text}>
