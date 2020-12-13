@@ -16,8 +16,8 @@ export default function Hero() {
 				data-message=""
 				data-color="#557FFF"
 				data-position="right"
-				data-x_margin="0"
-				data-y_margin="0"
+				data-x_margin="20"
+				data-y_margin="20"
 			/>
 
 			<img src="/background.jpg" alt="Mountain Image" />
