@@ -1,11 +1,13 @@
 import Head from 'next/head';
-
-const name = ' - brent champion';
-
+import MetadataConstants from '../../constants/metadata';
 export default function Header(props) {
     const { page, id } = props;
 
-    const siteTitle = id ? id + name : page + name;
+	const siteTitle = id ? 
+		id + MetadataConstants.TITLE_POSTFIX : 
+		(page === 'home' ? 
+		'brent champion' : 
+		page + MetadataConstants.TITLE_POSTFIX);
     
 	return (
 		<Head>
