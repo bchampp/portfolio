@@ -4,7 +4,7 @@ startDate: '2020-09-09'
 endDate: 'present'
 type: 'projects'
 subtitle: 'A democratic, shared, cross-platform music queue'
-img: '/images/projects/auxme.PNG'
+img: '/images/projects/auxme.png'
 link: 'https://github.com/bchampp/auxme'
 tags: ['spotify', 'serverless', 'websocket', 'react', 'c++', 'control-system']
 exists: true

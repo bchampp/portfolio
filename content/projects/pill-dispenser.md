@@ -15,12 +15,12 @@ My contribution to the project was primarily in the mechanical and electrical de
 
 The mechanical design of the prototype (both CAD and the actual built prototype) can be seen below
 
-![Mechanical Design](/projects/pilldispensor/prototype.PNG)
+![Mechanical Design](/projects/pilldispenser/prototype.png)
 
 An arduino UNO was used to power the electrical system. 
 The system consisted of a 16x2 display, a potentiometer, a stepper motor and some diagnostic LED's. 
 
 The schematic can be seen below
-![Electrical Design](/projects/pilldispensor/electrical.PNG)
+![Electrical Design](/projects/pilldispenser/electrical.png)
 
 This was my first time developing and prototyping a working control system. I had a lot of fun working on this project!
