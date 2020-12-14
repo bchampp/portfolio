@@ -5,11 +5,11 @@ export default function Header(props) {
     const { page, id } = props;
 
 	const pageTitle = id ? 
-		id + MetadataConstants.TITLE_POSTFIX : 
+		id.toLowerCase() + MetadataConstants.TITLE_POSTFIX : 
 		(page === 'home' ? 
 		'brent champion' : 
 		page + MetadataConstants.TITLE_POSTFIX);
-	
+		
 	const pageDescription = id;
 
 	return (

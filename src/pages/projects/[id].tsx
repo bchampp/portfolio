@@ -7,10 +7,7 @@ import Post from '../../components/posts/Post';
 
 export default function Project({ postData }) {
   return (
-    <Layout page='projects'>
-      <Head>
-        <title>brent champion | {postData.title.toLowerCase()}</title>
-      </Head>
+    <Layout page='projects' id={postData.title}>
 			<Post data={postData} />
     </Layout>
   )
