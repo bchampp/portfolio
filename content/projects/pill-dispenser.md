@@ -2,14 +2,14 @@
 title: 'Pill Dispenser'
 startDate: '2018-09-01'
 endDate: '2018-12-09'
-subtitle: 'An automated pill dispensor for health care applications'
+subtitle: 'An automated pill dispenser for health care applications'
 type: 'projects'
 tags: ['c++', 'control system', '3D printing']
 exists: true
 ---
 
 In my second year <i>Engineering Design</i> course, we were given an open ended problem to develop something that would benefit seniors homes. 
-My team chose to build an automated pill dispensor machine, and an accompanying app for the healthcare workers to use to schedule and monitor pill consumption. 
+My team chose to build an automated pill dispenser machine, and an accompanying app for the healthcare workers to use to schedule and monitor pill consumption. 
 
 My contribution to the project was primarily in the mechanical and electrical designs, wheras my teammates worked on building the iOS and Android apps. 
 

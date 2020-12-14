@@ -8,9 +8,14 @@ const Typewriter = require('typewriter-effect');
 export default function Hero() {
 	useEffect(() => {
 		// Hide the broken white square that appears beside the coffee widget
-		function hideBrokenCoffeeChild(){
-			let widget = document.getElementById('bmc-wbtn').nextSibling;
-			widget.parentNode.removeChild(widget); 
+		function hideBrokenCoffeeChild() {
+			let widget = document.getElementById('bmc-wbtn');
+			if (widget) {
+				let brokenThing = widget.nextSibling;
+				if (brokenThing) {
+					widget.parentNode.removeChild(brokenThing);
+				}
+			}
 		}
 		hideBrokenCoffeeChild();
 	}, []);
