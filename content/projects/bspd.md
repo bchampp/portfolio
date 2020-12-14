@@ -36,6 +36,6 @@ Next, a custom PCB was built and tested. 3 iterations of the board were built an
 
 This is the final version of the board.
 
-![PCB](/projects/bspd/pcb.png)
+![PCB](/projects/bspd/pcb.PNG)
 
 The last step with the project is to do final integration testing on the car. This means replicating these unsafe conditions and ensuring that the controller responds properly. Unfortunately, due to the COVID-19 pandemic, this final testing has not been completed yet. I look forward to completing this project on our car in the 2021-2022 school year. 

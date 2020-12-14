@@ -21,4 +21,4 @@ From there, the math engine would be able to solve the problem and display the s
 
 This is what our final application looked like:
 
-![GUI](/projects/terminator/gui.png)
+![GUI](/projects/terminator/gui.PNG)

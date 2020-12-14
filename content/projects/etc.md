@@ -20,7 +20,7 @@ Some of the benefits of an Electronic Control System include:
 ## Control System
 A flowchart outlining the control system can be seen below. 
 
-![ETC Control System](/projects/etc/controlsystem.png)
+![ETC Control System](/projects/etc/controlsystem.PNG)
 
 In summary, when the driver actuates the gas pedal, the throttle body is actuated in response. If the driver actuates a shift (upshift or downshift), an interrupt service routine is performed to blip or cut the throttle based on different engine parameters (RPM, wheel speeds, traction...etc). 
 
@@ -33,13 +33,13 @@ This is the schematic I designed for the testbench:
 
 This is the testbench:
 
-![ETC Control System](/projects/etc/testbench.png)
+![ETC Control System](/projects/etc/testbench.PNG)
 
 ## Custom Controller 
 After validating the control system and a baseline of our software on the testbench, the next step was integrating it into a custom printed circuit board (PCB). 
 I worked with some other team members on the formula team while designing these boards. Two iterations of the board were made. 
 
-![ETC PCBs](/projects/etc/pcbs.png)
+![ETC PCBs](/projects/etc/pcbs.PNG)
 
 ## Summary
 This project was one of most interesting and challenging things I worked on in my time on the Queen's Formula SAE Team. 
