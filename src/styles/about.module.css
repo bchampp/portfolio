@@ -16,7 +16,7 @@
     transition: 1s;
 }
 @media screen and (max-width: 1000px) {
-    .about {padding: 0; }
+    .about {padding: 5%; }
 }
 .gallery {
     padding-bottom: 20px;
