@@ -1,6 +1,5 @@
 /* Hero Component */
 
-import { isWidthDown } from '@material-ui/core';
 import { useEffect } from 'react';
 import styles from '../../styles/hero.module.css';
 
