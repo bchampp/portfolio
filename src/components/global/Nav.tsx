@@ -157,7 +157,7 @@ export default function Nav({ page }) {
 				</StyledMenuItem>
 				<StyledMenuItem>
 					<Link href={resumeLink}>
-						<a target="_blank">
+						<a>
 							<ListItemText primary="resume" />
 						</a>
 					</Link>
