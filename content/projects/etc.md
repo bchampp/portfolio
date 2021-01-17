@@ -4,7 +4,7 @@ startDate: '2018-10-01'
 endDate: '2019-12-09'
 type: 'projects'
 subtitle: 'An Electronic Throttle Control System'
-tags: ['c++', 'formula', 'control system']
+tags: ['c++', 'formula', 'control-system']
 exists: true
 ---
 

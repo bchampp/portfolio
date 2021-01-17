@@ -3,7 +3,7 @@ title: 'Queens Formula SAE Team'
 startDate: '2017-09-25'
 endDate: '2020-08-01'
 image: '/work/qfsae.png'
-tags: ['c++', 'pcb', 'control-systems']
+tags: ['c++', 'pcb', 'control-system']
 subtitle: 'Electrical Lead, Electrical Team Member'
 type: 'work'
 exists: true

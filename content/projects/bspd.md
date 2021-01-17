@@ -4,7 +4,7 @@ startDate: '2019-01-10'
 endDate: '2020-03-15'
 type: 'projects'
 subtitle: 'A hardware-only automotive safety device'
-tags: ['formula', 'control system', 'digital logic']
+tags: ['formula', 'control-system', 'digital logic']
 exists: true
 ---
 

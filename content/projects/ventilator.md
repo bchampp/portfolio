@@ -2,7 +2,7 @@
 title: 'Code Life Ventilator Challenge'
 startDate: '2020-03-15'
 endDate: '2020-05-03'
-tags: ['python', 'control system']
+tags: ['python', 'control-system']
 type: 'projects'
 subtitle: 'Building a ventilator in under 14 days'
 github: 'https://code.engineering.queensu.ca/ygk-modular-ventilator/display-app'

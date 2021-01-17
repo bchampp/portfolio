@@ -4,7 +4,7 @@ startDate: '2018-09-01'
 endDate: '2018-12-09'
 subtitle: 'An automated pill dispenser for health care applications'
 type: 'projects'
-tags: ['c++', 'control system', '3D printing']
+tags: ['c++', 'control-system', '3D printing']
 exists: true
 ---
 
