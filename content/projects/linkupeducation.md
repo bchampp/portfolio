@@ -36,4 +36,4 @@ We chose AWS serverless for a couple reasons:
 Lastly, the company I intern at uses AWS serverless heavily for our email service. I personally wanted to become more familiar with the technology, so I lead the backend development for this project. 
 
 
-Overall I had a great time working on this platform , and the team from the hackathon is continuing to develop the platform as a learning exersize. Feel free to make an account and play around on the platform!
+Overall I had a great time working on this platform , and the team from the hackathon is continuing to develop the platform as a learning exercise. Feel free to make an account and play around on the platform!

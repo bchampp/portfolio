@@ -7,7 +7,7 @@ subtitle: 'A democratic, shared, cross-platform music queue'
 img: '/images/projects/auxme.png'
 link: 'https://github.com/bchampp/auxme'
 tags: ['spotify', 'serverless', 'websocket', 'react', 'c++', 'control-system']
-exists: true
+exists: false
 ---
 
 AuxMe is an **all-inclusive** app to control music and lights that a group of friends and I started working on in September. Since we're all either working or in school, this has been a long term project we've been working toward, with the goal of launching in January 2021. 

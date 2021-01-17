@@ -58,7 +58,7 @@ function Tags({ tags }) {
 			<h4>Tags: </h4>
 			{tags &&
 				tags.map((tag) => (
-					<div className={styles.tag}>
+					<div className={styles.tag} key={tag}>
 						<a href={`/tags/${tag}`}>{tag}</a>
 					</div>
 				))}
