@@ -21,3 +21,10 @@ yarn-debug.log*
 yarn-error.log*
 
 .next/**
+
+content/resume/resume.aux
+content/resume/resume.fdb_latexmk
+content/resume/resume.fls
+content/resume/resume.log
+content/resume/resume.out
+content/resume/resume.synctex.gz
