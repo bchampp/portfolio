@@ -22,7 +22,7 @@
     "react-flip-toolkit": "^7.0.12",
     "react-typewriter": "^0.4.1",
     "remark": "^13.0.0",
-    "remark-html": "^13.0.1",
+    "remark-html": "^13.0.2",
     "typewriter-effect": "^2.13.1"
   },
   "devDependencies": {
