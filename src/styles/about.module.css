@@ -1,23 +1,22 @@
 .about {
-    font-size: medium;
-    padding-bottom: 40px;
-    min-height: 100vh;
-}
-.about img {
-    margin: auto;
-    border-radius: 50%;
+  font-size: medium;
+  padding-bottom: 40px;
+  min-height: 100vh;
 }
 .about a {
-    font-weight: 600;
+  font-weight: 600;
 }
 .about p {
-    color: var(--font-color);
-    transition-property: color;
-    transition: 1s;
+  color: var(--font-color);
+  transition-property: color;
+  transition: 1s;
 }
 @media screen and (max-width: 1000px) {
-    .about {padding: 5%; }
+  .about {
+    padding: 5%;
+  }
 }
 .gallery {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+  margin: auto;
 }

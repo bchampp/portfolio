@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 /* Light Mode */
 :root {
@@ -19,8 +19,8 @@
   --surface-color: #272727;
   --bg-color: #121212;
   --heading-color: #818cab;
-  --tag-color: #79E2F2;
-  --tag-hover: #FF9F00;
+  --tag-color: #79e2f2;
+  --tag-hover: #ff9f00;
   --invert: 1;
 }
 
@@ -29,8 +29,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   line-height: 1.6;
   font-size: 18px;
   width: 100%;
@@ -73,9 +72,9 @@ img {
 }
 
 .fa-moon {
-	color: #f1c40f;
+  color: #f1c40f;
 }
 
 .fa-sun {
-	color: #f39c12;
+  color: #f39c12;
 }
